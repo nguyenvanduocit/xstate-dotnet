@@ -1,0 +1,12 @@
+using XState;
+public static class Probe
+{
+    public static string Check()
+    {
+        var machine = new StateMachine<object>(new(), _ => new object());
+        var snapshot = new Actor<MachineSnapshot<object>>(machine).GetSnapshot();
+        var results = StateMapping.MapState(snapshot, new StateMapper<object, int> { Map = _ => 42 });
+        string value = results[0].Result;
+        return value;
+    }
+}

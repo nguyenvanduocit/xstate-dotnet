@@ -1,0 +1,15 @@
+using System;
+using XState;
+public sealed record Context(int Count, string Name);
+public static class Probe
+{
+    public static void Check()
+    {
+        var machine = new StateMachine<Context>(new(), _ => new(0, "test"));
+        var snapshot = new Actor<MachineSnapshot<Context>>(machine).GetSnapshot();
+        StateMapping.MapState(snapshot, new StateMapper<Context, (int, string)>
+        {
+            Map = state => { int n = state.Context.Count; string s = state.Context.Name; return (n, s); }
+        });
+    }
+}

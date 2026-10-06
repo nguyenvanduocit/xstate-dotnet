@@ -1,0 +1,1 @@
+{"status":"active","value":{},"historyValue":{},"context":{"child":{"xstate$$type":1,"id":"child"},"array":[{"xstate$$type":1,"id":"child"}],"list":[{"xstate$$type":1,"id":"child"}],"map":{"ref":{"xstate$$type":1,"id":"child"}}},"children":{"child":{"snapshot":{"status":"active","context":7},"src":"counter","systemId":"counter-system","syncSnapshot":true}}}

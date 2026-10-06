@@ -1,0 +1,10 @@
+using XState;
+using XState.Graph;
+public static class Probe
+{
+    public static void Check()
+    {
+        var machine = new StateMachine<object>(new(), _ => new object());
+        StateGraph.GetShortestPaths(machine, new() { SerializeState = (_, _, _) => "" });
+    }
+}

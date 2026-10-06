@@ -1,0 +1,19 @@
+root = true
+
+[*.cs]
+charset = utf-8
+indent_style = space
+indent_size = 4
+insert_final_newline = true
+
+# Quality rules use the .NET 8 Recommended profile in Directory.Build.props.
+# Unused imports stay an editor suggestion: .NET 8 requires XML documentation
+# generation to run IDE0005 on build. Unused assignments run in both places.
+dotnet_diagnostic.IDE0005.severity = suggestion
+dotnet_diagnostic.IDE0059.severity = warning
+
+[**/obj/**/*.cs]
+generated_code = true
+
+[**/bin/**/*.cs]
+generated_code = true

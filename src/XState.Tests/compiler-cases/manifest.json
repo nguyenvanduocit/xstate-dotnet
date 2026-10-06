@@ -1,0 +1,56 @@
+[
+  {
+    "id": "packages/core/test/types.test.ts:4669",
+    "mapping": "UnknownActorRef maps to IActor; Snapshot.status maps to SnapshotStatus. A status enum cannot be compared with an arbitrary string.",
+    "positive": "unknown-snapshot.positive.cs.txt",
+    "negative": "unknown-snapshot.negative.cs.txt",
+    "expectedDiagnostics": [
+      {
+        "id": "CS0019",
+        "line": 7
+      }
+    ]
+  },
+  {
+    "id": "packages/core/test/types.test.ts:4676",
+    "mapping": "ActorRefFromLogic<IActorLogic<TSnapshot>> maps to IActorRef<TSnapshot>; Actor<TSnapshot> must be assignable for any valid TSnapshot.",
+    "positive": "actor-reference.positive.cs.txt",
+    "expectedDiagnostics": []
+  },
+  {
+    "id": "packages/core/src/graph/types.test.ts:126",
+    "mapping": "Graph serializeEvent accepts a C# delegate returning ordinary string; no branded string is required. The machine and traversal call are compiled together.",
+    "positive": "graph-serialize-event.positive.cs.txt",
+    "expectedDiagnostics": []
+  },
+  {
+    "id": "packages/core/src/graph/types.test.ts:134",
+    "mapping": "Graph serializeState accepts a C# delegate returning ordinary string; no branded string is required. The machine and traversal call are compiled together.",
+    "positive": "graph-serialize-state.positive.cs.txt",
+    "expectedDiagnostics": []
+  },
+  {
+    "id": "packages/core/test/mapState.test.ts:380",
+    "mapping": "MachineSnapshot<TContext> and StateMapper<TContext,TResult> share the context type. Lambda parameters expose Count as int and Name as string; the resulting tuple retains both types.",
+    "positive": "map-state-context.positive.cs.txt",
+    "expectedDiagnostics": []
+  },
+  {
+    "id": "packages/core/test/mapState.test.ts:405",
+    "mapping": "The same TResult int is required at root, child and grandchild mappers. The complete nested mapping and machine snapshot compile together.",
+    "positive": "map-state-consistency.positive.cs.txt",
+    "expectedDiagnostics": []
+  },
+  {
+    "id": "packages/core/test/mapState.test.ts:503",
+    "mapping": "MapState returns StateMapResult<TContext,int>; Result is assignable to int and is not assignable to string.",
+    "positive": "map-state-result.positive.cs.txt",
+    "negative": "map-state-result.negative.cs.txt",
+    "expectedDiagnostics": [
+      {
+        "id": "CS0029",
+        "line": 9
+      }
+    ]
+  }
+]

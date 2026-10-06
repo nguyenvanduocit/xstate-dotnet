@@ -1,0 +1,19 @@
+using XState;
+public sealed class ActorThing<TSnapshot> where TSnapshot : class, IActorSnapshot
+{
+    public IActorRef<TSnapshot> ActorRef { get; }
+    public ActorThing(IActorLogic<TSnapshot> logic)
+    {
+        var actor = new Actor<TSnapshot>(logic);
+        IActorRef<TSnapshot> satisfies = actor;
+        ActorRef = satisfies;
+    }
+}
+public static class Probe
+{
+    public static void Check()
+    {
+        var logic = new StateMachine<int>(new(), _ => 0);
+        _ = new ActorThing<MachineSnapshot<int>>(logic);
+    }
+}

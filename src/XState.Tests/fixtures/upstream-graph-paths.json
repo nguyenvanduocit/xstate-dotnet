@@ -1,0 +1,1118 @@
+{
+  "commit": "fbee62e7c1586315ed478c2fedf530d7e0ff5a3e",
+  "source": "packages/core/src/graph/test/__snapshots__/graph.test.ts.snap",
+  "sourceSha256": "4d7b64e99306380ca2bec602054595a0095233d1700ed8baecb9c4716408daf6",
+  "snapshots": {
+    "@xstate/graph > getPathFromEvents() > should return a path to the last entered state by the event sequence > path from events 1": {
+      "state": {
+        "red": "flashing"
+      },
+      "steps": [
+        {
+          "eventType": "xstate.init",
+          "state": "green"
+        },
+        {
+          "eventType": "TIMER",
+          "state": "yellow"
+        },
+        {
+          "eventType": "TIMER",
+          "state": {
+            "red": "walk"
+          }
+        },
+        {
+          "eventType": "TIMER",
+          "state": "green"
+        },
+        {
+          "eventType": "POWER_OUTAGE",
+          "state": {
+            "red": "flashing"
+          }
+        }
+      ]
+    },
+    "@xstate/graph > getShortestPaths() > should return a mapping of shortest paths to all states (parallel) > shortest paths parallel 1": [
+      {
+        "state": {
+          "a": "a1",
+          "b": "b1"
+        },
+        "steps": [
+          {
+            "eventType": "xstate.init",
+            "state": {
+              "a": "a1",
+              "b": "b1"
+            }
+          }
+        ]
+      },
+      {
+        "state": {
+          "a": "a2",
+          "b": "b2"
+        },
+        "steps": [
+          {
+            "eventType": "xstate.init",
+            "state": {
+              "a": "a1",
+              "b": "b1"
+            }
+          },
+          {
+            "eventType": "2",
+            "state": {
+              "a": "a2",
+              "b": "b2"
+            }
+          }
+        ]
+      },
+      {
+        "state": {
+          "a": "a3",
+          "b": "b3"
+        },
+        "steps": [
+          {
+            "eventType": "xstate.init",
+            "state": {
+              "a": "a1",
+              "b": "b1"
+            }
+          },
+          {
+            "eventType": "3",
+            "state": {
+              "a": "a3",
+              "b": "b3"
+            }
+          }
+        ]
+      }
+    ],
+    "@xstate/graph > getShortestPaths() > should return a mapping of shortest paths to all states > shortest paths 1": [
+      {
+        "state": "green",
+        "steps": [
+          {
+            "eventType": "xstate.init",
+            "state": "green"
+          }
+        ]
+      },
+      {
+        "state": "yellow",
+        "steps": [
+          {
+            "eventType": "xstate.init",
+            "state": "green"
+          },
+          {
+            "eventType": "TIMER",
+            "state": "yellow"
+          }
+        ]
+      },
+      {
+        "state": {
+          "red": "flashing"
+        },
+        "steps": [
+          {
+            "eventType": "xstate.init",
+            "state": "green"
+          },
+          {
+            "eventType": "POWER_OUTAGE",
+            "state": {
+              "red": "flashing"
+            }
+          }
+        ]
+      },
+      {
+        "state": {
+          "red": "walk"
+        },
+        "steps": [
+          {
+            "eventType": "xstate.init",
+            "state": "green"
+          },
+          {
+            "eventType": "TIMER",
+            "state": "yellow"
+          },
+          {
+            "eventType": "TIMER",
+            "state": {
+              "red": "walk"
+            }
+          }
+        ]
+      },
+      {
+        "state": {
+          "red": "wait"
+        },
+        "steps": [
+          {
+            "eventType": "xstate.init",
+            "state": "green"
+          },
+          {
+            "eventType": "TIMER",
+            "state": "yellow"
+          },
+          {
+            "eventType": "TIMER",
+            "state": {
+              "red": "walk"
+            }
+          },
+          {
+            "eventType": "PED_COUNTDOWN",
+            "state": {
+              "red": "wait"
+            }
+          }
+        ]
+      },
+      {
+        "state": {
+          "red": "stop"
+        },
+        "steps": [
+          {
+            "eventType": "xstate.init",
+            "state": "green"
+          },
+          {
+            "eventType": "TIMER",
+            "state": "yellow"
+          },
+          {
+            "eventType": "TIMER",
+            "state": {
+              "red": "walk"
+            }
+          },
+          {
+            "eventType": "PED_COUNTDOWN",
+            "state": {
+              "red": "wait"
+            }
+          },
+          {
+            "eventType": "PED_COUNTDOWN",
+            "state": {
+              "red": "stop"
+            }
+          }
+        ]
+      }
+    ],
+    "@xstate/graph > getSimplePaths() > should return a mapping of arrays of simple paths to all states 2": [
+      {
+        "state": "green",
+        "steps": [
+          {
+            "eventType": "xstate.init",
+            "state": "green"
+          }
+        ]
+      },
+      {
+        "state": "yellow",
+        "steps": [
+          {
+            "eventType": "xstate.init",
+            "state": "green"
+          },
+          {
+            "eventType": "TIMER",
+            "state": "yellow"
+          }
+        ]
+      },
+      {
+        "state": {
+          "red": "flashing"
+        },
+        "steps": [
+          {
+            "eventType": "xstate.init",
+            "state": "green"
+          },
+          {
+            "eventType": "TIMER",
+            "state": "yellow"
+          },
+          {
+            "eventType": "TIMER",
+            "state": {
+              "red": "walk"
+            }
+          },
+          {
+            "eventType": "POWER_OUTAGE",
+            "state": {
+              "red": "flashing"
+            }
+          }
+        ]
+      },
+      {
+        "state": {
+          "red": "flashing"
+        },
+        "steps": [
+          {
+            "eventType": "xstate.init",
+            "state": "green"
+          },
+          {
+            "eventType": "TIMER",
+            "state": "yellow"
+          },
+          {
+            "eventType": "TIMER",
+            "state": {
+              "red": "walk"
+            }
+          },
+          {
+            "eventType": "PED_COUNTDOWN",
+            "state": {
+              "red": "wait"
+            }
+          },
+          {
+            "eventType": "POWER_OUTAGE",
+            "state": {
+              "red": "flashing"
+            }
+          }
+        ]
+      },
+      {
+        "state": {
+          "red": "flashing"
+        },
+        "steps": [
+          {
+            "eventType": "xstate.init",
+            "state": "green"
+          },
+          {
+            "eventType": "TIMER",
+            "state": "yellow"
+          },
+          {
+            "eventType": "TIMER",
+            "state": {
+              "red": "walk"
+            }
+          },
+          {
+            "eventType": "PED_COUNTDOWN",
+            "state": {
+              "red": "wait"
+            }
+          },
+          {
+            "eventType": "PED_COUNTDOWN",
+            "state": {
+              "red": "stop"
+            }
+          },
+          {
+            "eventType": "POWER_OUTAGE",
+            "state": {
+              "red": "flashing"
+            }
+          }
+        ]
+      },
+      {
+        "state": {
+          "red": "flashing"
+        },
+        "steps": [
+          {
+            "eventType": "xstate.init",
+            "state": "green"
+          },
+          {
+            "eventType": "TIMER",
+            "state": "yellow"
+          },
+          {
+            "eventType": "POWER_OUTAGE",
+            "state": {
+              "red": "flashing"
+            }
+          }
+        ]
+      },
+      {
+        "state": {
+          "red": "flashing"
+        },
+        "steps": [
+          {
+            "eventType": "xstate.init",
+            "state": "green"
+          },
+          {
+            "eventType": "POWER_OUTAGE",
+            "state": {
+              "red": "flashing"
+            }
+          }
+        ]
+      },
+      {
+        "state": {
+          "red": "walk"
+        },
+        "steps": [
+          {
+            "eventType": "xstate.init",
+            "state": "green"
+          },
+          {
+            "eventType": "TIMER",
+            "state": "yellow"
+          },
+          {
+            "eventType": "TIMER",
+            "state": {
+              "red": "walk"
+            }
+          }
+        ]
+      },
+      {
+        "state": {
+          "red": "wait"
+        },
+        "steps": [
+          {
+            "eventType": "xstate.init",
+            "state": "green"
+          },
+          {
+            "eventType": "TIMER",
+            "state": "yellow"
+          },
+          {
+            "eventType": "TIMER",
+            "state": {
+              "red": "walk"
+            }
+          },
+          {
+            "eventType": "PED_COUNTDOWN",
+            "state": {
+              "red": "wait"
+            }
+          }
+        ]
+      },
+      {
+        "state": {
+          "red": "stop"
+        },
+        "steps": [
+          {
+            "eventType": "xstate.init",
+            "state": "green"
+          },
+          {
+            "eventType": "TIMER",
+            "state": "yellow"
+          },
+          {
+            "eventType": "TIMER",
+            "state": {
+              "red": "walk"
+            }
+          },
+          {
+            "eventType": "PED_COUNTDOWN",
+            "state": {
+              "red": "wait"
+            }
+          },
+          {
+            "eventType": "PED_COUNTDOWN",
+            "state": {
+              "red": "stop"
+            }
+          }
+        ]
+      }
+    ],
+    "@xstate/graph > getSimplePaths() > should return a mapping of simple paths to all states (parallel) > simple paths parallel 1": [
+      {
+        "state": {
+          "a": "a1",
+          "b": "b1"
+        },
+        "steps": [
+          {
+            "eventType": "xstate.init",
+            "state": {
+              "a": "a1",
+              "b": "b1"
+            }
+          }
+        ]
+      },
+      {
+        "state": {
+          "a": "a2",
+          "b": "b2"
+        },
+        "steps": [
+          {
+            "eventType": "xstate.init",
+            "state": {
+              "a": "a1",
+              "b": "b1"
+            }
+          },
+          {
+            "eventType": "2",
+            "state": {
+              "a": "a2",
+              "b": "b2"
+            }
+          }
+        ]
+      },
+      {
+        "state": {
+          "a": "a3",
+          "b": "b3"
+        },
+        "steps": [
+          {
+            "eventType": "xstate.init",
+            "state": {
+              "a": "a1",
+              "b": "b1"
+            }
+          },
+          {
+            "eventType": "2",
+            "state": {
+              "a": "a2",
+              "b": "b2"
+            }
+          },
+          {
+            "eventType": "3",
+            "state": {
+              "a": "a3",
+              "b": "b3"
+            }
+          }
+        ]
+      },
+      {
+        "state": {
+          "a": "a3",
+          "b": "b3"
+        },
+        "steps": [
+          {
+            "eventType": "xstate.init",
+            "state": {
+              "a": "a1",
+              "b": "b1"
+            }
+          },
+          {
+            "eventType": "3",
+            "state": {
+              "a": "a3",
+              "b": "b3"
+            }
+          }
+        ]
+      }
+    ],
+    "@xstate/graph > getSimplePaths() > should return multiple paths for equivalent transitions > simple paths equal transitions 1": [
+      {
+        "state": "a",
+        "steps": [
+          {
+            "eventType": "xstate.init",
+            "state": "a"
+          }
+        ]
+      },
+      {
+        "state": "b",
+        "steps": [
+          {
+            "eventType": "xstate.init",
+            "state": "a"
+          },
+          {
+            "eventType": "FOO",
+            "state": "b"
+          }
+        ]
+      },
+      {
+        "state": "b",
+        "steps": [
+          {
+            "eventType": "xstate.init",
+            "state": "a"
+          },
+          {
+            "eventType": "BAR",
+            "state": "b"
+          }
+        ]
+      }
+    ],
+    "@xstate/graph > getSimplePaths() > should return value-based paths > simple paths context 1": [
+      {
+        "state": "start",
+        "steps": [
+          {
+            "eventType": "xstate.init",
+            "state": "start"
+          }
+        ]
+      },
+      {
+        "state": "start",
+        "steps": [
+          {
+            "eventType": "xstate.init",
+            "state": "start"
+          },
+          {
+            "eventType": "INC",
+            "state": "start"
+          }
+        ]
+      },
+      {
+        "state": "start",
+        "steps": [
+          {
+            "eventType": "xstate.init",
+            "state": "start"
+          },
+          {
+            "eventType": "INC",
+            "state": "start"
+          },
+          {
+            "eventType": "INC",
+            "state": "start"
+          }
+        ]
+      },
+      {
+        "state": "finish",
+        "steps": [
+          {
+            "eventType": "xstate.init",
+            "state": "start"
+          },
+          {
+            "eventType": "INC",
+            "state": "start"
+          },
+          {
+            "eventType": "INC",
+            "state": "start"
+          },
+          {
+            "eventType": "INC",
+            "state": "finish"
+          }
+        ]
+      }
+    ],
+    "shortest paths for transition functions 1": [
+      {
+        "state": 0,
+        "steps": [
+          {
+            "eventType": "xstate.init",
+            "state": 0
+          }
+        ]
+      },
+      {
+        "state": 1,
+        "steps": [
+          {
+            "eventType": "xstate.init",
+            "state": 0
+          },
+          {
+            "eventType": "a",
+            "state": 1
+          }
+        ]
+      },
+      {
+        "state": 1,
+        "steps": [
+          {
+            "eventType": "xstate.init",
+            "state": 0
+          },
+          {
+            "eventType": "b",
+            "state": 0
+          },
+          {
+            "eventType": "a",
+            "state": 1
+          }
+        ]
+      },
+      {
+        "state": 1,
+        "steps": [
+          {
+            "eventType": "xstate.init",
+            "state": 0
+          },
+          {
+            "eventType": "b",
+            "state": 0
+          },
+          {
+            "eventType": "reset",
+            "state": 0
+          },
+          {
+            "eventType": "a",
+            "state": 1
+          }
+        ]
+      },
+      {
+        "state": 1,
+        "steps": [
+          {
+            "eventType": "xstate.init",
+            "state": 0
+          },
+          {
+            "eventType": "reset",
+            "state": 0
+          },
+          {
+            "eventType": "a",
+            "state": 1
+          }
+        ]
+      },
+      {
+        "state": 1,
+        "steps": [
+          {
+            "eventType": "xstate.init",
+            "state": 0
+          },
+          {
+            "eventType": "reset",
+            "state": 0
+          },
+          {
+            "eventType": "b",
+            "state": 0
+          },
+          {
+            "eventType": "a",
+            "state": 1
+          }
+        ]
+      },
+      {
+        "state": 0,
+        "steps": [
+          {
+            "eventType": "xstate.init",
+            "state": 0
+          },
+          {
+            "eventType": "a",
+            "state": 1
+          },
+          {
+            "eventType": "b",
+            "state": 2
+          },
+          {
+            "eventType": "reset",
+            "state": 0
+          },
+          {
+            "eventType": "b",
+            "state": 0
+          }
+        ]
+      },
+      {
+        "state": 0,
+        "steps": [
+          {
+            "eventType": "xstate.init",
+            "state": 0
+          },
+          {
+            "eventType": "a",
+            "state": 1
+          },
+          {
+            "eventType": "reset",
+            "state": 0
+          },
+          {
+            "eventType": "b",
+            "state": 0
+          }
+        ]
+      },
+      {
+        "state": 0,
+        "steps": [
+          {
+            "eventType": "xstate.init",
+            "state": 0
+          },
+          {
+            "eventType": "b",
+            "state": 0
+          }
+        ]
+      },
+      {
+        "state": 0,
+        "steps": [
+          {
+            "eventType": "xstate.init",
+            "state": 0
+          },
+          {
+            "eventType": "reset",
+            "state": 0
+          },
+          {
+            "eventType": "b",
+            "state": 0
+          }
+        ]
+      },
+      {
+        "state": 0,
+        "steps": [
+          {
+            "eventType": "xstate.init",
+            "state": 0
+          },
+          {
+            "eventType": "a",
+            "state": 1
+          },
+          {
+            "eventType": "b",
+            "state": 2
+          },
+          {
+            "eventType": "reset",
+            "state": 0
+          }
+        ]
+      },
+      {
+        "state": 0,
+        "steps": [
+          {
+            "eventType": "xstate.init",
+            "state": 0
+          },
+          {
+            "eventType": "a",
+            "state": 1
+          },
+          {
+            "eventType": "reset",
+            "state": 0
+          }
+        ]
+      },
+      {
+        "state": 0,
+        "steps": [
+          {
+            "eventType": "xstate.init",
+            "state": 0
+          },
+          {
+            "eventType": "b",
+            "state": 0
+          },
+          {
+            "eventType": "a",
+            "state": 1
+          },
+          {
+            "eventType": "b",
+            "state": 2
+          },
+          {
+            "eventType": "reset",
+            "state": 0
+          }
+        ]
+      },
+      {
+        "state": 0,
+        "steps": [
+          {
+            "eventType": "xstate.init",
+            "state": 0
+          },
+          {
+            "eventType": "b",
+            "state": 0
+          },
+          {
+            "eventType": "a",
+            "state": 1
+          },
+          {
+            "eventType": "reset",
+            "state": 0
+          }
+        ]
+      },
+      {
+        "state": 0,
+        "steps": [
+          {
+            "eventType": "xstate.init",
+            "state": 0
+          },
+          {
+            "eventType": "b",
+            "state": 0
+          },
+          {
+            "eventType": "reset",
+            "state": 0
+          }
+        ]
+      },
+      {
+        "state": 0,
+        "steps": [
+          {
+            "eventType": "xstate.init",
+            "state": 0
+          },
+          {
+            "eventType": "reset",
+            "state": 0
+          }
+        ]
+      },
+      {
+        "state": 2,
+        "steps": [
+          {
+            "eventType": "xstate.init",
+            "state": 0
+          },
+          {
+            "eventType": "a",
+            "state": 1
+          },
+          {
+            "eventType": "b",
+            "state": 2
+          }
+        ]
+      },
+      {
+        "state": 2,
+        "steps": [
+          {
+            "eventType": "xstate.init",
+            "state": 0
+          },
+          {
+            "eventType": "b",
+            "state": 0
+          },
+          {
+            "eventType": "a",
+            "state": 1
+          },
+          {
+            "eventType": "b",
+            "state": 2
+          }
+        ]
+      },
+      {
+        "state": 2,
+        "steps": [
+          {
+            "eventType": "xstate.init",
+            "state": 0
+          },
+          {
+            "eventType": "b",
+            "state": 0
+          },
+          {
+            "eventType": "reset",
+            "state": 0
+          },
+          {
+            "eventType": "a",
+            "state": 1
+          },
+          {
+            "eventType": "b",
+            "state": 2
+          }
+        ]
+      },
+      {
+        "state": 2,
+        "steps": [
+          {
+            "eventType": "xstate.init",
+            "state": 0
+          },
+          {
+            "eventType": "reset",
+            "state": 0
+          },
+          {
+            "eventType": "a",
+            "state": 1
+          },
+          {
+            "eventType": "b",
+            "state": 2
+          }
+        ]
+      },
+      {
+        "state": 2,
+        "steps": [
+          {
+            "eventType": "xstate.init",
+            "state": 0
+          },
+          {
+            "eventType": "reset",
+            "state": 0
+          },
+          {
+            "eventType": "b",
+            "state": 0
+          },
+          {
+            "eventType": "a",
+            "state": 1
+          },
+          {
+            "eventType": "b",
+            "state": 2
+          }
+        ]
+      }
+    ],
+    "simple paths for transition functions 1": [
+      {
+        "state": 0,
+        "steps": [
+          {
+            "eventType": "xstate.init",
+            "state": 0
+          }
+        ]
+      },
+      {
+        "state": 1,
+        "steps": [
+          {
+            "eventType": "xstate.init",
+            "state": 0
+          },
+          {
+            "eventType": "a",
+            "state": 1
+          }
+        ]
+      },
+      {
+        "state": 0,
+        "steps": [
+          {
+            "eventType": "xstate.init",
+            "state": 0
+          },
+          {
+            "eventType": "b",
+            "state": 0
+          }
+        ]
+      },
+      {
+        "state": 0,
+        "steps": [
+          {
+            "eventType": "xstate.init",
+            "state": 0
+          },
+          {
+            "eventType": "reset",
+            "state": 0
+          }
+        ]
+      },
+      {
+        "state": 2,
+        "steps": [
+          {
+            "eventType": "xstate.init",
+            "state": 0
+          },
+          {
+            "eventType": "a",
+            "state": 1
+          },
+          {
+            "eventType": "b",
+            "state": 2
+          }
+        ]
+      }
+    ]
+  }
+}

@@ -1,0 +1,2358 @@
+{
+  "commit": "fbee62e7c1586315ed478c2fedf530d7e0ff5a3e",
+  "sharedFiles": [
+    {
+      "path": "examples/readme.md",
+      "sha256": "bd49efce4a6d944913435ec9244dafc167b847800fc7a5a1f7b7c7cef02dd12a"
+    }
+  ],
+  "total": 49,
+  "required": 31,
+  "excludedUi": 18,
+  "examples": [
+    {
+      "name": "7guis-1-counter-vue",
+      "scope": "excluded-ui",
+      "exclusion": {
+        "name": "7guis-1-counter-vue",
+        "reason": "User excludes examples with interactive UI.",
+        "evidence": "examples/7guis-1-counter-vue/src/App.vue"
+      },
+      "sourceSha256": "687d70231666afd0a2239bf48a9354c118ac64129d7eecb6b077366cc81b0516",
+      "files": [
+        {
+          "path": "examples/7guis-1-counter-vue/.gitignore",
+          "sha256": "fe718e7babb14f3cbad2d97f08889b9ce5215ed3fe0e43b2b8cfbfb3b9b844e8"
+        },
+        {
+          "path": "examples/7guis-1-counter-vue/.vscode/extensions.json",
+          "sha256": "52ae49c12d428d63080a4fb5f18ebc239bdcaa478d79d93d261d9d2ffd3f3197"
+        },
+        {
+          "path": "examples/7guis-1-counter-vue/index.html",
+          "sha256": "9b02472c34773a9dc3127ead8c3d1e354040a63c7a6d28705778a285dbae78a7"
+        },
+        {
+          "path": "examples/7guis-1-counter-vue/package.json",
+          "sha256": "fb1c22811bbe07014e688edbc42d2d5f93174e7fd5b20093be7d56b0f13725ab"
+        },
+        {
+          "path": "examples/7guis-1-counter-vue/pnpm-lock.yaml",
+          "sha256": "9df5baaf18ae02e27bf6f4a0bbc0839b88aadd73af14bda9a5904d52c294886a"
+        },
+        {
+          "path": "examples/7guis-1-counter-vue/README.md",
+          "sha256": "127d07c83b78af6f52713f37a4fea24b9098c9684a226c8b3da5be861e183d06"
+        },
+        {
+          "path": "examples/7guis-1-counter-vue/src/App.vue",
+          "sha256": "eaaf973e8d31261d23cbc5ee5be8cb8cbdf25bc7bb2dd0b6dc70f47893e0342b"
+        },
+        {
+          "path": "examples/7guis-1-counter-vue/src/components/HelloWorld.vue",
+          "sha256": "81cf674285e74a5b538c2f86e75fa6f0af4ab409b7582cfc04619f721bccfa1f"
+        },
+        {
+          "path": "examples/7guis-1-counter-vue/src/Counter.vue",
+          "sha256": "9df4ced2bada6a551dc548713a909bc4fc8f7b8c0a3b2e767ea9e22fbe7e13fc"
+        },
+        {
+          "path": "examples/7guis-1-counter-vue/src/counterMachine.ts",
+          "sha256": "eedf41901e941fd08bc0a00a123a6330356b4a8c7567ee8a1234db7dfb87ea4b"
+        },
+        {
+          "path": "examples/7guis-1-counter-vue/src/main.ts",
+          "sha256": "c22cb8ecc583af067a6c4a7461a27523a2d2530d1f169fad62e27b9821ae361a"
+        },
+        {
+          "path": "examples/7guis-1-counter-vue/src/style.css",
+          "sha256": "632a819e578371a7daf0910e565f4b043681b74da19358f1cdda64322b8e798c"
+        },
+        {
+          "path": "examples/7guis-1-counter-vue/src/vite-env.d.ts",
+          "sha256": "65996936fbb042915f7b74a200fcdde7e410f32a669b1ab9597cfaa4b0faddb5"
+        },
+        {
+          "path": "examples/7guis-1-counter-vue/src/vue-shim.d.ts",
+          "sha256": "6bfcb23591f74b295f8b912908ec6c0d18214b31f3fc7710253a5589750a5dea"
+        },
+        {
+          "path": "examples/7guis-1-counter-vue/tsconfig.json",
+          "sha256": "660ea60e0ba26ed40f9b70620031ec0f5f29faf2e3f276949838cfeeb43911fe"
+        },
+        {
+          "path": "examples/7guis-1-counter-vue/tsconfig.node.json",
+          "sha256": "9e2abb169ea87b7190613a1d4da57ca608463a453bd4231fa3aeee5e308370dd"
+        },
+        {
+          "path": "examples/7guis-1-counter-vue/vite.config.ts",
+          "sha256": "54290f9889e86e2a74ef32f1cecd29e7eb152cb13e6cd57d70d19f5e500d0b08"
+        }
+      ]
+    },
+    {
+      "name": "7guis-2-temperature-vue",
+      "scope": "excluded-ui",
+      "exclusion": {
+        "name": "7guis-2-temperature-vue",
+        "reason": "User excludes examples with interactive UI.",
+        "evidence": "examples/7guis-2-temperature-vue/src/App.vue"
+      },
+      "sourceSha256": "d3142781fd631b67f2c2b63014da092145cd9eb40bebd2b8f178e032b951a95e",
+      "files": [
+        {
+          "path": "examples/7guis-2-temperature-vue/.gitignore",
+          "sha256": "fe718e7babb14f3cbad2d97f08889b9ce5215ed3fe0e43b2b8cfbfb3b9b844e8"
+        },
+        {
+          "path": "examples/7guis-2-temperature-vue/.vscode/extensions.json",
+          "sha256": "52ae49c12d428d63080a4fb5f18ebc239bdcaa478d79d93d261d9d2ffd3f3197"
+        },
+        {
+          "path": "examples/7guis-2-temperature-vue/index.html",
+          "sha256": "e99840427cf5ad19d4cedf6c222472b0ce33297893e97a647da40239a972814c"
+        },
+        {
+          "path": "examples/7guis-2-temperature-vue/package.json",
+          "sha256": "d8af4900d08d0ef144fbd4a515fbafefdf7f07ce705d7c3de5c9bf78f0203eda"
+        },
+        {
+          "path": "examples/7guis-2-temperature-vue/pnpm-lock.yaml",
+          "sha256": "9df5baaf18ae02e27bf6f4a0bbc0839b88aadd73af14bda9a5904d52c294886a"
+        },
+        {
+          "path": "examples/7guis-2-temperature-vue/public/vite.svg",
+          "sha256": "4a748afd443918bb16591c834c401dae33e87861ab5dbad0811c3a3b4a9214fb"
+        },
+        {
+          "path": "examples/7guis-2-temperature-vue/README.md",
+          "sha256": "c3b55449e5199f77513bc147fb169dadaa0d9ed8c0f07c61b3d1db9ad6c2da29"
+        },
+        {
+          "path": "examples/7guis-2-temperature-vue/src/App.vue",
+          "sha256": "5128a7898ba526fda925d1152950dd7eb67d238ab2152820c13519f06444c9a7"
+        },
+        {
+          "path": "examples/7guis-2-temperature-vue/src/main.ts",
+          "sha256": "c22cb8ecc583af067a6c4a7461a27523a2d2530d1f169fad62e27b9821ae361a"
+        },
+        {
+          "path": "examples/7guis-2-temperature-vue/src/style.css",
+          "sha256": "084ef178cb5d8026a7663bae416303e14730d5df2b29721ff1d002b39c30b4f8"
+        },
+        {
+          "path": "examples/7guis-2-temperature-vue/src/TempConverter.vue",
+          "sha256": "8aacd367aba726e1f6d3162f9870eca1425d2f98087b68cc84e6884e0f4d69cf"
+        },
+        {
+          "path": "examples/7guis-2-temperature-vue/src/tempMachine.ts",
+          "sha256": "482de65acdbbe7746c455a6d6f3804875cc48f2def1525aeaa041bf9d1b9203d"
+        },
+        {
+          "path": "examples/7guis-2-temperature-vue/src/vite-env.d.ts",
+          "sha256": "65996936fbb042915f7b74a200fcdde7e410f32a669b1ab9597cfaa4b0faddb5"
+        },
+        {
+          "path": "examples/7guis-2-temperature-vue/src/vue-shim.d.ts",
+          "sha256": "6bfcb23591f74b295f8b912908ec6c0d18214b31f3fc7710253a5589750a5dea"
+        },
+        {
+          "path": "examples/7guis-2-temperature-vue/tsconfig.json",
+          "sha256": "660ea60e0ba26ed40f9b70620031ec0f5f29faf2e3f276949838cfeeb43911fe"
+        },
+        {
+          "path": "examples/7guis-2-temperature-vue/tsconfig.node.json",
+          "sha256": "9e2abb169ea87b7190613a1d4da57ca608463a453bd4231fa3aeee5e308370dd"
+        },
+        {
+          "path": "examples/7guis-2-temperature-vue/vite.config.ts",
+          "sha256": "54290f9889e86e2a74ef32f1cecd29e7eb152cb13e6cd57d70d19f5e500d0b08"
+        }
+      ]
+    },
+    {
+      "name": "7guis-counter-react",
+      "scope": "excluded-ui",
+      "exclusion": {
+        "name": "7guis-counter-react",
+        "reason": "User excludes examples with interactive UI.",
+        "evidence": "examples/7guis-counter-react/src/App.tsx"
+      },
+      "sourceSha256": "963c1e15f75369fcef8061c2f6bdaaf2fb178565db5c3d4e24ac281164e48211",
+      "files": [
+        {
+          "path": "examples/7guis-counter-react/.gitignore",
+          "sha256": "519e334a031a31da20aa9a903fdac291e0c50a9c4f223b664a08d1af90075a54"
+        },
+        {
+          "path": "examples/7guis-counter-react/index.html",
+          "sha256": "7a6c342da6e3939d51ddca594afbeb034ec2e2416859019059a66bb3e5d89697"
+        },
+        {
+          "path": "examples/7guis-counter-react/package.json",
+          "sha256": "54b0bb04ad467e06e53e89e1dbeda8aa747180a3bd87d4d81d2891dcb2fb520b"
+        },
+        {
+          "path": "examples/7guis-counter-react/pnpm-lock.yaml",
+          "sha256": "0133368fd1f7e428027842154122ea7f5a357ff3b592a05f27643df2a51f51d7"
+        },
+        {
+          "path": "examples/7guis-counter-react/readme.md",
+          "sha256": "9896761b0d27a6990f8af026b78649a6c239ec3c7eb1fc9f18916d6effd81478"
+        },
+        {
+          "path": "examples/7guis-counter-react/src/App.css",
+          "sha256": "e3a7a3d1c37e468daeaa8208b5a7524bb92ab0cb23b52e749a4ca5434ea1500e"
+        },
+        {
+          "path": "examples/7guis-counter-react/src/App.tsx",
+          "sha256": "d4dac3d1c606ce0d6f387ae845d0bb43f4b5f43d0d4949c4e39b617358f4db73"
+        },
+        {
+          "path": "examples/7guis-counter-react/src/counterMachine.ts",
+          "sha256": "b2269a311ea0ddb48cb9af495bdc05e1edfe1b60a11fc0e288d06cb9b54a53a4"
+        },
+        {
+          "path": "examples/7guis-counter-react/src/favicon.svg",
+          "sha256": "17e50649ce0babbf448e8a728d4475192b60b4d096a7d9414df727128435519e"
+        },
+        {
+          "path": "examples/7guis-counter-react/src/index.css",
+          "sha256": "20f02633355a107749d634eff0af61f639d751f331e4309d444b35c77f86c520"
+        },
+        {
+          "path": "examples/7guis-counter-react/src/main.tsx",
+          "sha256": "aae3d518402a951e120af40bfecd9c1e65edf640236c46bde3f73b86652defb1"
+        },
+        {
+          "path": "examples/7guis-counter-react/src/vite-env.d.ts",
+          "sha256": "65996936fbb042915f7b74a200fcdde7e410f32a669b1ab9597cfaa4b0faddb5"
+        },
+        {
+          "path": "examples/7guis-counter-react/tsconfig.json",
+          "sha256": "378237325c09658eb1e06b24b146f4affc49d0eb1e367230b34ce986f7fd1ea2"
+        },
+        {
+          "path": "examples/7guis-counter-react/vite.config.ts",
+          "sha256": "7ab7075e3dc4710ae7e2e7083e5349193dbacd639e2d13a975f56d7ce2362aca"
+        }
+      ]
+    },
+    {
+      "name": "7guis-flight-booker-react",
+      "scope": "excluded-ui",
+      "exclusion": {
+        "name": "7guis-flight-booker-react",
+        "reason": "User excludes examples with interactive UI.",
+        "evidence": "examples/7guis-flight-booker-react/src/App.tsx"
+      },
+      "sourceSha256": "8808fddd7d6e0e710906cb713028c39b4019d292589a878257d4a90b4c116626",
+      "files": [
+        {
+          "path": "examples/7guis-flight-booker-react/.eslintrc.cjs",
+          "sha256": "48e1b97f865cc3fc9c49db9af7a46b0d0d8e74af36759ffe024c105a1098ff9f"
+        },
+        {
+          "path": "examples/7guis-flight-booker-react/.gitignore",
+          "sha256": "fe718e7babb14f3cbad2d97f08889b9ce5215ed3fe0e43b2b8cfbfb3b9b844e8"
+        },
+        {
+          "path": "examples/7guis-flight-booker-react/index.html",
+          "sha256": "db908a36f7f8ea1b2697b54f5d792edeb9a525ff5b8df5785470641abe531753"
+        },
+        {
+          "path": "examples/7guis-flight-booker-react/package-lock.json",
+          "sha256": "a7cbbf59ba028bf82203cad77b79e35e6a13f0ed9ab9c3dae7b570ca09196d7c"
+        },
+        {
+          "path": "examples/7guis-flight-booker-react/package.json",
+          "sha256": "8b3ba143385a14d4411533661dedb27a0a5c337ead5ff6e14ead34f224966fb0"
+        },
+        {
+          "path": "examples/7guis-flight-booker-react/pnpm-lock.yaml",
+          "sha256": "fea9a68adf216487b862d3a85346b65b9a86fa94642521d05aa2de7dd76a3cd8"
+        },
+        {
+          "path": "examples/7guis-flight-booker-react/public/flight-booker.jpg",
+          "sha256": "41d3f742a9d96e2cced0499a7e132fb1c2910705b7b7d7bd575ace4d2cddaf8f"
+        },
+        {
+          "path": "examples/7guis-flight-booker-react/public/flight-booker.png",
+          "sha256": "e2e3dfabdf665e15136eab9567fd0f80a33d209836550fedc41cce54a7c39dde"
+        },
+        {
+          "path": "examples/7guis-flight-booker-react/public/vite.svg",
+          "sha256": "4a748afd443918bb16591c834c401dae33e87861ab5dbad0811c3a3b4a9214fb"
+        },
+        {
+          "path": "examples/7guis-flight-booker-react/README.md",
+          "sha256": "42aa74506c7738c6792e5098045c0607f50a13b3a0c6f92b553e8bc816fce1ce"
+        },
+        {
+          "path": "examples/7guis-flight-booker-react/src/App.tsx",
+          "sha256": "c89e0da7a04657d33639a9157c19fe34838098c01716ba6ea12e92c3080c00ef"
+        },
+        {
+          "path": "examples/7guis-flight-booker-react/src/components/BookButton.tsx",
+          "sha256": "5f2525eae5393955563fd707dc161310c3f95e847d155ef25eb766e2b4a4ef84"
+        },
+        {
+          "path": "examples/7guis-flight-booker-react/src/components/DateInput.tsx",
+          "sha256": "b142ba22a151e6d056161b46d0288f80142d058cb47da1118c63eecf0fd4ac5f"
+        },
+        {
+          "path": "examples/7guis-flight-booker-react/src/components/Header.tsx",
+          "sha256": "b6381a9799e128401a089e2f60c72d53c48b35a0aeb73e64315fe8dbe423e3ab"
+        },
+        {
+          "path": "examples/7guis-flight-booker-react/src/components/index.ts",
+          "sha256": "4604f1fdac0ab43b1cbba091b50808cedd6f3e0f8c0814932de5990ace98565c"
+        },
+        {
+          "path": "examples/7guis-flight-booker-react/src/components/TripSelector.tsx",
+          "sha256": "b8ef612457af3a66b992c66d6906669f26cee9b297b65c4b8002c72a12caa24b"
+        },
+        {
+          "path": "examples/7guis-flight-booker-react/src/machines/flightMachine.ts",
+          "sha256": "263404a767c2e72d34281fc39293174fa2ee53aa3c617bdc7df1ae074be8fd89"
+        },
+        {
+          "path": "examples/7guis-flight-booker-react/src/main.tsx",
+          "sha256": "af1ef161bd8e44b779193cca3584ea55698dcf9730bfd2c27f4af97405625780"
+        },
+        {
+          "path": "examples/7guis-flight-booker-react/src/styles/reset.css",
+          "sha256": "b0ac7d298381b50780641fd6d1a8949e85074377f1176e9960ebe7ee27ab9605"
+        },
+        {
+          "path": "examples/7guis-flight-booker-react/src/styles/styles.css",
+          "sha256": "29f143c55726c7ccfcdc569a3104e78a9796b7c2c9ca4584d071857c225cc3e7"
+        },
+        {
+          "path": "examples/7guis-flight-booker-react/src/utils/index.ts",
+          "sha256": "f8677280794c3093c88b7b2e436a46917c60948abfadc97e638cf91d4292df29"
+        },
+        {
+          "path": "examples/7guis-flight-booker-react/src/vite-env.d.ts",
+          "sha256": "65996936fbb042915f7b74a200fcdde7e410f32a669b1ab9597cfaa4b0faddb5"
+        },
+        {
+          "path": "examples/7guis-flight-booker-react/tsconfig.json",
+          "sha256": "1235b08de163a345ed4d32d573bd1c43169d2e04f1d837ea05c5a37f64f24ae5"
+        },
+        {
+          "path": "examples/7guis-flight-booker-react/tsconfig.node.json",
+          "sha256": "bb9fd8592a9e364641441219f10d84daae9ba2ca5cc85db798efad6913bb8257"
+        },
+        {
+          "path": "examples/7guis-flight-booker-react/types.d.ts",
+          "sha256": "bc17e6e289ac8a796b14b336c78033aff34fd95dc85eec9982b9b796a75b7fb8"
+        },
+        {
+          "path": "examples/7guis-flight-booker-react/vite.config.ts",
+          "sha256": "30c3a270c6d327a4a47244f2532229fa7a9c164b1e0442bc21ef245a0ef9578c"
+        }
+      ]
+    },
+    {
+      "name": "7guis-temperature-react",
+      "scope": "excluded-ui",
+      "exclusion": {
+        "name": "7guis-temperature-react",
+        "reason": "User excludes examples with interactive UI.",
+        "evidence": "examples/7guis-temperature-react/src/App.tsx"
+      },
+      "sourceSha256": "96c817fa9df38c85f25c39f4501e87d047c3cac5d8fe8c72d8d4e36f2f84b24d",
+      "files": [
+        {
+          "path": "examples/7guis-temperature-react/.gitignore",
+          "sha256": "519e334a031a31da20aa9a903fdac291e0c50a9c4f223b664a08d1af90075a54"
+        },
+        {
+          "path": "examples/7guis-temperature-react/index.html",
+          "sha256": "0380e5f47eac02b342d416d908037dec3b661b8a920000199951a5ced9c8c5ef"
+        },
+        {
+          "path": "examples/7guis-temperature-react/package.json",
+          "sha256": "234d338f618dae1e208b5b3b450a11e0bff132ad8e972376940389a06cd4eb2d"
+        },
+        {
+          "path": "examples/7guis-temperature-react/pnpm-lock.yaml",
+          "sha256": "0133368fd1f7e428027842154122ea7f5a357ff3b592a05f27643df2a51f51d7"
+        },
+        {
+          "path": "examples/7guis-temperature-react/readme.md",
+          "sha256": "ccb9e46132a8c19e618b961a16a5fe88a835bdffc68d1fea7fa2ef1f8f3909b4"
+        },
+        {
+          "path": "examples/7guis-temperature-react/src/App.css",
+          "sha256": "1db98f45a43383882840434ee80313037dae7448f360c1a085b68d5f09dfe311"
+        },
+        {
+          "path": "examples/7guis-temperature-react/src/App.tsx",
+          "sha256": "13576c735b9838421549f5b5ac74d3394951a6793ad2e1f7bc27bcea12937485"
+        },
+        {
+          "path": "examples/7guis-temperature-react/src/favicon.svg",
+          "sha256": "17e50649ce0babbf448e8a728d4475192b60b4d096a7d9414df727128435519e"
+        },
+        {
+          "path": "examples/7guis-temperature-react/src/index.css",
+          "sha256": "20f02633355a107749d634eff0af61f639d751f331e4309d444b35c77f86c520"
+        },
+        {
+          "path": "examples/7guis-temperature-react/src/main.tsx",
+          "sha256": "aae3d518402a951e120af40bfecd9c1e65edf640236c46bde3f73b86652defb1"
+        },
+        {
+          "path": "examples/7guis-temperature-react/src/temperatureMachine.ts",
+          "sha256": "36a8dfc485c559958fafa2ca3020d3eb8739bc2e4dbab31f3a8a5651d2328a85"
+        },
+        {
+          "path": "examples/7guis-temperature-react/src/vite-env.d.ts",
+          "sha256": "65996936fbb042915f7b74a200fcdde7e410f32a669b1ab9597cfaa4b0faddb5"
+        },
+        {
+          "path": "examples/7guis-temperature-react/tsconfig.json",
+          "sha256": "378237325c09658eb1e06b24b146f4affc49d0eb1e367230b34ce986f7fd1ea2"
+        },
+        {
+          "path": "examples/7guis-temperature-react/vite.config.ts",
+          "sha256": "7ab7075e3dc4710ae7e2e7083e5349193dbacd639e2d13a975f56d7ce2362aca"
+        }
+      ]
+    },
+    {
+      "name": "counter",
+      "scope": "excluded-ui",
+      "exclusion": {
+        "name": "counter",
+        "reason": "User excludes examples with interactive UI.",
+        "evidence": "examples/counter/src/main.ts"
+      },
+      "sourceSha256": "9273d785a6caebe8c2524865d08eb728a7a0b28a5196d6ef4852eb0eea40c563",
+      "files": [
+        {
+          "path": "examples/counter/.gitignore",
+          "sha256": "fe718e7babb14f3cbad2d97f08889b9ce5215ed3fe0e43b2b8cfbfb3b9b844e8"
+        },
+        {
+          "path": "examples/counter/index.html",
+          "sha256": "df8930a5a756243f2553058a585f3d6a9f57ac5676b09d53ab0e8c5e4a849913"
+        },
+        {
+          "path": "examples/counter/package.json",
+          "sha256": "122d91640338cc71bf46632a7218947494f2f5d364db76d9337a8beb1de82084"
+        },
+        {
+          "path": "examples/counter/pnpm-lock.yaml",
+          "sha256": "ebfc8ae0cc793524715d53ff0025c8e441c23bc5320f58dc360ca908021cfd10"
+        },
+        {
+          "path": "examples/counter/public/vite.svg",
+          "sha256": "4a748afd443918bb16591c834c401dae33e87861ab5dbad0811c3a3b4a9214fb"
+        },
+        {
+          "path": "examples/counter/readme.md",
+          "sha256": "eb5b658b66ca281014bb0193de41d42466cbf2fe818e5d01e94023173f088d5e"
+        },
+        {
+          "path": "examples/counter/src/counterMachine.ts",
+          "sha256": "5d68cd5033dbba4f519958e0a5a1e9c8aaf5b4df0870fc9e9af430b286bdf9ec"
+        },
+        {
+          "path": "examples/counter/src/main.ts",
+          "sha256": "7f254dfcc103f0643d369b047d4942aad2676de1cc4896bda837f1d35bbee26f"
+        },
+        {
+          "path": "examples/counter/src/style.css",
+          "sha256": "ef9e35517dec6535c8127f520b44d5bea07c869d1b6a874401221786fed22f37"
+        },
+        {
+          "path": "examples/counter/src/vite-env.d.ts",
+          "sha256": "65996936fbb042915f7b74a200fcdde7e410f32a669b1ab9597cfaa4b0faddb5"
+        },
+        {
+          "path": "examples/counter/tsconfig.json",
+          "sha256": "266c9d1daaf1312691cc35d58b313eed8fb9b0359e376062dcf3deb6588207a5"
+        }
+      ]
+    },
+    {
+      "name": "express-workflow",
+      "scope": "required",
+      "exclusion": null,
+      "sourceSha256": "5d6902c687fe00596d7bb738649aabc753e1975b4c71df50a937dab023721ba4",
+      "files": [
+        {
+          "path": "examples/express-workflow/index.ts",
+          "sha256": "08c46ea27d2b55dedda3fbeaa43222fa586cbe93df87bf1def6564716458d9e0"
+        },
+        {
+          "path": "examples/express-workflow/machine.ts",
+          "sha256": "7cbcc13206fc1ffc408681e6b81fb73e69a7a16da41f79e2469e9559fbd308ec"
+        },
+        {
+          "path": "examples/express-workflow/package.json",
+          "sha256": "a9acdfd686e6f001a0eb35365bb05141a2a075dcf7eb6f997af28c129b435855"
+        },
+        {
+          "path": "examples/express-workflow/pnpm-lock.yaml",
+          "sha256": "df49763a26d6ff8eca148f369b34091f3444b5c6dcb21a313330daf951b2fe4c"
+        },
+        {
+          "path": "examples/express-workflow/README.md",
+          "sha256": "aebc06cc952d7b1c1649e91cc904a53c446456c3683b81530447963aa960a45f"
+        },
+        {
+          "path": "examples/express-workflow/tsconfig.json",
+          "sha256": "bdbc850ecbef2e12d03a1a1ca775f3798c63ded7fea47c283366f428a004d95e"
+        }
+      ]
+    },
+    {
+      "name": "fetch",
+      "scope": "required",
+      "exclusion": null,
+      "sourceSha256": "0d00c82f2d0d07e52584fc08e5d8e32af45442e44750fc4d5f046ff77351fad4",
+      "files": [
+        {
+          "path": "examples/fetch/index.html",
+          "sha256": "291ff8abb29e6a29f522722ffe63ca98049c7c56797e11820cc9483fcfb6e1f1"
+        },
+        {
+          "path": "examples/fetch/package.json",
+          "sha256": "dacd010b107f67194bd861359dd550c08ab3c223642c3eabeb444c54e66dd1e3"
+        },
+        {
+          "path": "examples/fetch/pnpm-lock.yaml",
+          "sha256": "1f40a7e338aee11ec73b34757b4e778fc6af53db69c4f345c40a8b8f6a09fd60"
+        },
+        {
+          "path": "examples/fetch/README.md",
+          "sha256": "5416d8099d6d0378234ad22ea76fc54573d2b247fa94eab83adc49e276f405af"
+        },
+        {
+          "path": "examples/fetch/src/fetchMachine.ts",
+          "sha256": "cf425c45d57a9debdd73e9b8f566fe40095d4e9dd68d6852edc3692be698751b"
+        },
+        {
+          "path": "examples/fetch/src/index.ts",
+          "sha256": "820f18617e64c18b3ad3475c84376e3b5d9c25d7006a1bdf08ad97258f9ea4d0"
+        }
+      ]
+    },
+    {
+      "name": "friends-list-react",
+      "scope": "excluded-ui",
+      "exclusion": {
+        "name": "friends-list-react",
+        "reason": "User excludes examples with interactive UI.",
+        "evidence": "examples/friends-list-react/src/App.tsx"
+      },
+      "sourceSha256": "6d8ea82380cee253af314db72e89f7962e7771e486e5515d0642d0e2a1cf36ed",
+      "files": [
+        {
+          "path": "examples/friends-list-react/.gitignore",
+          "sha256": "519e334a031a31da20aa9a903fdac291e0c50a9c4f223b664a08d1af90075a54"
+        },
+        {
+          "path": "examples/friends-list-react/index.html",
+          "sha256": "5c45e1eeea066870e604a1861f77df8fb7079b4b9dbbfbaf675fdf62a06ea373"
+        },
+        {
+          "path": "examples/friends-list-react/package.json",
+          "sha256": "10ad83001ed368194b7fcb70686b8c309a9787065e1575ce419ab1f68167c0d1"
+        },
+        {
+          "path": "examples/friends-list-react/pnpm-lock.yaml",
+          "sha256": "0133368fd1f7e428027842154122ea7f5a357ff3b592a05f27643df2a51f51d7"
+        },
+        {
+          "path": "examples/friends-list-react/readme.md",
+          "sha256": "0d2c51b01e36e36d2a496dc438766df8a71f36227643d1f959d2d3cb75ed31bc"
+        },
+        {
+          "path": "examples/friends-list-react/src/App.css",
+          "sha256": "7fa27db06c31257b03948933328e6fa603a8660656ed3e927345f12937307f1d"
+        },
+        {
+          "path": "examples/friends-list-react/src/App.tsx",
+          "sha256": "8fd3d8a98c05305f1c21d7d45ee7a9a0087b82606ea670b9291f91da987a3216"
+        },
+        {
+          "path": "examples/friends-list-react/src/favicon.svg",
+          "sha256": "17e50649ce0babbf448e8a728d4475192b60b4d096a7d9414df727128435519e"
+        },
+        {
+          "path": "examples/friends-list-react/src/Friend.tsx",
+          "sha256": "244afb60c809a7d6b411ec0b313808a69ad27920cbdb1243301ca4d11106b4c4"
+        },
+        {
+          "path": "examples/friends-list-react/src/friendMachine.ts",
+          "sha256": "8b6e223c1060b5683c323bf34f8ad8dc196b8ba5aaf2c55959bd8b6a52b3c5c0"
+        },
+        {
+          "path": "examples/friends-list-react/src/friendsMachine.ts",
+          "sha256": "c89471cb845c8b60d7e73b8ae28d9efe3a5fdad1c685019ba9ac2f9cebfba709"
+        },
+        {
+          "path": "examples/friends-list-react/src/index.css",
+          "sha256": "20f02633355a107749d634eff0af61f639d751f331e4309d444b35c77f86c520"
+        },
+        {
+          "path": "examples/friends-list-react/src/main.tsx",
+          "sha256": "aae3d518402a951e120af40bfecd9c1e65edf640236c46bde3f73b86652defb1"
+        },
+        {
+          "path": "examples/friends-list-react/src/vite-env.d.ts",
+          "sha256": "65996936fbb042915f7b74a200fcdde7e410f32a669b1ab9597cfaa4b0faddb5"
+        },
+        {
+          "path": "examples/friends-list-react/tsconfig.json",
+          "sha256": "378237325c09658eb1e06b24b146f4affc49d0eb1e367230b34ce986f7fd1ea2"
+        },
+        {
+          "path": "examples/friends-list-react/vite.config.ts",
+          "sha256": "7ab7075e3dc4710ae7e2e7083e5349193dbacd639e2d13a975f56d7ce2362aca"
+        }
+      ]
+    },
+    {
+      "name": "local-store-counter-react",
+      "scope": "excluded-ui",
+      "exclusion": {
+        "name": "local-store-counter-react",
+        "reason": "User excludes examples with interactive UI.",
+        "evidence": "examples/local-store-counter-react/src/App.tsx"
+      },
+      "sourceSha256": "d70eaaea5c10addfc1030cdbaffc203e06f98cc601c30287bcc31e7d8e05e725",
+      "files": [
+        {
+          "path": "examples/local-store-counter-react/eslint.config.js",
+          "sha256": "a7ec479847aafba8c560e3fd819f76f7e2ee64feec1f78e75cac8f62f0f54271"
+        },
+        {
+          "path": "examples/local-store-counter-react/index.html",
+          "sha256": "db908a36f7f8ea1b2697b54f5d792edeb9a525ff5b8df5785470641abe531753"
+        },
+        {
+          "path": "examples/local-store-counter-react/package.json",
+          "sha256": "5fced778d07577ee80d452a48e9480217d8443f0ee24e9c460cef6dc40966e75"
+        },
+        {
+          "path": "examples/local-store-counter-react/pnpm-lock.yaml",
+          "sha256": "baae76c417c2b9c8b020fce50a2da15ce5fe16cf12ec2739d23afe400b0c3256"
+        },
+        {
+          "path": "examples/local-store-counter-react/README.md",
+          "sha256": "5c19e22ecea67bcb104419576979c81043a4f32360ad5a36efb9d9abef83f00a"
+        },
+        {
+          "path": "examples/local-store-counter-react/src/App.css",
+          "sha256": "a0715e0a09edbd0fbde65816a75e0fa0fc8b314c5260c0768c19bf3aac22621a"
+        },
+        {
+          "path": "examples/local-store-counter-react/src/App.tsx",
+          "sha256": "3e8bf08855f587be65834f244edf597a2abcb270aca945c1f12f5aa43013de69"
+        },
+        {
+          "path": "examples/local-store-counter-react/src/assets/react.svg",
+          "sha256": "35ef61ed53b323ae94a16a8ec659b3d0af3880698791133f23b084085ab1c2e5"
+        },
+        {
+          "path": "examples/local-store-counter-react/src/index.css",
+          "sha256": "a7938196d3e52b21ea3e2af74bd60b2012ad662ed8eb905b86f9842e5f94bdc4"
+        },
+        {
+          "path": "examples/local-store-counter-react/src/main.tsx",
+          "sha256": "832842269af94b055b2cd42fd27a0f212773b36d20083b631b863cbb5f0fd09e"
+        },
+        {
+          "path": "examples/local-store-counter-react/src/vite-env.d.ts",
+          "sha256": "65996936fbb042915f7b74a200fcdde7e410f32a669b1ab9597cfaa4b0faddb5"
+        },
+        {
+          "path": "examples/local-store-counter-react/tsconfig.app.json",
+          "sha256": "86764d2e803a44c58e30bcf7512bb5d866b6be1b8d46bd0d4416e07a70b1699d"
+        },
+        {
+          "path": "examples/local-store-counter-react/tsconfig.json",
+          "sha256": "770b4140bbb581e2dfd9ea9946ffc9c75a1d86ba7d2db5f77c83e37cbdf9d808"
+        },
+        {
+          "path": "examples/local-store-counter-react/tsconfig.node.json",
+          "sha256": "1a270cb8020d1fa879262423b9c222fa38d94b830ec61164a46b558ea9d2a526"
+        },
+        {
+          "path": "examples/local-store-counter-react/vite.config.ts",
+          "sha256": "4a426df46f269a74c34c215e6955267d9a4d4510e75e7ae43891fce83a3ecf3d"
+        }
+      ]
+    },
+    {
+      "name": "mongodb-credit-check-api",
+      "scope": "required",
+      "exclusion": null,
+      "sourceSha256": "61e8b9e1a606f9568e6d430fdd70aec1c2f61aad4614ad04e278a3dca752a7e7",
+      "files": [
+        {
+          "path": "examples/mongodb-credit-check-api/.gitignore",
+          "sha256": "fc6bd0ca560cb402b5a5ca4011278ce37c3c728d8723d4dd7ad5c10249269aec"
+        },
+        {
+          "path": "examples/mongodb-credit-check-api/.prettierrc",
+          "sha256": "b90a2d062e9a3cb7c7e9cca9b74684c4e906456954909e2fc15d0a616b964993"
+        },
+        {
+          "path": "examples/mongodb-credit-check-api/index.ts",
+          "sha256": "c8a7a05d32587fc32d2a2a40f44a5e1ee75beafdcedd517c0bb17316142dff0b"
+        },
+        {
+          "path": "examples/mongodb-credit-check-api/machine.ts",
+          "sha256": "d6a521edcc004c4b84f200430ded1f2edc08cc1071bd3ba62261583e11ec4615"
+        },
+        {
+          "path": "examples/mongodb-credit-check-api/models/creditProfile.ts",
+          "sha256": "8d8b59a064c1bcdfb1290ece318b056fb56c72afd583f06f3091b5c37f6a2402"
+        },
+        {
+          "path": "examples/mongodb-credit-check-api/models/creditReport.ts",
+          "sha256": "aea18038c64bc232e15fb4beea807c0bc551920122a363530902d24917efbf3c"
+        },
+        {
+          "path": "examples/mongodb-credit-check-api/package.json",
+          "sha256": "ae80d7ffc30c9e1d919d78b6bb236d2e0b2f6e6cf66b7a9fb9c82b7b318e49f0"
+        },
+        {
+          "path": "examples/mongodb-credit-check-api/pnpm-lock.yaml",
+          "sha256": "e446d3cbac1ce68f414fb3a384b6d359708b37ba8adb07577ceb5dc8ca685d26"
+        },
+        {
+          "path": "examples/mongodb-credit-check-api/README.md",
+          "sha256": "12728c2c90458afe1adecdbbdb39ddd78f6ea0e184f2e6249e6932adc0681a24"
+        },
+        {
+          "path": "examples/mongodb-credit-check-api/services/actorService.ts",
+          "sha256": "1dd46d0f75c0db4bbd8cf0dbea3d68ce8d5123472c9715c58f6973f8887b5558"
+        },
+        {
+          "path": "examples/mongodb-credit-check-api/services/machineLogicService.ts",
+          "sha256": "7bd1b5e1c0585c38e56b4387d17dd427375090fa14ad10f4aea48b9f78e9f379"
+        },
+        {
+          "path": "examples/mongodb-credit-check-api/tsconfig.json",
+          "sha256": "bdbc850ecbef2e12d03a1a1ca775f3798c63ded7fea47c283366f428a004d95e"
+        }
+      ]
+    },
+    {
+      "name": "mongodb-persisted-state",
+      "scope": "required",
+      "exclusion": null,
+      "sourceSha256": "9558ca62b15780910f70847b1a6f728b4ecbdeaa7628aefb498bfaa42592cfb9",
+      "files": [
+        {
+          "path": "examples/mongodb-persisted-state/.gitignore",
+          "sha256": "fe718e7babb14f3cbad2d97f08889b9ce5215ed3fe0e43b2b8cfbfb3b9b844e8"
+        },
+        {
+          "path": "examples/mongodb-persisted-state/donutMachine.ts",
+          "sha256": "9e5173f624626efb39596850eb75a5f7c0c2566feae4d20f6b73f20e98ec8b41"
+        },
+        {
+          "path": "examples/mongodb-persisted-state/main.ts",
+          "sha256": "f7016266c14829bc365a72e140faf1ec1c5fd39406bdab7139afe42b64030ed6"
+        },
+        {
+          "path": "examples/mongodb-persisted-state/package.json",
+          "sha256": "dc5068b1313c698b4ae24f3061897badc7974fbc35d399311e75d03c3d780b3a"
+        },
+        {
+          "path": "examples/mongodb-persisted-state/pnpm-lock.yaml",
+          "sha256": "41a5717a0ed4920c35e474e996fa44ee58d09bcebca52f3a66a3fdaa41fe3d45"
+        },
+        {
+          "path": "examples/mongodb-persisted-state/README.md",
+          "sha256": "0a4899cd0ce9222f24dae0d53001ef0a413417c716dbdb0205b488ab80d0d171"
+        },
+        {
+          "path": "examples/mongodb-persisted-state/TaskQueue.ts",
+          "sha256": "22f9bccc02477b672afb2a602506b91291eb9e5366dc13fe9e6d304318034731"
+        },
+        {
+          "path": "examples/mongodb-persisted-state/tsconfig.json",
+          "sha256": "234a10cd2f6eb44a93ae542bdd64a4a10cd5f7e5e74879d42899dbff4c96096d"
+        }
+      ]
+    },
+    {
+      "name": "persisted-donut-maker",
+      "scope": "required",
+      "exclusion": null,
+      "sourceSha256": "776c892f5ec98fa79d2cee3b786024e4cb30bc494e68a9298b25e56091947eb0",
+      "files": [
+        {
+          "path": "examples/persisted-donut-maker/.gitignore",
+          "sha256": "fe718e7babb14f3cbad2d97f08889b9ce5215ed3fe0e43b2b8cfbfb3b9b844e8"
+        },
+        {
+          "path": "examples/persisted-donut-maker/donutMachine.ts",
+          "sha256": "9e5173f624626efb39596850eb75a5f7c0c2566feae4d20f6b73f20e98ec8b41"
+        },
+        {
+          "path": "examples/persisted-donut-maker/main.ts",
+          "sha256": "c69ad61fcf18959f29c27a767988f587eef2852c6da36d11da349ced6cbec579"
+        },
+        {
+          "path": "examples/persisted-donut-maker/package.json",
+          "sha256": "20330533c884489b5d431e983dbd8da0e2d3ee406864e2776ea4490d48aaf08e"
+        },
+        {
+          "path": "examples/persisted-donut-maker/pnpm-lock.yaml",
+          "sha256": "372a1e840e431c1ec60d9ceae5e6f6a675dd9fb2d28c2de54019b86d64044618"
+        },
+        {
+          "path": "examples/persisted-donut-maker/tsconfig.json",
+          "sha256": "c5e416e7754844b764fedbbcb304ce24a68fc94c95001f6e491125aada3dd6f7"
+        }
+      ]
+    },
+    {
+      "name": "snake-react",
+      "scope": "excluded-ui",
+      "exclusion": {
+        "name": "snake-react",
+        "reason": "User excludes examples with interactive UI.",
+        "evidence": "examples/snake-react/src/App.tsx"
+      },
+      "sourceSha256": "c5637e976c5f8af9e73494fc5462c8fe330d38f431506c89eb8e0cbf404daf59",
+      "files": [
+        {
+          "path": "examples/snake-react/.eslintrc.cjs",
+          "sha256": "48e1b97f865cc3fc9c49db9af7a46b0d0d8e74af36759ffe024c105a1098ff9f"
+        },
+        {
+          "path": "examples/snake-react/.gitignore",
+          "sha256": "fe718e7babb14f3cbad2d97f08889b9ce5215ed3fe0e43b2b8cfbfb3b9b844e8"
+        },
+        {
+          "path": "examples/snake-react/index.html",
+          "sha256": "0189df8b1313d3f10b24305f6fb44026127bafd9af97bf58bd3d4c1eed22aaa2"
+        },
+        {
+          "path": "examples/snake-react/package.json",
+          "sha256": "70bd9f2a332f0cb0f4f2859e5cc21b709c69b63dd654a115fe3bbd15acaf75f1"
+        },
+        {
+          "path": "examples/snake-react/pnpm-lock.yaml",
+          "sha256": "13f38d9993624c5893b2ca1b618f0beb5b9be06e20e0963a18a0667807637f52"
+        },
+        {
+          "path": "examples/snake-react/README.md",
+          "sha256": "5791b6429254a71ef38692a3377adeaad2a9a2194698689aa0622bdabef41662"
+        },
+        {
+          "path": "examples/snake-react/src/App.tsx",
+          "sha256": "c885c837127a9ba44dc0a77d7c423a34cc9ec95cde9a47960887b2539fe4ea11"
+        },
+        {
+          "path": "examples/snake-react/src/index.css",
+          "sha256": "ddfc81af3dc6db10cbeed699d665913017d7330cf52e99c0127f4bc4027a4929"
+        },
+        {
+          "path": "examples/snake-react/src/main.tsx",
+          "sha256": "f72b2f3d1634a5a46410b55808e58eb8fae0380e76987a9101fa2e89518fb630"
+        },
+        {
+          "path": "examples/snake-react/src/snakeMachine.ts",
+          "sha256": "b76d5163904081ec9b9f1d4b06fa35717817e3bfbedbeae670f0758f7109f38c"
+        },
+        {
+          "path": "examples/snake-react/src/vite-env.d.ts",
+          "sha256": "65996936fbb042915f7b74a200fcdde7e410f32a669b1ab9597cfaa4b0faddb5"
+        },
+        {
+          "path": "examples/snake-react/tsconfig.json",
+          "sha256": "980d6cbe977ddfb52d3ab1bdd3fba30f8c1db9371b3b14aa4557d32bb00ce54b"
+        },
+        {
+          "path": "examples/snake-react/tsconfig.node.json",
+          "sha256": "9e2abb169ea87b7190613a1d4da57ca608463a453bd4231fa3aeee5e308370dd"
+        },
+        {
+          "path": "examples/snake-react/vite.config.ts",
+          "sha256": "4a426df46f269a74c34c215e6955267d9a4d4510e75e7ae43891fce83a3ecf3d"
+        }
+      ]
+    },
+    {
+      "name": "stopwatch",
+      "scope": "excluded-ui",
+      "exclusion": {
+        "name": "stopwatch",
+        "reason": "User excludes examples with interactive UI.",
+        "evidence": "examples/stopwatch/src/main.ts"
+      },
+      "sourceSha256": "99fe84925ebbd51d8fb83e47b229a3abe909d0dfae5ee4ab65fec611a307544b",
+      "files": [
+        {
+          "path": "examples/stopwatch/.gitignore",
+          "sha256": "fe718e7babb14f3cbad2d97f08889b9ce5215ed3fe0e43b2b8cfbfb3b9b844e8"
+        },
+        {
+          "path": "examples/stopwatch/index.html",
+          "sha256": "df8930a5a756243f2553058a585f3d6a9f57ac5676b09d53ab0e8c5e4a849913"
+        },
+        {
+          "path": "examples/stopwatch/package.json",
+          "sha256": "5ba4fee883e9f81b79fded0ef9d99d837dcc2588d255cfca2dbcda2dfcb87988"
+        },
+        {
+          "path": "examples/stopwatch/pnpm-lock.yaml",
+          "sha256": "ebfc8ae0cc793524715d53ff0025c8e441c23bc5320f58dc360ca908021cfd10"
+        },
+        {
+          "path": "examples/stopwatch/public/vite.svg",
+          "sha256": "4a748afd443918bb16591c834c401dae33e87861ab5dbad0811c3a3b4a9214fb"
+        },
+        {
+          "path": "examples/stopwatch/readme.md",
+          "sha256": "9bf8e224162391f9fc21ca67f6a0d73fe6935dc40b802d5db699d9e5c76207af"
+        },
+        {
+          "path": "examples/stopwatch/src/main.ts",
+          "sha256": "50641611afd3aa569f55fa4f59b78ca378a332d3df7a87f32b0cea3d52835296"
+        },
+        {
+          "path": "examples/stopwatch/src/stopwatchMachine.ts",
+          "sha256": "e2901115fbe65fcf42585238df361894ded52ed2ea40de8eedb2cacd1d51bc0b"
+        },
+        {
+          "path": "examples/stopwatch/src/style.css",
+          "sha256": "ef9e35517dec6535c8127f520b44d5bea07c869d1b6a874401221786fed22f37"
+        },
+        {
+          "path": "examples/stopwatch/src/vite-env.d.ts",
+          "sha256": "65996936fbb042915f7b74a200fcdde7e410f32a669b1ab9597cfaa4b0faddb5"
+        },
+        {
+          "path": "examples/stopwatch/tsconfig.json",
+          "sha256": "266c9d1daaf1312691cc35d58b313eed8fb9b0359e376062dcf3deb6588207a5"
+        }
+      ]
+    },
+    {
+      "name": "store-counter-react",
+      "scope": "excluded-ui",
+      "exclusion": {
+        "name": "store-counter-react",
+        "reason": "User excludes examples with interactive UI.",
+        "evidence": "examples/store-counter-react/src/App.tsx"
+      },
+      "sourceSha256": "90f0daf085794c005bd0922ba60fdd6da512245c6c5ca54d6c5c434ab7f5add9",
+      "files": [
+        {
+          "path": "examples/store-counter-react/eslint.config.js",
+          "sha256": "a7ec479847aafba8c560e3fd819f76f7e2ee64feec1f78e75cac8f62f0f54271"
+        },
+        {
+          "path": "examples/store-counter-react/index.html",
+          "sha256": "db908a36f7f8ea1b2697b54f5d792edeb9a525ff5b8df5785470641abe531753"
+        },
+        {
+          "path": "examples/store-counter-react/package.json",
+          "sha256": "a7d1feb0cf208960ecd5afd236a55dbb8ed4a810c1f5f6fd0e97de34cdf24d8b"
+        },
+        {
+          "path": "examples/store-counter-react/pnpm-lock.yaml",
+          "sha256": "baae76c417c2b9c8b020fce50a2da15ce5fe16cf12ec2739d23afe400b0c3256"
+        },
+        {
+          "path": "examples/store-counter-react/README.md",
+          "sha256": "5c19e22ecea67bcb104419576979c81043a4f32360ad5a36efb9d9abef83f00a"
+        },
+        {
+          "path": "examples/store-counter-react/src/App.css",
+          "sha256": "a0715e0a09edbd0fbde65816a75e0fa0fc8b314c5260c0768c19bf3aac22621a"
+        },
+        {
+          "path": "examples/store-counter-react/src/App.tsx",
+          "sha256": "e315cc3057faef3c7b241a65263274beab5a4f7e7e9f767f4e9e135166dcc288"
+        },
+        {
+          "path": "examples/store-counter-react/src/assets/react.svg",
+          "sha256": "35ef61ed53b323ae94a16a8ec659b3d0af3880698791133f23b084085ab1c2e5"
+        },
+        {
+          "path": "examples/store-counter-react/src/index.css",
+          "sha256": "a7938196d3e52b21ea3e2af74bd60b2012ad662ed8eb905b86f9842e5f94bdc4"
+        },
+        {
+          "path": "examples/store-counter-react/src/main.tsx",
+          "sha256": "832842269af94b055b2cd42fd27a0f212773b36d20083b631b863cbb5f0fd09e"
+        },
+        {
+          "path": "examples/store-counter-react/src/vite-env.d.ts",
+          "sha256": "65996936fbb042915f7b74a200fcdde7e410f32a669b1ab9597cfaa4b0faddb5"
+        },
+        {
+          "path": "examples/store-counter-react/tsconfig.app.json",
+          "sha256": "86764d2e803a44c58e30bcf7512bb5d866b6be1b8d46bd0d4416e07a70b1699d"
+        },
+        {
+          "path": "examples/store-counter-react/tsconfig.json",
+          "sha256": "770b4140bbb581e2dfd9ea9946ffc9c75a1d86ba7d2db5f77c83e37cbdf9d808"
+        },
+        {
+          "path": "examples/store-counter-react/tsconfig.node.json",
+          "sha256": "1a270cb8020d1fa879262423b9c222fa38d94b830ec61164a46b558ea9d2a526"
+        },
+        {
+          "path": "examples/store-counter-react/vite.config.ts",
+          "sha256": "4a426df46f269a74c34c215e6955267d9a4d4510e75e7ae43891fce83a3ecf3d"
+        }
+      ]
+    },
+    {
+      "name": "store-tic-tac-toe",
+      "scope": "excluded-ui",
+      "exclusion": {
+        "name": "store-tic-tac-toe",
+        "reason": "User excludes examples with interactive UI.",
+        "evidence": "examples/store-tic-tac-toe/src/App.tsx"
+      },
+      "sourceSha256": "fb9ddded36fac40b6332213e94ef0fafe36dc7e3b381fd39364ee23502091888",
+      "files": [
+        {
+          "path": "examples/store-tic-tac-toe/.gitignore",
+          "sha256": "fe718e7babb14f3cbad2d97f08889b9ce5215ed3fe0e43b2b8cfbfb3b9b844e8"
+        },
+        {
+          "path": "examples/store-tic-tac-toe/eslint.config.js",
+          "sha256": "a7ec479847aafba8c560e3fd819f76f7e2ee64feec1f78e75cac8f62f0f54271"
+        },
+        {
+          "path": "examples/store-tic-tac-toe/index.html",
+          "sha256": "db908a36f7f8ea1b2697b54f5d792edeb9a525ff5b8df5785470641abe531753"
+        },
+        {
+          "path": "examples/store-tic-tac-toe/package.json",
+          "sha256": "f4dcedc9771b2d0035c45d4119a3a8e9300865471d6ec00f73fdc6552fcf4418"
+        },
+        {
+          "path": "examples/store-tic-tac-toe/public/vite.svg",
+          "sha256": "4a748afd443918bb16591c834c401dae33e87861ab5dbad0811c3a3b4a9214fb"
+        },
+        {
+          "path": "examples/store-tic-tac-toe/README.md",
+          "sha256": "7ef721ab988ce3e5e8b7314d5058b2a25ec1f1689aefb3d27df3ef24b389a613"
+        },
+        {
+          "path": "examples/store-tic-tac-toe/src/App.css",
+          "sha256": "613557564ef2b382e91e8201840e97380134a70a43f4359fc41715fde03da248"
+        },
+        {
+          "path": "examples/store-tic-tac-toe/src/App.tsx",
+          "sha256": "4b9d1ae3526fb8540f9e2f112b2fedaa37261ce32002c974c2539da4324623f5"
+        },
+        {
+          "path": "examples/store-tic-tac-toe/src/index.css",
+          "sha256": "bdba2919116e9b72ac06558f88371dc4c80fb0196da6403d239e0fb085250892"
+        },
+        {
+          "path": "examples/store-tic-tac-toe/src/main.tsx",
+          "sha256": "a7a7286b966c4934d00cd83fc884caebdb3e3cd29ee35eb325c0d0eff562e529"
+        },
+        {
+          "path": "examples/store-tic-tac-toe/src/store.ts",
+          "sha256": "4e3c077f6945c23843798f773349ad4458e55e3e039ca50ec1cc49d26be6a2bc"
+        },
+        {
+          "path": "examples/store-tic-tac-toe/src/vite-env.d.ts",
+          "sha256": "65996936fbb042915f7b74a200fcdde7e410f32a669b1ab9597cfaa4b0faddb5"
+        },
+        {
+          "path": "examples/store-tic-tac-toe/tsconfig.app.json",
+          "sha256": "3486628a9821fd2448b3ea289810215d5ef5c182c8f8e392791a79be70fc170a"
+        },
+        {
+          "path": "examples/store-tic-tac-toe/tsconfig.json",
+          "sha256": "770b4140bbb581e2dfd9ea9946ffc9c75a1d86ba7d2db5f77c83e37cbdf9d808"
+        },
+        {
+          "path": "examples/store-tic-tac-toe/tsconfig.node.json",
+          "sha256": "cbd52595b15d6df830561f659111baa38a89d3e30d1683c4e027b78925bb603d"
+        },
+        {
+          "path": "examples/store-tic-tac-toe/vite.config.ts",
+          "sha256": "984b42472b08957fea27a267e9f0cb8d2896faad452beb128d744ae0591f46e9"
+        }
+      ]
+    },
+    {
+      "name": "tic-tac-toe-react",
+      "scope": "excluded-ui",
+      "exclusion": {
+        "name": "tic-tac-toe-react",
+        "reason": "User excludes examples with interactive UI.",
+        "evidence": "examples/tic-tac-toe-react/src/App.tsx"
+      },
+      "sourceSha256": "1a0eef3232ec987cfbf15e2cdf717f7fe64e497108acdefead9da0c780e2911a",
+      "files": [
+        {
+          "path": "examples/tic-tac-toe-react/index.html",
+          "sha256": "cf00837f8499b84e844516191f784505f2b74b8bea6bc45275005f988a122674"
+        },
+        {
+          "path": "examples/tic-tac-toe-react/package.json",
+          "sha256": "bac555424b5a7aa8a3b93f125ab86529c2d98f607b07c99e52dbfdc8eb0f0333"
+        },
+        {
+          "path": "examples/tic-tac-toe-react/pnpm-lock.yaml",
+          "sha256": "330175ebbb1b01ded94bdb017a27082ce4416115413568183e6c7cd31d42caea"
+        },
+        {
+          "path": "examples/tic-tac-toe-react/readme.md",
+          "sha256": "dad27bd257dad314c33ca4886182b9645d7dcc29cef056fbc2e834e3976940a9"
+        },
+        {
+          "path": "examples/tic-tac-toe-react/src/App.tsx",
+          "sha256": "2220f09a4f39432b7d15c4594df2df5c5b8806fbbbdfa2b437b2d259d87e4591"
+        },
+        {
+          "path": "examples/tic-tac-toe-react/src/main.tsx",
+          "sha256": "fac46e1db98a70897a77af756d27d3c415e00ee24d825412b869786d9a5f94ac"
+        },
+        {
+          "path": "examples/tic-tac-toe-react/src/styles.css",
+          "sha256": "95bb323025a5bdf80ee2b598585af3657b0d3e39abd978bbcd3c9c52c1f158e5"
+        },
+        {
+          "path": "examples/tic-tac-toe-react/src/ticTacToeMachine.ts",
+          "sha256": "7130dab7979797a9b619d760b5f95351ccb091d3f83a99cb49f940d3fb77797c"
+        },
+        {
+          "path": "examples/tic-tac-toe-react/src/vite-env.d.ts",
+          "sha256": "65996936fbb042915f7b74a200fcdde7e410f32a669b1ab9597cfaa4b0faddb5"
+        },
+        {
+          "path": "examples/tic-tac-toe-react/tsconfig.json",
+          "sha256": "378237325c09658eb1e06b24b146f4affc49d0eb1e367230b34ce986f7fd1ea2"
+        }
+      ]
+    },
+    {
+      "name": "tiles",
+      "scope": "excluded-ui",
+      "exclusion": {
+        "name": "tiles",
+        "reason": "User excludes examples with interactive UI.",
+        "evidence": "examples/tiles/src/App.tsx"
+      },
+      "sourceSha256": "398e53b845c7272e8557ade7b3bc8af6e9479e95e30db07442bf23458c8a23bf",
+      "files": [
+        {
+          "path": "examples/tiles/.gitignore",
+          "sha256": "fe718e7babb14f3cbad2d97f08889b9ce5215ed3fe0e43b2b8cfbfb3b9b844e8"
+        },
+        {
+          "path": "examples/tiles/index.html",
+          "sha256": "db908a36f7f8ea1b2697b54f5d792edeb9a525ff5b8df5785470641abe531753"
+        },
+        {
+          "path": "examples/tiles/package.json",
+          "sha256": "60685054c7dfaca492596fc5d40a90bf57aa97005e804714191aeae341eceb8b"
+        },
+        {
+          "path": "examples/tiles/pnpm-lock.yaml",
+          "sha256": "4fd20750a4ec3fd9506d4960a9efe1630cbc627063ba49283feb8cd956e56cb0"
+        },
+        {
+          "path": "examples/tiles/public/vite.svg",
+          "sha256": "4a748afd443918bb16591c834c401dae33e87861ab5dbad0811c3a3b4a9214fb"
+        },
+        {
+          "path": "examples/tiles/readme.md",
+          "sha256": "5195912027a7b94f3b4c9975a33749a5a3721427f10e9ab5cd43b4c70c89e020"
+        },
+        {
+          "path": "examples/tiles/src/App.css",
+          "sha256": "a0715e0a09edbd0fbde65816a75e0fa0fc8b314c5260c0768c19bf3aac22621a"
+        },
+        {
+          "path": "examples/tiles/src/App.tsx",
+          "sha256": "551dd9958da48c58aaa6bdfcaa00811f76aaab0dd38b2393ef7508544caeff25"
+        },
+        {
+          "path": "examples/tiles/src/assets/react.svg",
+          "sha256": "35ef61ed53b323ae94a16a8ec659b3d0af3880698791133f23b084085ab1c2e5"
+        },
+        {
+          "path": "examples/tiles/src/index.css",
+          "sha256": "7d5b1f808581d979cd6ed73e30ed50da9dad87ad54e69c937fd157b767fd15c1"
+        },
+        {
+          "path": "examples/tiles/src/main.tsx",
+          "sha256": "631a3d40ef113b9c3c85e783353a6ad3d230ad264a350daad53281f38929c7e2"
+        },
+        {
+          "path": "examples/tiles/src/tilesMachine.ts",
+          "sha256": "3093185412cb55439adec47f211c24c74e9f5de4e5f85aac8f1b2b348f84cd2c"
+        },
+        {
+          "path": "examples/tiles/src/vite-env.d.ts",
+          "sha256": "65996936fbb042915f7b74a200fcdde7e410f32a669b1ab9597cfaa4b0faddb5"
+        },
+        {
+          "path": "examples/tiles/tsconfig.json",
+          "sha256": "e406d87c9b5edebb901c53ec8e53c7aa35f4c93616a279b18c96f24efaea6385"
+        },
+        {
+          "path": "examples/tiles/tsconfig.node.json",
+          "sha256": "c40d0614fda5b8a746a1ba2e3be8e2370140c0167851ac77881cd53bb5647cdd"
+        },
+        {
+          "path": "examples/tiles/vite.config.ts",
+          "sha256": "3cc566b69fb7d19746e0f3db7d1be699d6cdf298bc6870a987d97276365658b9"
+        }
+      ]
+    },
+    {
+      "name": "timer",
+      "scope": "excluded-ui",
+      "exclusion": {
+        "name": "timer",
+        "reason": "User excludes examples with interactive UI.",
+        "evidence": "examples/timer/src/App.tsx"
+      },
+      "sourceSha256": "ce6bb963f8785be2e6e5063f52f6fc83370b837016b38bdbd8a3faa141bb0827",
+      "files": [
+        {
+          "path": "examples/timer/.gitignore",
+          "sha256": "fe718e7babb14f3cbad2d97f08889b9ce5215ed3fe0e43b2b8cfbfb3b9b844e8"
+        },
+        {
+          "path": "examples/timer/index.html",
+          "sha256": "db908a36f7f8ea1b2697b54f5d792edeb9a525ff5b8df5785470641abe531753"
+        },
+        {
+          "path": "examples/timer/package.json",
+          "sha256": "8fad2d5d3cfe088ea0d8560e21dde0846bfc6a701ca8d15a5597c1338b2154c4"
+        },
+        {
+          "path": "examples/timer/pnpm-lock.yaml",
+          "sha256": "4fd20750a4ec3fd9506d4960a9efe1630cbc627063ba49283feb8cd956e56cb0"
+        },
+        {
+          "path": "examples/timer/public/vite.svg",
+          "sha256": "4a748afd443918bb16591c834c401dae33e87861ab5dbad0811c3a3b4a9214fb"
+        },
+        {
+          "path": "examples/timer/readme.md",
+          "sha256": "b3b87d461f4645737637942bd96e5be89041d10510c5e9d0d7e42648ead0d9eb"
+        },
+        {
+          "path": "examples/timer/src/App.css",
+          "sha256": "a0715e0a09edbd0fbde65816a75e0fa0fc8b314c5260c0768c19bf3aac22621a"
+        },
+        {
+          "path": "examples/timer/src/App.tsx",
+          "sha256": "3ac7d94fdabad1bd9715a7209851b828ffb86972d253bf731074dc3f026bc1eb"
+        },
+        {
+          "path": "examples/timer/src/assets/react.svg",
+          "sha256": "35ef61ed53b323ae94a16a8ec659b3d0af3880698791133f23b084085ab1c2e5"
+        },
+        {
+          "path": "examples/timer/src/index.css",
+          "sha256": "7d5b1f808581d979cd6ed73e30ed50da9dad87ad54e69c937fd157b767fd15c1"
+        },
+        {
+          "path": "examples/timer/src/main.tsx",
+          "sha256": "631a3d40ef113b9c3c85e783353a6ad3d230ad264a350daad53281f38929c7e2"
+        },
+        {
+          "path": "examples/timer/src/timerMachine.ts",
+          "sha256": "36df09483cf4fa84327da64a17aeadca1f6fffc851c9975dc81bb14d48ce627a"
+        },
+        {
+          "path": "examples/timer/src/vite-env.d.ts",
+          "sha256": "65996936fbb042915f7b74a200fcdde7e410f32a669b1ab9597cfaa4b0faddb5"
+        },
+        {
+          "path": "examples/timer/tsconfig.json",
+          "sha256": "e406d87c9b5edebb901c53ec8e53c7aa35f4c93616a279b18c96f24efaea6385"
+        },
+        {
+          "path": "examples/timer/tsconfig.node.json",
+          "sha256": "c40d0614fda5b8a746a1ba2e3be8e2370140c0167851ac77881cd53bb5647cdd"
+        },
+        {
+          "path": "examples/timer/vite.config.ts",
+          "sha256": "4a426df46f269a74c34c215e6955267d9a4d4510e75e7ae43891fce83a3ecf3d"
+        }
+      ]
+    },
+    {
+      "name": "todomvc-react",
+      "scope": "excluded-ui",
+      "exclusion": {
+        "name": "todomvc-react",
+        "reason": "User excludes examples with interactive UI.",
+        "evidence": "examples/todomvc-react/src/App.tsx"
+      },
+      "sourceSha256": "8dd2d0b6e002836f325816b1d1e3491fe4675313a2cd9f0bd22a8d797450dcdb",
+      "files": [
+        {
+          "path": "examples/todomvc-react/.gitignore",
+          "sha256": "519e334a031a31da20aa9a903fdac291e0c50a9c4f223b664a08d1af90075a54"
+        },
+        {
+          "path": "examples/todomvc-react/index.html",
+          "sha256": "aac7ad1ae7ed8124de5c4b53abf51958690de23b078637ab8a94f3e8c0c142da"
+        },
+        {
+          "path": "examples/todomvc-react/package.json",
+          "sha256": "0cb2c711928f9346f7c6df03bb0c3f525b95fff3c317636e6c8650bcf757bd61"
+        },
+        {
+          "path": "examples/todomvc-react/pnpm-lock.yaml",
+          "sha256": "a73aa87869a79636c02831cca991faa5c207b5249c8363199c40cd8cb4dce082"
+        },
+        {
+          "path": "examples/todomvc-react/readme.md",
+          "sha256": "81b025d40a5ab7e7e86e7d23038b46fb1aad45571e1c1ca010075949e028e373"
+        },
+        {
+          "path": "examples/todomvc-react/src/App.css",
+          "sha256": "c7b164c88a4b9c26ac4afd606af5420fe1b9cbd833e01f54a3aa8c3ebb1403fc"
+        },
+        {
+          "path": "examples/todomvc-react/src/App.tsx",
+          "sha256": "8f13a7fc6949ffff615ea953fcde9899f55b4517129b39b1546449f25d9d0349"
+        },
+        {
+          "path": "examples/todomvc-react/src/index.css",
+          "sha256": "20f02633355a107749d634eff0af61f639d751f331e4309d444b35c77f86c520"
+        },
+        {
+          "path": "examples/todomvc-react/src/logo.svg",
+          "sha256": "ecc203fbd1d0b912e7653108ff7d6e4f98da8a17b94d9f7045d06eccfad93a85"
+        },
+        {
+          "path": "examples/todomvc-react/src/main.tsx",
+          "sha256": "5bb5834196844b98f2ae335dda3f2af633f37cbb171ac1987a0564370fbbb6d2"
+        },
+        {
+          "path": "examples/todomvc-react/src/react-app-env.d.ts",
+          "sha256": "63f5a6a8134a58d41d941753731749eb089c4d8934a695aa3a24d9085817f5fe"
+        },
+        {
+          "path": "examples/todomvc-react/src/Todo.tsx",
+          "sha256": "e73457164d3144082171d66816cc34a9751f10f5a2695d2513b4965ac750f699"
+        },
+        {
+          "path": "examples/todomvc-react/src/Todos.tsx",
+          "sha256": "54bb229b8cb1f5d449dc56991fafe2cda73681f5b90ca2a67b5122a97555b800"
+        },
+        {
+          "path": "examples/todomvc-react/src/todosMachine.ts",
+          "sha256": "3862870f8114b69ed3adcd619aba78cb2cba3b64ebb8f5a5b6b6f82a7a9a9645"
+        },
+        {
+          "path": "examples/todomvc-react/src/useHashChange.ts",
+          "sha256": "0c9af15ed2306c8434dc94cd333a5a4466cd666341fcdbe2fc516deed907b9e6"
+        },
+        {
+          "path": "examples/todomvc-react/tsconfig.json",
+          "sha256": "2cd52d4eaf2bb4b96aaaf10c9c5260f6a91460bffb582e781bbbbd7fabc360e8"
+        },
+        {
+          "path": "examples/todomvc-react/vite.config.ts",
+          "sha256": "6ece022771998962aa1624e3753080ce641db6c89b2f3fabe274a8d5eaf2fe33"
+        }
+      ]
+    },
+    {
+      "name": "toggle",
+      "scope": "excluded-ui",
+      "exclusion": {
+        "name": "toggle",
+        "reason": "User excludes examples with interactive UI.",
+        "evidence": "examples/toggle/src/main.ts"
+      },
+      "sourceSha256": "96ccf07be719a5253be61f53b2bf8d64f3911dbade657e3ec23959fb97f2af5a",
+      "files": [
+        {
+          "path": "examples/toggle/.gitignore",
+          "sha256": "fe718e7babb14f3cbad2d97f08889b9ce5215ed3fe0e43b2b8cfbfb3b9b844e8"
+        },
+        {
+          "path": "examples/toggle/index.html",
+          "sha256": "df8930a5a756243f2553058a585f3d6a9f57ac5676b09d53ab0e8c5e4a849913"
+        },
+        {
+          "path": "examples/toggle/package.json",
+          "sha256": "641c862275d3e1e0202800883ff4c35b72061a43e3dc586c469e80d9e4e8e8aa"
+        },
+        {
+          "path": "examples/toggle/pnpm-lock.yaml",
+          "sha256": "ebfc8ae0cc793524715d53ff0025c8e441c23bc5320f58dc360ca908021cfd10"
+        },
+        {
+          "path": "examples/toggle/public/vite.svg",
+          "sha256": "4a748afd443918bb16591c834c401dae33e87861ab5dbad0811c3a3b4a9214fb"
+        },
+        {
+          "path": "examples/toggle/readme.md",
+          "sha256": "febce22a1e9fa79264fda6802700313d77cffd790a6a6aea7560165d8af1596d"
+        },
+        {
+          "path": "examples/toggle/src/main.ts",
+          "sha256": "17adbc40fbb67a68819a367d6dad03a01ccea9e829bc92d6ce4e5cc6d78e8411"
+        },
+        {
+          "path": "examples/toggle/src/style.css",
+          "sha256": "ef9e35517dec6535c8127f520b44d5bea07c869d1b6a874401221786fed22f37"
+        },
+        {
+          "path": "examples/toggle/src/toggleMachine.ts",
+          "sha256": "9c8d99da067ccdab02553681a1aaeae27fde830b3f177e494f8854e19cb733ca"
+        },
+        {
+          "path": "examples/toggle/src/vite-env.d.ts",
+          "sha256": "65996936fbb042915f7b74a200fcdde7e410f32a669b1ab9597cfaa4b0faddb5"
+        },
+        {
+          "path": "examples/toggle/tsconfig.json",
+          "sha256": "266c9d1daaf1312691cc35d58b313eed8fb9b0359e376062dcf3deb6588207a5"
+        }
+      ]
+    },
+    {
+      "name": "trivia-game-example",
+      "scope": "excluded-ui",
+      "exclusion": {
+        "name": "trivia-game-example",
+        "reason": "User excludes examples with interactive UI.",
+        "evidence": "examples/trivia-game-example/src/App.tsx"
+      },
+      "sourceSha256": "e4ee71f4ae8d43c113e566ea967e064ba7dcb4d64e35119188e46efe91ad5e96",
+      "files": [
+        {
+          "path": "examples/trivia-game-example/.eslintrc.cjs",
+          "sha256": "48e1b97f865cc3fc9c49db9af7a46b0d0d8e74af36759ffe024c105a1098ff9f"
+        },
+        {
+          "path": "examples/trivia-game-example/.gitignore",
+          "sha256": "fe718e7babb14f3cbad2d97f08889b9ce5215ed3fe0e43b2b8cfbfb3b9b844e8"
+        },
+        {
+          "path": "examples/trivia-game-example/index.html",
+          "sha256": "3f2e9cf3597d378e5c6d180c68c31c7f132cf83b04282ee7a7b28dcaca9db71b"
+        },
+        {
+          "path": "examples/trivia-game-example/package.json",
+          "sha256": "16b4f5e41acbcaea9b49aa0536a7342211c50db79c27c03436f84e5f6156fd12"
+        },
+        {
+          "path": "examples/trivia-game-example/pnpm-lock.yaml",
+          "sha256": "dd2dfbb6a5bf7caa6c74ff356d7f8eaaf5714d12a2aee33c79b3bc8d7eac75ad"
+        },
+        {
+          "path": "examples/trivia-game-example/postcss.config.js",
+          "sha256": "082f9a07aae22ae329bfc652d405ba5a704cba1ee86f4b78c7c70f98d628a610"
+        },
+        {
+          "path": "examples/trivia-game-example/README.md",
+          "sha256": "8caf91424f6d70966d2eec20b22af63cc4d05bbda94bbd4e576466996ec38d52"
+        },
+        {
+          "path": "examples/trivia-game-example/src/App.css",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "path": "examples/trivia-game-example/src/App.tsx",
+          "sha256": "5e577a9df66cbc8a80e426337e3646b9436efcdadec634d2e7640f8299c2be1a"
+        },
+        {
+          "path": "examples/trivia-game-example/src/common/constants.ts",
+          "sha256": "0a676c6a6b70620a4d4c655ab0cbd9ec54a63c6de39f3f34e939854e894cc774"
+        },
+        {
+          "path": "examples/trivia-game-example/src/common/types.ts",
+          "sha256": "33bfde2cebe45755cdd7dec7421901c3fc90ba94b41608b33fd811684268f9e4"
+        },
+        {
+          "path": "examples/trivia-game-example/src/components/game/CharacterPicture.tsx",
+          "sha256": "2bbc2c16264ee216d4207f6d60668f8c8e5227fa2e2d92e08f0d81ddb97ea64d"
+        },
+        {
+          "path": "examples/trivia-game-example/src/components/game/Clue.tsx",
+          "sha256": "501f7216a14e31843713439685eece3d51e0ec553c8e31bb774ab575694fd3a9"
+        },
+        {
+          "path": "examples/trivia-game-example/src/components/game/GamePanel.tsx",
+          "sha256": "1dacf823378f47781861e9b14f12688d8b4e2400f2c298220c1dda8b52e01fe3"
+        },
+        {
+          "path": "examples/trivia-game-example/src/components/game/GuessOptions.tsx",
+          "sha256": "f548126e0927621ce3c1b3e3600dbc8615ad03b51fbc61fd18ee91b566c9ee8b"
+        },
+        {
+          "path": "examples/trivia-game-example/src/components/game/LifesCounter.tsx",
+          "sha256": "0507cf52d5eaef021e47d2437377d0b0a796eba33dd5bd31b9ed3fc4c079233b"
+        },
+        {
+          "path": "examples/trivia-game-example/src/components/game/Lose.tsx",
+          "sha256": "e4311f02384618f2939b076b5faf2d61b9dcdb7b4f4e4ea1a774f055da09fcbc"
+        },
+        {
+          "path": "examples/trivia-game-example/src/components/game/PointCounter.tsx",
+          "sha256": "80bbbef9e5cd26150dbf90b0c9214b8c4b8e2168d315c5a23d1543c8d280bf54"
+        },
+        {
+          "path": "examples/trivia-game-example/src/components/game/QuestionNumber.tsx",
+          "sha256": "09d019951a29f58719399b050689f08953885595f6e7d4a3900c645bac1c1d00"
+        },
+        {
+          "path": "examples/trivia-game-example/src/components/game/StartGame.tsx",
+          "sha256": "920cab016d41bae6704bfc5c227a7fe9c5afe3afb698f8f72b75b8c607b8f04b"
+        },
+        {
+          "path": "examples/trivia-game-example/src/components/game/Win.tsx",
+          "sha256": "4047b6236df1ecfccaabb6fedf81811725df0dd741142f7c3ce71e570ad79b86"
+        },
+        {
+          "path": "examples/trivia-game-example/src/components/layout/BigTitle.tsx",
+          "sha256": "242af222c0aa8c78428c650ed1acc4711eb2374e84298852a092951bd1d6d200"
+        },
+        {
+          "path": "examples/trivia-game-example/src/components/layout/DisplayError.tsx",
+          "sha256": "1a78f56fd950629f268b2340af586910467ea89dae66c4d90e5c8705a3980b00"
+        },
+        {
+          "path": "examples/trivia-game-example/src/components/layout/ErrorBoundary.tsx",
+          "sha256": "08ecf493e5eeadd5e648faa655385e2794ab5dcdbfaf7f1dd823fb9c8390a9b1"
+        },
+        {
+          "path": "examples/trivia-game-example/src/components/layout/GameTitle.tsx",
+          "sha256": "2da82eb4b9bc7b2aa7de7dd7527f762090744b176ab47f24b37ef8dfdf0874e8"
+        },
+        {
+          "path": "examples/trivia-game-example/src/components/layout/ImgsBack.tsx",
+          "sha256": "cfc9bd42931b2826823915b0d24d298b6457c6bed2679117e3b7505645528d88"
+        },
+        {
+          "path": "examples/trivia-game-example/src/components/layout/Modal.tsx",
+          "sha256": "2397f3b09c2ee98f183a15ef97f06add974328d9a83eba4b76dcd75609a33f47"
+        },
+        {
+          "path": "examples/trivia-game-example/src/components/styled/Button.tsx",
+          "sha256": "bf7f9ab185a34c27d48402023381d385b95b9fa15443f1004f95b4fdacafdda6"
+        },
+        {
+          "path": "examples/trivia-game-example/src/components/styled/ImgBack.tsx",
+          "sha256": "fd7eecad8c44c7676f066ccc62e37f17f1b64c5e99b723fc3c2a47e427407676"
+        },
+        {
+          "path": "examples/trivia-game-example/src/components/styled/Option.tsx",
+          "sha256": "012b1f8cded2f442541da4ab6ce7ef8525861d792500468c654b9af135ff7465"
+        },
+        {
+          "path": "examples/trivia-game-example/src/context/AppContext.tsx",
+          "sha256": "b168a94789f627d8c79c69128711dc601aee66d7d20835f503dd4a49c22f8c88"
+        },
+        {
+          "path": "examples/trivia-game-example/src/index.css",
+          "sha256": "cc1a7ad0d019ddb1d32d0ecb588ba0ac26ce41d8625dd6c366348b25f83a28ec"
+        },
+        {
+          "path": "examples/trivia-game-example/src/main.tsx",
+          "sha256": "3f2aae0e5eaa56729fb596695bc0e090820b0bf96a91a0be1d7002c674d2b078"
+        },
+        {
+          "path": "examples/trivia-game-example/src/pages/Home.tsx",
+          "sha256": "d77498f30007a7d886fe20f94b4fde24b89886626c212167e7bdda211eff8b3b"
+        },
+        {
+          "path": "examples/trivia-game-example/src/pages/Trivia.tsx",
+          "sha256": "39009af3a3351996acd5703c3b1cea35652079569b0b82bf857166fed238ae26"
+        },
+        {
+          "path": "examples/trivia-game-example/src/services/RickApi.tsx",
+          "sha256": "0e8304233ef75e300136c5e568e771003c74e2eba8e42559e0a1bacbfc1db6e6"
+        },
+        {
+          "path": "examples/trivia-game-example/src/styles/global.scss",
+          "sha256": "dbdb9e5ef7f8f3c710dce99792d3d99986149c02b7109ed977cac399afcbc268"
+        },
+        {
+          "path": "examples/trivia-game-example/src/triviaMachine.ts",
+          "sha256": "d3486e89a6b3fbe1ca5a851582ce6859e3db0002cbbf84d29f17c99f3477f48b"
+        },
+        {
+          "path": "examples/trivia-game-example/src/vite-env.d.ts",
+          "sha256": "65996936fbb042915f7b74a200fcdde7e410f32a669b1ab9597cfaa4b0faddb5"
+        },
+        {
+          "path": "examples/trivia-game-example/tailwind.config.js",
+          "sha256": "791c0eaa52f234ed7418ac691e3b8502fa6e5d4145db9d3d3e86011074194eab"
+        },
+        {
+          "path": "examples/trivia-game-example/tsconfig.json",
+          "sha256": "980d6cbe977ddfb52d3ab1bdd3fba30f8c1db9371b3b14aa4557d32bb00ce54b"
+        },
+        {
+          "path": "examples/trivia-game-example/tsconfig.node.json",
+          "sha256": "bb9fd8592a9e364641441219f10d84daae9ba2ca5cc85db798efad6913bb8257"
+        },
+        {
+          "path": "examples/trivia-game-example/vite.config.ts",
+          "sha256": "6952fd38717e73ed2c87bc7f40aa7ad97c6a57102f2d0a0017c5dcbc8f9c33bd"
+        }
+      ]
+    },
+    {
+      "name": "workflow-accumulate-room-readings",
+      "scope": "required",
+      "exclusion": null,
+      "sourceSha256": "93538cf9af610ba7e832e6bde229d42433ee333e7af8ff485f3de00919e51c10",
+      "files": [
+        {
+          "path": "examples/workflow-accumulate-room-readings/.gitignore",
+          "sha256": "fe718e7babb14f3cbad2d97f08889b9ce5215ed3fe0e43b2b8cfbfb3b9b844e8"
+        },
+        {
+          "path": "examples/workflow-accumulate-room-readings/main.ts",
+          "sha256": "9181c288248183d9af90dfdef2e98cebc3a012883732cd92622ee5310afa630f"
+        },
+        {
+          "path": "examples/workflow-accumulate-room-readings/package.json",
+          "sha256": "2968f28ed59f242fefa259c042345a2e45e080ca6ea85c51a1c4ca3f54fcbe4e"
+        },
+        {
+          "path": "examples/workflow-accumulate-room-readings/pnpm-lock.yaml",
+          "sha256": "3cde4bf070224476a9426431ebf626275ad41df072929e22190e795d5242ce6d"
+        },
+        {
+          "path": "examples/workflow-accumulate-room-readings/tsconfig.json",
+          "sha256": "c5e416e7754844b764fedbbcb304ce24a68fc94c95001f6e491125aada3dd6f7"
+        }
+      ]
+    },
+    {
+      "name": "workflow-applicant-request",
+      "scope": "required",
+      "exclusion": null,
+      "sourceSha256": "0a92ff99711f62132797bd69ea1619543fe4f09c464ab2d1b13469ebfb16e6de",
+      "files": [
+        {
+          "path": "examples/workflow-applicant-request/.gitignore",
+          "sha256": "fe718e7babb14f3cbad2d97f08889b9ce5215ed3fe0e43b2b8cfbfb3b9b844e8"
+        },
+        {
+          "path": "examples/workflow-applicant-request/main.ts",
+          "sha256": "9437ba664a0ac7f95063c2b9ddc0ee2b0251dabfb9fad0b5f44a5fe90e6f5a7a"
+        },
+        {
+          "path": "examples/workflow-applicant-request/package.json",
+          "sha256": "8119223619157f7cba125905b13d2f34caef2f69135bccf27ab4748a26daf08f"
+        },
+        {
+          "path": "examples/workflow-applicant-request/pnpm-lock.yaml",
+          "sha256": "534fa51e15e22700f7eb48d1254f930e5771381a5e3fa281ca32a87e17c60d98"
+        },
+        {
+          "path": "examples/workflow-applicant-request/tsconfig.json",
+          "sha256": "c5e416e7754844b764fedbbcb304ce24a68fc94c95001f6e491125aada3dd6f7"
+        }
+      ]
+    },
+    {
+      "name": "workflow-async-function",
+      "scope": "required",
+      "exclusion": null,
+      "sourceSha256": "3ac86700e4a3f4fb1cc2c15ecd9ac42ca4625bf02bee5e9f5cf844fec71712a1",
+      "files": [
+        {
+          "path": "examples/workflow-async-function/.gitignore",
+          "sha256": "fe718e7babb14f3cbad2d97f08889b9ce5215ed3fe0e43b2b8cfbfb3b9b844e8"
+        },
+        {
+          "path": "examples/workflow-async-function/main.ts",
+          "sha256": "0c78a5bb19f0f48eef058d9c0af16ef0d0a882e122ba7d1833edc3dbd28ed83f"
+        },
+        {
+          "path": "examples/workflow-async-function/package.json",
+          "sha256": "3cbf22c43e19e95c6a7df0509b8111ca15105c75d90442a6f6878d7784529834"
+        },
+        {
+          "path": "examples/workflow-async-function/pnpm-lock.yaml",
+          "sha256": "372a1e840e431c1ec60d9ceae5e6f6a675dd9fb2d28c2de54019b86d64044618"
+        },
+        {
+          "path": "examples/workflow-async-function/tsconfig.json",
+          "sha256": "c5e416e7754844b764fedbbcb304ce24a68fc94c95001f6e491125aada3dd6f7"
+        }
+      ]
+    },
+    {
+      "name": "workflow-async-subflow",
+      "scope": "required",
+      "exclusion": null,
+      "sourceSha256": "ce80ab8d819ccba7b80da4f02534da4d9d7174dfb9a32b5266199547dc62438a",
+      "files": [
+        {
+          "path": "examples/workflow-async-subflow/.gitignore",
+          "sha256": "fe718e7babb14f3cbad2d97f08889b9ce5215ed3fe0e43b2b8cfbfb3b9b844e8"
+        },
+        {
+          "path": "examples/workflow-async-subflow/main.ts",
+          "sha256": "3ff12c4216a008556f44216821bf2dda77819d4213b0c311f8ab67524c79cf31"
+        },
+        {
+          "path": "examples/workflow-async-subflow/package.json",
+          "sha256": "acb680bf89d94a90fde82a57ef42425b8742cdc3168eb72020e5b67c7611d6d7"
+        },
+        {
+          "path": "examples/workflow-async-subflow/pnpm-lock.yaml",
+          "sha256": "372a1e840e431c1ec60d9ceae5e6f6a675dd9fb2d28c2de54019b86d64044618"
+        },
+        {
+          "path": "examples/workflow-async-subflow/tsconfig.json",
+          "sha256": "c5e416e7754844b764fedbbcb304ce24a68fc94c95001f6e491125aada3dd6f7"
+        }
+      ]
+    },
+    {
+      "name": "workflow-book-lending",
+      "scope": "required",
+      "exclusion": null,
+      "sourceSha256": "0ee9f49f7c77bb4756f632e38f3b10b365613f2b3d1361653b0c477d8bd8fd59",
+      "files": [
+        {
+          "path": "examples/workflow-book-lending/.gitignore",
+          "sha256": "fe718e7babb14f3cbad2d97f08889b9ce5215ed3fe0e43b2b8cfbfb3b9b844e8"
+        },
+        {
+          "path": "examples/workflow-book-lending/main.ts",
+          "sha256": "2d8194fd7e5ca9cf6d856533bfa3854c422d3258d016b379a7c4ed5da535c7af"
+        },
+        {
+          "path": "examples/workflow-book-lending/package.json",
+          "sha256": "b0d1e90278d19514a67e130726bb1f125f71cc57369be8f328e2364deaca804a"
+        },
+        {
+          "path": "examples/workflow-book-lending/pnpm-lock.yaml",
+          "sha256": "3cde4bf070224476a9426431ebf626275ad41df072929e22190e795d5242ce6d"
+        },
+        {
+          "path": "examples/workflow-book-lending/tsconfig.json",
+          "sha256": "c5e416e7754844b764fedbbcb304ce24a68fc94c95001f6e491125aada3dd6f7"
+        }
+      ]
+    },
+    {
+      "name": "workflow-car-auction-bids",
+      "scope": "required",
+      "exclusion": null,
+      "sourceSha256": "b7edb6b3001e519ad978cf6d59141c447ba205ccde003c329399708d2ed32475",
+      "files": [
+        {
+          "path": "examples/workflow-car-auction-bids/.gitignore",
+          "sha256": "fe718e7babb14f3cbad2d97f08889b9ce5215ed3fe0e43b2b8cfbfb3b9b844e8"
+        },
+        {
+          "path": "examples/workflow-car-auction-bids/main.ts",
+          "sha256": "bded07ff22a0ba387645fbe33a4d7250c473e8eaa429bcaee0353ad8511bf5c5"
+        },
+        {
+          "path": "examples/workflow-car-auction-bids/package.json",
+          "sha256": "047eb0e7b79c9156914f78e0084eb8898ef84ce1aa052d5193c7e55d15af6012"
+        },
+        {
+          "path": "examples/workflow-car-auction-bids/pnpm-lock.yaml",
+          "sha256": "372a1e840e431c1ec60d9ceae5e6f6a675dd9fb2d28c2de54019b86d64044618"
+        },
+        {
+          "path": "examples/workflow-car-auction-bids/tsconfig.json",
+          "sha256": "c5e416e7754844b764fedbbcb304ce24a68fc94c95001f6e491125aada3dd6f7"
+        }
+      ]
+    },
+    {
+      "name": "workflow-car-vitals",
+      "scope": "required",
+      "exclusion": null,
+      "sourceSha256": "37a7e7e1297926c3eddbbe01a7d7b832361021f1c6ef46c0777711fe765f963c",
+      "files": [
+        {
+          "path": "examples/workflow-car-vitals/.gitignore",
+          "sha256": "fe718e7babb14f3cbad2d97f08889b9ce5215ed3fe0e43b2b8cfbfb3b9b844e8"
+        },
+        {
+          "path": "examples/workflow-car-vitals/main.ts",
+          "sha256": "eb7b84e8849c77d99370a5f7f6fcd2dc2e508e8bd2cdf9bb6db129b25b1451d2"
+        },
+        {
+          "path": "examples/workflow-car-vitals/package.json",
+          "sha256": "c2e24f399adf331db1a062579987094dc1eece92a9f543a3c8165474603f3c29"
+        },
+        {
+          "path": "examples/workflow-car-vitals/pnpm-lock.yaml",
+          "sha256": "3cde4bf070224476a9426431ebf626275ad41df072929e22190e795d5242ce6d"
+        },
+        {
+          "path": "examples/workflow-car-vitals/tsconfig.json",
+          "sha256": "c5e416e7754844b764fedbbcb304ce24a68fc94c95001f6e491125aada3dd6f7"
+        }
+      ]
+    },
+    {
+      "name": "workflow-check-inbox",
+      "scope": "required",
+      "exclusion": null,
+      "sourceSha256": "5848865d6641ff20eef315a6fa477fdc06c0e0a95423f30381ad750bd7f5a20b",
+      "files": [
+        {
+          "path": "examples/workflow-check-inbox/.gitignore",
+          "sha256": "fe718e7babb14f3cbad2d97f08889b9ce5215ed3fe0e43b2b8cfbfb3b9b844e8"
+        },
+        {
+          "path": "examples/workflow-check-inbox/main.ts",
+          "sha256": "f749d530dff3f83f91dd6be540ad6088c642da494c0aa18b70af439583049c97"
+        },
+        {
+          "path": "examples/workflow-check-inbox/package.json",
+          "sha256": "7c8e4be872f2a53fc2f7722dd0b3173489d8d1a58438b9b92287e50e96ad0d41"
+        },
+        {
+          "path": "examples/workflow-check-inbox/pnpm-lock.yaml",
+          "sha256": "372a1e840e431c1ec60d9ceae5e6f6a675dd9fb2d28c2de54019b86d64044618"
+        },
+        {
+          "path": "examples/workflow-check-inbox/tsconfig.json",
+          "sha256": "c5e416e7754844b764fedbbcb304ce24a68fc94c95001f6e491125aada3dd6f7"
+        }
+      ]
+    },
+    {
+      "name": "workflow-credit-check",
+      "scope": "required",
+      "exclusion": null,
+      "sourceSha256": "6b8a6eb7146d28ed66ac12cff24d0eaafffb74c315c0ce666ab2cc7ef272354d",
+      "files": [
+        {
+          "path": "examples/workflow-credit-check/.gitignore",
+          "sha256": "fe718e7babb14f3cbad2d97f08889b9ce5215ed3fe0e43b2b8cfbfb3b9b844e8"
+        },
+        {
+          "path": "examples/workflow-credit-check/main.ts",
+          "sha256": "6303b923b2a4a4a40092d1a82d2ed1a77f751b3ffaa24892199d2f7b707d9629"
+        },
+        {
+          "path": "examples/workflow-credit-check/package.json",
+          "sha256": "43c7e0237532c94155cfc211aadafac0d578ba008f5b375587652efac8e34880"
+        },
+        {
+          "path": "examples/workflow-credit-check/pnpm-lock.yaml",
+          "sha256": "372a1e840e431c1ec60d9ceae5e6f6a675dd9fb2d28c2de54019b86d64044618"
+        },
+        {
+          "path": "examples/workflow-credit-check/tsconfig.json",
+          "sha256": "c5e416e7754844b764fedbbcb304ce24a68fc94c95001f6e491125aada3dd6f7"
+        }
+      ]
+    },
+    {
+      "name": "workflow-event-based",
+      "scope": "required",
+      "exclusion": null,
+      "sourceSha256": "8d055d5f524a28eeef5dfc610914bb4abfcfb797c38794f9a658f9bb642c8b7d",
+      "files": [
+        {
+          "path": "examples/workflow-event-based/.gitignore",
+          "sha256": "fe718e7babb14f3cbad2d97f08889b9ce5215ed3fe0e43b2b8cfbfb3b9b844e8"
+        },
+        {
+          "path": "examples/workflow-event-based/main.ts",
+          "sha256": "ee7ebd379e4052065d18deb31803bb12f73f90263e7fd5bf306379b3e1c3923d"
+        },
+        {
+          "path": "examples/workflow-event-based/package.json",
+          "sha256": "415897ec252169b37551d671813b8a52092d47cc87b9b841659d3c0f25757065"
+        },
+        {
+          "path": "examples/workflow-event-based/pnpm-lock.yaml",
+          "sha256": "372a1e840e431c1ec60d9ceae5e6f6a675dd9fb2d28c2de54019b86d64044618"
+        },
+        {
+          "path": "examples/workflow-event-based/tsconfig.json",
+          "sha256": "c5e416e7754844b764fedbbcb304ce24a68fc94c95001f6e491125aada3dd6f7"
+        }
+      ]
+    },
+    {
+      "name": "workflow-event-based-service",
+      "scope": "required",
+      "exclusion": null,
+      "sourceSha256": "798fdfa4c4bc0bd2b63862d62a7278c50d994484aeef153d12ceb6dd7bb423ed",
+      "files": [
+        {
+          "path": "examples/workflow-event-based-service/.gitignore",
+          "sha256": "fe718e7babb14f3cbad2d97f08889b9ce5215ed3fe0e43b2b8cfbfb3b9b844e8"
+        },
+        {
+          "path": "examples/workflow-event-based-service/main.ts",
+          "sha256": "a9e807866a602f9ef1ce63d8b7fe70982f273ebb429264652b508c592a69cda1"
+        },
+        {
+          "path": "examples/workflow-event-based-service/package.json",
+          "sha256": "64647f249fac694986a3f25cab8520efb1d448f75b809f8a5f72a4fb0830d7ba"
+        },
+        {
+          "path": "examples/workflow-event-based-service/pnpm-lock.yaml",
+          "sha256": "372a1e840e431c1ec60d9ceae5e6f6a675dd9fb2d28c2de54019b86d64044618"
+        },
+        {
+          "path": "examples/workflow-event-based-service/tsconfig.json",
+          "sha256": "c5e416e7754844b764fedbbcb304ce24a68fc94c95001f6e491125aada3dd6f7"
+        }
+      ]
+    },
+    {
+      "name": "workflow-event-greeting",
+      "scope": "required",
+      "exclusion": null,
+      "sourceSha256": "6f4bf11de5f0c9b6c6118658c5beb8e4c8c75dcc58e6e87b867d233663cbee78",
+      "files": [
+        {
+          "path": "examples/workflow-event-greeting/.gitignore",
+          "sha256": "fe718e7babb14f3cbad2d97f08889b9ce5215ed3fe0e43b2b8cfbfb3b9b844e8"
+        },
+        {
+          "path": "examples/workflow-event-greeting/main.ts",
+          "sha256": "809c55ecaf55a06bf956eba30924cc8b6542c50a6601c8c5c696b825b1b0afad"
+        },
+        {
+          "path": "examples/workflow-event-greeting/package.json",
+          "sha256": "2ecc0b8e19235e2eb9859b7dff43d97274ce3cf22fc9f4e654853a4f9df356d1"
+        },
+        {
+          "path": "examples/workflow-event-greeting/pnpm-lock.yaml",
+          "sha256": "372a1e840e431c1ec60d9ceae5e6f6a675dd9fb2d28c2de54019b86d64044618"
+        },
+        {
+          "path": "examples/workflow-event-greeting/tsconfig.json",
+          "sha256": "c5e416e7754844b764fedbbcb304ce24a68fc94c95001f6e491125aada3dd6f7"
+        }
+      ]
+    },
+    {
+      "name": "workflow-filling-water",
+      "scope": "required",
+      "exclusion": null,
+      "sourceSha256": "460e674d511524bc8f022305993e9ec2dc7273ddfbf35594cde37234a7b68ef2",
+      "files": [
+        {
+          "path": "examples/workflow-filling-water/.gitignore",
+          "sha256": "fe718e7babb14f3cbad2d97f08889b9ce5215ed3fe0e43b2b8cfbfb3b9b844e8"
+        },
+        {
+          "path": "examples/workflow-filling-water/main.ts",
+          "sha256": "0c36f70b7f49a44cf45867f5582291d40ef9d1c64509563e61041c876dad3975"
+        },
+        {
+          "path": "examples/workflow-filling-water/package.json",
+          "sha256": "e633dab0893985ce76d5e15f02e2a710b190f1cd218d209874a379147b5824d2"
+        },
+        {
+          "path": "examples/workflow-filling-water/pnpm-lock.yaml",
+          "sha256": "3cde4bf070224476a9426431ebf626275ad41df072929e22190e795d5242ce6d"
+        },
+        {
+          "path": "examples/workflow-filling-water/tsconfig.json",
+          "sha256": "c5e416e7754844b764fedbbcb304ce24a68fc94c95001f6e491125aada3dd6f7"
+        }
+      ]
+    },
+    {
+      "name": "workflow-finalize-college-app",
+      "scope": "required",
+      "exclusion": null,
+      "sourceSha256": "fd3cb1ade6d7fe9aa4531bab91a4c05853c7ec16225ae6894550ac3cea2c9391",
+      "files": [
+        {
+          "path": "examples/workflow-finalize-college-app/.gitignore",
+          "sha256": "fe718e7babb14f3cbad2d97f08889b9ce5215ed3fe0e43b2b8cfbfb3b9b844e8"
+        },
+        {
+          "path": "examples/workflow-finalize-college-app/main.ts",
+          "sha256": "7e5eb096934c3f0355d5901d6a68002d7af1e15623aba92addb9b7c411a80959"
+        },
+        {
+          "path": "examples/workflow-finalize-college-app/package.json",
+          "sha256": "77f885e39e12428a41aaa37bab24795d5490faf1376a732cf04e159ea167db8d"
+        },
+        {
+          "path": "examples/workflow-finalize-college-app/pnpm-lock.yaml",
+          "sha256": "372a1e840e431c1ec60d9ceae5e6f6a675dd9fb2d28c2de54019b86d64044618"
+        },
+        {
+          "path": "examples/workflow-finalize-college-app/tsconfig.json",
+          "sha256": "c5e416e7754844b764fedbbcb304ce24a68fc94c95001f6e491125aada3dd6f7"
+        }
+      ]
+    },
+    {
+      "name": "workflow-greeting",
+      "scope": "required",
+      "exclusion": null,
+      "sourceSha256": "21b750352f43f09ed6328334cbd78afdace1a422f44da0aba17634e3e966f83d",
+      "files": [
+        {
+          "path": "examples/workflow-greeting/.gitignore",
+          "sha256": "fe718e7babb14f3cbad2d97f08889b9ce5215ed3fe0e43b2b8cfbfb3b9b844e8"
+        },
+        {
+          "path": "examples/workflow-greeting/main.ts",
+          "sha256": "1c4abbcc0eb5e561590eb46ba536c2ea5185dc20c4a598da2c00a888619991c3"
+        },
+        {
+          "path": "examples/workflow-greeting/package.json",
+          "sha256": "034c60ff6d731910607da1aaa211812b081fcec81ec84af8e583085466576f48"
+        },
+        {
+          "path": "examples/workflow-greeting/pnpm-lock.yaml",
+          "sha256": "372a1e840e431c1ec60d9ceae5e6f6a675dd9fb2d28c2de54019b86d64044618"
+        },
+        {
+          "path": "examples/workflow-greeting/tsconfig.json",
+          "sha256": "c5e416e7754844b764fedbbcb304ce24a68fc94c95001f6e491125aada3dd6f7"
+        }
+      ]
+    },
+    {
+      "name": "workflow-hello",
+      "scope": "required",
+      "exclusion": null,
+      "sourceSha256": "3ba460e911b95ebbcbbe8b856c6d171c6f60cdd4ac85f5c1215e230e04a29a6d",
+      "files": [
+        {
+          "path": "examples/workflow-hello/.gitignore",
+          "sha256": "fe718e7babb14f3cbad2d97f08889b9ce5215ed3fe0e43b2b8cfbfb3b9b844e8"
+        },
+        {
+          "path": "examples/workflow-hello/main.ts",
+          "sha256": "84c5cc6c6a0742a2a4f2cd9ac9028c60d7fc9dc5b19a5e0bb356458eb8924f55"
+        },
+        {
+          "path": "examples/workflow-hello/package.json",
+          "sha256": "5a2dbed0bb26de2a16bf824119239eeb69bc353141a3e1d090bfd70523950c7a"
+        },
+        {
+          "path": "examples/workflow-hello/pnpm-lock.yaml",
+          "sha256": "06b200ef9cad2e288c51a2386420b00cc0dcd9f89a35da621f9292de7071851e"
+        },
+        {
+          "path": "examples/workflow-hello/tsconfig.json",
+          "sha256": "c5e416e7754844b764fedbbcb304ce24a68fc94c95001f6e491125aada3dd6f7"
+        }
+      ]
+    },
+    {
+      "name": "workflow-math-problem",
+      "scope": "required",
+      "exclusion": null,
+      "sourceSha256": "9d8501c465d776c08d855effdb00ed3aa0dc1d084495d4c013abe7b4098a50e2",
+      "files": [
+        {
+          "path": "examples/workflow-math-problem/.gitignore",
+          "sha256": "fe718e7babb14f3cbad2d97f08889b9ce5215ed3fe0e43b2b8cfbfb3b9b844e8"
+        },
+        {
+          "path": "examples/workflow-math-problem/main.ts",
+          "sha256": "175247e7826973d7751591884088054a6ba7b3dcc3ec56ce2340c0a5ac4b5db3"
+        },
+        {
+          "path": "examples/workflow-math-problem/package.json",
+          "sha256": "5a814388f9e91db1e8cffac348d2926aeafd1e2cc96f9f5c586f7bdd7c84678b"
+        },
+        {
+          "path": "examples/workflow-math-problem/pnpm-lock.yaml",
+          "sha256": "06b200ef9cad2e288c51a2386420b00cc0dcd9f89a35da621f9292de7071851e"
+        },
+        {
+          "path": "examples/workflow-math-problem/tsconfig.json",
+          "sha256": "c5e416e7754844b764fedbbcb304ce24a68fc94c95001f6e491125aada3dd6f7"
+        }
+      ]
+    },
+    {
+      "name": "workflow-media-scanner",
+      "scope": "required",
+      "exclusion": null,
+      "sourceSha256": "ede882ebff352878c41556f7eb79b12d7569d11b0592701a3a3e7c978397c66d",
+      "files": [
+        {
+          "path": "examples/workflow-media-scanner/.gitignore",
+          "sha256": "bdceec63c8b9f23b0b23c7daaaf0a8e41ba112d5ded9c02cdc5ebc26271eb24f"
+        },
+        {
+          "path": "examples/workflow-media-scanner/package.json",
+          "sha256": "39294fb0ca92564c4219dd2330e952ceed2a3c478747b3cc40d73e4d639b53b2"
+        },
+        {
+          "path": "examples/workflow-media-scanner/pnpm-lock.yaml",
+          "sha256": "c16299cb8d2d01bf5ee0f1722312a80dcfbd7f81924ec8b4fb30a7265e258cd3"
+        },
+        {
+          "path": "examples/workflow-media-scanner/README.md",
+          "sha256": "db11288ca3b0959af996b2363a9b9f8bef436591983c9843cf8729ce1e0c7d13"
+        },
+        {
+          "path": "examples/workflow-media-scanner/src/fileHandlers.ts",
+          "sha256": "da7535d53d1055209b9ad9a9929c68c885ad29813be4a9b5a59dc7221c0adabe"
+        },
+        {
+          "path": "examples/workflow-media-scanner/src/index.ts",
+          "sha256": "5c20705dc06880e65e5c79459ade6896fcfbf935fdfff89b6ef5abe01943c3a5"
+        },
+        {
+          "path": "examples/workflow-media-scanner/src/mediaScannerMachine.ts",
+          "sha256": "41eed3deeee8a7a8afadd088f609e90d8a9dab667a532f0ab0a8f6b641e43290"
+        },
+        {
+          "path": "examples/workflow-media-scanner/tsconfig.json",
+          "sha256": "dbed4ef49442d210023aad1321af95597b089f82ab3aa29f19f0a9a62006c8dd"
+        }
+      ]
+    },
+    {
+      "name": "workflow-monitor-job",
+      "scope": "required",
+      "exclusion": null,
+      "sourceSha256": "b67fc5548e549ecd9233bf077848bb37bfb76d8ba20812d6b330ac9e79dfe8ff",
+      "files": [
+        {
+          "path": "examples/workflow-monitor-job/.gitignore",
+          "sha256": "fe718e7babb14f3cbad2d97f08889b9ce5215ed3fe0e43b2b8cfbfb3b9b844e8"
+        },
+        {
+          "path": "examples/workflow-monitor-job/main.ts",
+          "sha256": "4e276fd8d4dff89d25006cecddbbc39ea210e609e616a4200671cd65f239887f"
+        },
+        {
+          "path": "examples/workflow-monitor-job/package.json",
+          "sha256": "dc5436246a2d50ce859563f2a0b410ef6a67647e441c01614fe1aa267588dc4d"
+        },
+        {
+          "path": "examples/workflow-monitor-job/pnpm-lock.yaml",
+          "sha256": "06b200ef9cad2e288c51a2386420b00cc0dcd9f89a35da621f9292de7071851e"
+        },
+        {
+          "path": "examples/workflow-monitor-job/tsconfig.json",
+          "sha256": "c5e416e7754844b764fedbbcb304ce24a68fc94c95001f6e491125aada3dd6f7"
+        }
+      ]
+    },
+    {
+      "name": "workflow-monitor-patient",
+      "scope": "required",
+      "exclusion": null,
+      "sourceSha256": "d92145387c2e61fbea5d4d23899f00380181b61592c21fe219b98f2dc8f777fa",
+      "files": [
+        {
+          "path": "examples/workflow-monitor-patient/.gitignore",
+          "sha256": "fe718e7babb14f3cbad2d97f08889b9ce5215ed3fe0e43b2b8cfbfb3b9b844e8"
+        },
+        {
+          "path": "examples/workflow-monitor-patient/main.ts",
+          "sha256": "4c0417ab5b877c30a532f16f23b3130e6e67d14db57f60f54c22df29df73f05c"
+        },
+        {
+          "path": "examples/workflow-monitor-patient/package.json",
+          "sha256": "6207b7e2ae87a10837291d8e8122510faf7e466ad380e6a1da6da1b29c559752"
+        },
+        {
+          "path": "examples/workflow-monitor-patient/pnpm-lock.yaml",
+          "sha256": "06b200ef9cad2e288c51a2386420b00cc0dcd9f89a35da621f9292de7071851e"
+        },
+        {
+          "path": "examples/workflow-monitor-patient/tsconfig.json",
+          "sha256": "c5e416e7754844b764fedbbcb304ce24a68fc94c95001f6e491125aada3dd6f7"
+        }
+      ]
+    },
+    {
+      "name": "workflow-new-patient-onboarding",
+      "scope": "required",
+      "exclusion": null,
+      "sourceSha256": "86469be76bbf08ef3b9884891bbe2afad2df145560f987087ed4d731d9a4a629",
+      "files": [
+        {
+          "path": "examples/workflow-new-patient-onboarding/.gitignore",
+          "sha256": "fe718e7babb14f3cbad2d97f08889b9ce5215ed3fe0e43b2b8cfbfb3b9b844e8"
+        },
+        {
+          "path": "examples/workflow-new-patient-onboarding/main.ts",
+          "sha256": "49e423cc93e51bb35c1ed24d5fd4c08735ece3e5c44c778bb638b45e9163282f"
+        },
+        {
+          "path": "examples/workflow-new-patient-onboarding/package.json",
+          "sha256": "99830f812709ec237b81c8fdabbfb0fbbcd51393b36418a9bd17ec3d3c2134fb"
+        },
+        {
+          "path": "examples/workflow-new-patient-onboarding/pnpm-lock.yaml",
+          "sha256": "fb07d0743bfeae55557ab0ec2a0bccf01bc3a2fb8508f5f0d3bd0354055894e2"
+        },
+        {
+          "path": "examples/workflow-new-patient-onboarding/tsconfig.json",
+          "sha256": "c5e416e7754844b764fedbbcb304ce24a68fc94c95001f6e491125aada3dd6f7"
+        }
+      ]
+    },
+    {
+      "name": "workflow-parallel",
+      "scope": "required",
+      "exclusion": null,
+      "sourceSha256": "888eae8b723614f22fa1b58706b670a9be3a9d9ba77704976b6f0e97f76c0954",
+      "files": [
+        {
+          "path": "examples/workflow-parallel/.gitignore",
+          "sha256": "fe718e7babb14f3cbad2d97f08889b9ce5215ed3fe0e43b2b8cfbfb3b9b844e8"
+        },
+        {
+          "path": "examples/workflow-parallel/main.ts",
+          "sha256": "408f0801967428a82dc94a78802f39c9d80bcfcc881f2bff32e6917efd39b287"
+        },
+        {
+          "path": "examples/workflow-parallel/package.json",
+          "sha256": "b4df76d7917496779b353bc2d09332e26c5dcbead7fec7a63c403cef0eedf78b"
+        },
+        {
+          "path": "examples/workflow-parallel/pnpm-lock.yaml",
+          "sha256": "06b200ef9cad2e288c51a2386420b00cc0dcd9f89a35da621f9292de7071851e"
+        },
+        {
+          "path": "examples/workflow-parallel/tsconfig.json",
+          "sha256": "c5e416e7754844b764fedbbcb304ce24a68fc94c95001f6e491125aada3dd6f7"
+        }
+      ]
+    },
+    {
+      "name": "workflow-provision-orders",
+      "scope": "required",
+      "exclusion": null,
+      "sourceSha256": "5f1f4dc96a52005c61158e28e369c08fee2c16a47e243a8fb8ed1d51ca94392f",
+      "files": [
+        {
+          "path": "examples/workflow-provision-orders/.gitignore",
+          "sha256": "fe718e7babb14f3cbad2d97f08889b9ce5215ed3fe0e43b2b8cfbfb3b9b844e8"
+        },
+        {
+          "path": "examples/workflow-provision-orders/main.ts",
+          "sha256": "8c149c1951ba9bc2e86ae954f287dd73d9d5a99bafce0bcc1e5e633f0af1190e"
+        },
+        {
+          "path": "examples/workflow-provision-orders/package.json",
+          "sha256": "94680012dd1b848a7799ae35155d2fa4158a2479c8b97bee4aaea181f1f6f9a7"
+        },
+        {
+          "path": "examples/workflow-provision-orders/pnpm-lock.yaml",
+          "sha256": "06b200ef9cad2e288c51a2386420b00cc0dcd9f89a35da621f9292de7071851e"
+        },
+        {
+          "path": "examples/workflow-provision-orders/tsconfig.json",
+          "sha256": "c5e416e7754844b764fedbbcb304ce24a68fc94c95001f6e491125aada3dd6f7"
+        }
+      ]
+    },
+    {
+      "name": "workflow-purchase-order-deadline",
+      "scope": "required",
+      "exclusion": null,
+      "sourceSha256": "6ec84269c000aea599fdaec7238631b07c5ecb450ef9f24a2255f1fdefbc071a",
+      "files": [
+        {
+          "path": "examples/workflow-purchase-order-deadline/.gitignore",
+          "sha256": "fe718e7babb14f3cbad2d97f08889b9ce5215ed3fe0e43b2b8cfbfb3b9b844e8"
+        },
+        {
+          "path": "examples/workflow-purchase-order-deadline/main.ts",
+          "sha256": "9f78f493fd695c8084f77a40e18e11babd5a4abb28468362a0013c806502179a"
+        },
+        {
+          "path": "examples/workflow-purchase-order-deadline/package.json",
+          "sha256": "e8b8c5d1a07cc8b531b9fe1e4fa810a9419a70e6710fb8dad135f17d660241fa"
+        },
+        {
+          "path": "examples/workflow-purchase-order-deadline/pnpm-lock.yaml",
+          "sha256": "fb07d0743bfeae55557ab0ec2a0bccf01bc3a2fb8508f5f0d3bd0354055894e2"
+        },
+        {
+          "path": "examples/workflow-purchase-order-deadline/tsconfig.json",
+          "sha256": "c5e416e7754844b764fedbbcb304ce24a68fc94c95001f6e491125aada3dd6f7"
+        }
+      ]
+    },
+    {
+      "name": "workflow-reusing-functions",
+      "scope": "required",
+      "exclusion": null,
+      "sourceSha256": "3a42679c3959a64fc6f9a282788d5de4ceb4b37d6454c3081c24f82506cb755c",
+      "files": [
+        {
+          "path": "examples/workflow-reusing-functions/.gitignore",
+          "sha256": "fe718e7babb14f3cbad2d97f08889b9ce5215ed3fe0e43b2b8cfbfb3b9b844e8"
+        },
+        {
+          "path": "examples/workflow-reusing-functions/main.ts",
+          "sha256": "b75da8d6110a98dd84c5aa18ed937fb31d2e50840b1acc7adfb43499f2f81429"
+        },
+        {
+          "path": "examples/workflow-reusing-functions/package.json",
+          "sha256": "728121abaae726010f5da4cdcdb8159cc6336fea9da5fc186e05732e6206a273"
+        },
+        {
+          "path": "examples/workflow-reusing-functions/pnpm-lock.yaml",
+          "sha256": "06b200ef9cad2e288c51a2386420b00cc0dcd9f89a35da621f9292de7071851e"
+        },
+        {
+          "path": "examples/workflow-reusing-functions/tsconfig.json",
+          "sha256": "c5e416e7754844b764fedbbcb304ce24a68fc94c95001f6e491125aada3dd6f7"
+        }
+      ]
+    },
+    {
+      "name": "workflow-send-cloudevent",
+      "scope": "required",
+      "exclusion": null,
+      "sourceSha256": "5ff02397601e05ca1efb319bc12c45471c7b6d223a0a396772005f0653a22752",
+      "files": [
+        {
+          "path": "examples/workflow-send-cloudevent/.gitignore",
+          "sha256": "fe718e7babb14f3cbad2d97f08889b9ce5215ed3fe0e43b2b8cfbfb3b9b844e8"
+        },
+        {
+          "path": "examples/workflow-send-cloudevent/main.ts",
+          "sha256": "64c8a66dddfb95822db935053a286eb512b415a7002300c79ccc0fac16b2eadd"
+        },
+        {
+          "path": "examples/workflow-send-cloudevent/package.json",
+          "sha256": "444b953c63f1a553daa1beca3eb224be637a6b772ae57a1fc119fbd25c83378b"
+        },
+        {
+          "path": "examples/workflow-send-cloudevent/pnpm-lock.yaml",
+          "sha256": "06b200ef9cad2e288c51a2386420b00cc0dcd9f89a35da621f9292de7071851e"
+        },
+        {
+          "path": "examples/workflow-send-cloudevent/tsconfig.json",
+          "sha256": "c5e416e7754844b764fedbbcb304ce24a68fc94c95001f6e491125aada3dd6f7"
+        }
+      ]
+    }
+  ]
+}

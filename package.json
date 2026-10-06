@@ -1,0 +1,10 @@
+{
+  "name": "xstate-dotnet",
+  "private": true,
+  "scripts": {
+    "lint:csharp": "pwsh -NoProfile -File tools/Lint-CSharp.ps1",
+    "setup": "pwsh -NoProfile -File src/XState.Tests/tools/Setup-Upstream.ps1",
+    "test": "pwsh -NoProfile -File src/XState.Tests/tools/Test-Parity.ps1",
+    "test:complete": "pwsh -NoProfile -File src/XState.Tests/tools/Test-Parity.ps1 -RequireComplete"
+  }
+}

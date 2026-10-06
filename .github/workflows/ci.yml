@@ -1,0 +1,88 @@
+name: Tests and examples
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+    inputs:
+      require_complete:
+        description: Fail unless all upstream runtime, compiler and example cases are ported
+        type: boolean
+        default: false
+
+permissions:
+  contents: read
+
+concurrency:
+  group: tests-${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  parity:
+    runs-on: windows-2022
+    timeout-minutes: 30
+    defaults:
+      run:
+        shell: pwsh
+    env:
+      DOTNET_CLI_TELEMETRY_OPTOUT: '1'
+      DOTNET_NOLOGO: '1'
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
+        with:
+          persist-credentials: false
+      - uses: actions/setup-dotnet@26b0ec14cb23fa6904739307f278c14f94c95bf1 # v5
+        with:
+          global-json-file: global.json
+      - uses: oven-sh/setup-bun@0c5077e51419868618aeaa5fe8019c62421857d6 # v2
+        with:
+          bun-version: 1.3.3
+      - name: Prepare pinned upstream and Node
+        run: bun run setup
+      - name: Run lint, native tests, upstream differential and examples
+        run: bun run test
+      - name: Require complete parity when requested
+        if: ${{ inputs.require_complete == true }}
+        run: |
+          $pin = Get-Content src/XState/upstream.json -Raw | ConvertFrom-Json
+          $version = (Get-Content (Join-Path $pin.sourceDirectory '.node-version') -Raw).Trim()
+          & "data/library-source/node-v$version-win-x64/node.exe" src/XState.Tests/tools/parity-report.mjs --require-complete
+          exit $LASTEXITCODE
+      - name: Package native library
+        run: dotnet pack src/XState/XState.csproj -c Release --output tmp/packages -p:RepositoryUrl=https://github.com/nguyenvanduocit/xstate-dotnet -p:RepositoryType=git
+      - name: Write parity summary
+        if: always()
+        run: |
+          if (-not (Test-Path tmp/xstate-parity/parity-report.json)) {
+            'Pipeline did not produce a verified parity report. Inspect the failing step and uploaded logs.' >> $env:GITHUB_STEP_SUMMARY
+            exit 0
+          }
+          $report = Get-Content tmp/xstate-parity/parity-report.json -Raw | ConvertFrom-Json
+          @(
+            '# XState .NET parity',
+            '',
+            "Run: $($report.runId); execution: $($report.execution.status); complete: $($report.complete)",
+            '',
+            '| Suite | Passed | Pending |',
+            '| --- | ---: | ---: |',
+            "| Upstream runtime | $($report.baseline.passed) | n/a |",
+            "| Native runtime | $($report.csharp.passed) | $($report.csharp.pendingRuntime) |",
+            "| Supplementary .NET | $($report.resourceChecks.passed) | n/a |",
+            "| JS/C# differential | $($report.differential.passed) | n/a |",
+            "| Compiler groups | $($report.typeAssertions.declarations - $report.typeAssertions.pending) | $($report.typeAssertions.pending) |",
+            "| Executable examples | $($report.examples.passed) | $($report.examples.pending) |",
+            '',
+            'A successful CI run verifies the implemented subset; it is not a full-parity certification.'
+          ) >> $env:GITHUB_STEP_SUMMARY
+      - name: Upload evidence and packages
+        if: always()
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4
+        with:
+          name: test-evidence-${{ github.run_id }}-${{ github.run_attempt }}
+          path: |
+            tmp/xstate-parity/*.json
+            tmp/xstate-parity/*.log
+            tmp/packages/*.nupkg
+          if-no-files-found: warn
+          retention-days: 14

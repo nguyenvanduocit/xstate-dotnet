@@ -1,0 +1,90 @@
+{
+  "children": [
+    {
+      "children": [],
+      "edges": [
+        {
+          "label": {
+            "text": "TIMER"
+          },
+          "source": "light.green",
+          "target": "light.yellow"
+        }
+      ],
+      "id": "light.green"
+    },
+    {
+      "children": [],
+      "edges": [
+        {
+          "label": {
+            "text": "TIMER"
+          },
+          "source": "light.yellow",
+          "target": "light.red"
+        }
+      ],
+      "id": "light.yellow"
+    },
+    {
+      "children": [
+        {
+          "children": [],
+          "edges": [
+            {
+              "label": {
+                "text": "COUNTDOWN"
+              },
+              "source": "light.red.walk",
+              "target": "light.red.wait"
+            }
+          ],
+          "id": "light.red.walk"
+        },
+        {
+          "children": [],
+          "edges": [
+            {
+              "label": {
+                "text": "COUNTDOWN"
+              },
+              "source": "light.red.wait",
+              "target": "light.red.stop"
+            }
+          ],
+          "id": "light.red.wait"
+        },
+        {
+          "children": [],
+          "edges": [
+            {
+              "label": {
+                "text": "COUNTDOWN"
+              },
+              "source": "light.red.stop",
+              "target": "light.red.finished"
+            }
+          ],
+          "id": "light.red.stop"
+        },
+        {
+          "children": [],
+          "edges": [],
+          "id": "light.red.finished"
+        }
+      ],
+      "edges": [
+        {
+          "label": {
+            "text": "xstate.done.state.light.red"
+          },
+          "source": "light.red",
+          "target": "light.green"
+        }
+      ],
+      "id": "light.red"
+    }
+  ],
+  "edges": [],
+  "id": "light"
+}

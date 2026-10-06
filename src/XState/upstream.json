@@ -1,0 +1,104 @@
+{
+  "repository": "https://github.com/statelyai/xstate",
+  "version": "5.33.2",
+  "commit": "fbee62e7c1586315ed478c2fedf530d7e0ff5a3e",
+  "package": "packages/core",
+  "scope": "All core runtime exports, including graph, every upstream core test, and all non-UI upstream examples as executable integration tests. TypeScript type tests require corresponding C# compile tests. UI examples explicitly excluded by user; every included example must run and pass behavior checks before completion.",
+  "archive": "https://codeload.github.com/statelyai/xstate/zip/fbee62e7c1586315ed478c2fedf530d7e0ff5a3e",
+  "sourceDirectory": "data/library-source/xstate-fbee62e7c1586315ed478c2fedf530d7e0ff5a3e",
+  "npmIntegrity": "sha512-8tC7yXgeCvpT8gKEeEje6ikJJG1wpnoLiXe+HfECW8m10ubMd3QxKOwWA8KxPJVBcLwfdRoMKYxIBGYKmo37/A==",
+  "archiveSha256": "2a85f48363aae007be1dff4ecb14f064104ac7057a460af7f74d742a77e7c570",
+  "exampleDirectory": "examples",
+  "excludedUiExamples": [
+    {
+      "name": "7guis-1-counter-vue",
+      "reason": "User excludes examples with interactive UI.",
+      "evidence": "examples/7guis-1-counter-vue/src/App.vue"
+    },
+    {
+      "name": "7guis-2-temperature-vue",
+      "reason": "User excludes examples with interactive UI.",
+      "evidence": "examples/7guis-2-temperature-vue/src/App.vue"
+    },
+    {
+      "name": "7guis-counter-react",
+      "reason": "User excludes examples with interactive UI.",
+      "evidence": "examples/7guis-counter-react/src/App.tsx"
+    },
+    {
+      "name": "7guis-flight-booker-react",
+      "reason": "User excludes examples with interactive UI.",
+      "evidence": "examples/7guis-flight-booker-react/src/App.tsx"
+    },
+    {
+      "name": "7guis-temperature-react",
+      "reason": "User excludes examples with interactive UI.",
+      "evidence": "examples/7guis-temperature-react/src/App.tsx"
+    },
+    {
+      "name": "counter",
+      "reason": "User excludes examples with interactive UI.",
+      "evidence": "examples/counter/src/main.ts"
+    },
+    {
+      "name": "friends-list-react",
+      "reason": "User excludes examples with interactive UI.",
+      "evidence": "examples/friends-list-react/src/App.tsx"
+    },
+    {
+      "name": "local-store-counter-react",
+      "reason": "User excludes examples with interactive UI.",
+      "evidence": "examples/local-store-counter-react/src/App.tsx"
+    },
+    {
+      "name": "snake-react",
+      "reason": "User excludes examples with interactive UI.",
+      "evidence": "examples/snake-react/src/App.tsx"
+    },
+    {
+      "name": "stopwatch",
+      "reason": "User excludes examples with interactive UI.",
+      "evidence": "examples/stopwatch/src/main.ts"
+    },
+    {
+      "name": "store-counter-react",
+      "reason": "User excludes examples with interactive UI.",
+      "evidence": "examples/store-counter-react/src/App.tsx"
+    },
+    {
+      "name": "store-tic-tac-toe",
+      "reason": "User excludes examples with interactive UI.",
+      "evidence": "examples/store-tic-tac-toe/src/App.tsx"
+    },
+    {
+      "name": "tic-tac-toe-react",
+      "reason": "User excludes examples with interactive UI.",
+      "evidence": "examples/tic-tac-toe-react/src/App.tsx"
+    },
+    {
+      "name": "tiles",
+      "reason": "User excludes examples with interactive UI.",
+      "evidence": "examples/tiles/src/App.tsx"
+    },
+    {
+      "name": "timer",
+      "reason": "User excludes examples with interactive UI.",
+      "evidence": "examples/timer/src/App.tsx"
+    },
+    {
+      "name": "todomvc-react",
+      "reason": "User excludes examples with interactive UI.",
+      "evidence": "examples/todomvc-react/src/App.tsx"
+    },
+    {
+      "name": "toggle",
+      "reason": "User excludes examples with interactive UI.",
+      "evidence": "examples/toggle/src/main.ts"
+    },
+    {
+      "name": "trivia-game-example",
+      "reason": "User excludes examples with interactive UI.",
+      "evidence": "examples/trivia-game-example/src/App.tsx"
+    }
+  ]
+}

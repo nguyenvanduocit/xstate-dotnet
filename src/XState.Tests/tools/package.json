@@ -1,0 +1,15 @@
+{
+  "name": "xstate-csharp-parity-tools",
+  "private": true,
+  "type": "module",
+  "dependencies": {
+    "@scion-scxml/test-framework": "2.0.15",
+    "ajv": "8.17.1",
+    "happy-dom": "17.6.3",
+    "pkg-up": "3.1.0",
+    "rxjs": "7.8.2",
+    "typescript": "5.9.3",
+    "vitest": "3.2.7",
+    "xml-js": "1.6.11"
+  }
+}

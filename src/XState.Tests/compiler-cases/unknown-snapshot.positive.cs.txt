@@ -1,0 +1,9 @@
+using XState;
+public static class Probe
+{
+    public static bool Check()
+    {
+        IActor actor = Actors.CreateEmptyActor();
+        return actor.GetSnapshot().Status == SnapshotStatus.Active;
+    }
+}

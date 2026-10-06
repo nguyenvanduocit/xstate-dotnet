@@ -1,0 +1,21 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net8.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <RestorePackagesWithLockFile>true</RestorePackagesWithLockFile>
+    <RestoreLockedMode>true</RestoreLockedMode>
+  </PropertyGroup>
+  <ItemGroup>
+    <ProjectReference Include="../XState/XState.csproj" />
+    <PackageReference Include="JsonSchema.Net" Version="9.4.0" />
+    <None Include="../../data/library-source/xstate-fbee62e7c1586315ed478c2fedf530d7e0ff5a3e/packages/core/src/machine.schema.json" Link="fixtures/machine.schema.json" CopyToOutputDirectory="Always" />
+    <None Include="data-tests.json" CopyToOutputDirectory="PreserveNewest" />
+    <None Include="fixtures/upstream-transition-tables.json" CopyToOutputDirectory="PreserveNewest" />
+    <None Include="fixtures/upstream-graph-paths.json" CopyToOutputDirectory="PreserveNewest" />
+    <None Include="fixtures/upstream-parallel.json" CopyToOutputDirectory="PreserveNewest" />
+    <None Include="fixtures/upstream-json-snapshot.json" CopyToOutputDirectory="PreserveNewest" />
+    <None Include="fixtures/upstream-directed-graph.json" CopyToOutputDirectory="PreserveNewest" />
+  </ItemGroup>
+</Project>

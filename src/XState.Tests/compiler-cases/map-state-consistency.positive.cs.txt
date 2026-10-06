@@ -1,0 +1,16 @@
+using System.Collections.Generic;
+using XState;
+public sealed record Context(int Count);
+public static class Probe
+{
+    public static void Check()
+    {
+        var machine = new StateMachine<Context>(new() { Initial = "a", States = new Dictionary<string, StateConfig<Context>> { ["a"] = new() { Initial = "one", States = new Dictionary<string, StateConfig<Context>> { ["one"] = new() } } } }, _ => new(0));
+        var snapshot = new Actor<MachineSnapshot<Context>>(machine).GetSnapshot();
+        StateMapping.MapState(snapshot, new StateMapper<Context, int>
+        {
+            Map = _ => 42,
+            States = new Dictionary<string, StateMapper<Context, int>?> { ["a"] = new() { Map = _ => 100, States = new Dictionary<string, StateMapper<Context, int>?> { ["one"] = new() { Map = _ => 200 } } } }
+        });
+    }
+}

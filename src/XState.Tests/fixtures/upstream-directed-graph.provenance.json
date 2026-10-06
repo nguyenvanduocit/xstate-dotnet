@@ -1,0 +1,7 @@
+{
+  "upstreamCommit": "fbee62e7c1586315ed478c2fedf530d7e0ff5a3e",
+  "source": "packages/core/src/graph/test/__snapshots__/graph.test.ts.snap",
+  "snapshot": "@xstate/graph > toDirectedGraph > should represent a statechart as a directed graph 1",
+  "sourceSha256": "4d7b64e99306380ca2bec602054595a0095233d1700ed8baecb9c4716408daf6",
+  "fixtureSha256": "70a05f47d71248c9c1a75fe0af5a529dce22f9dec847c044badb56625118a2e3"
+}

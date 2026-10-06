@@ -1,0 +1,1704 @@
+{
+  "commit": "fbee62e7c1586315ed478c2fedf530d7e0ff5a3e",
+  "sources": [
+    {
+      "source": "packages/core/test/examples/6.16.test.ts",
+      "sha256": "e8fc897d410d4c55103e13f835b7f24f64edbe71aecf9d634b6280bc6064fdfd"
+    },
+    {
+      "source": "packages/core/test/examples/6.17.test.ts",
+      "sha256": "4beffcc2c7e92d597af90dd80b657b836250d66a5a07fd218f50cefa9dadca77"
+    },
+    {
+      "source": "packages/core/test/examples/6.6.test.ts",
+      "sha256": "95db561a5610af87f77d65706ce3f54e29e41db17ec088fb3d92d64f2cac2d0e"
+    },
+    {
+      "source": "packages/core/test/examples/6.8.test.ts",
+      "sha256": "66e9a9b59b80eca920fe64ec6a43bcda670efb70f7e10d66a3a88a133e312b02"
+    },
+    {
+      "source": "packages/core/test/examples/6.9.test.ts",
+      "sha256": "3de83dcb3fcf733761f1d4dc8e8fd566bb75526b78e3d1e37ca88e5705939ed7"
+    },
+    {
+      "source": "packages/core/test/examples/cd.test.ts",
+      "sha256": "12d14955f17a76170ef2faf67e19ffd753b1ebe83f7e97c933c916150a059dec"
+    },
+    {
+      "source": "packages/core/test/id.test.ts",
+      "sha256": "a3b44342836ecb157f6a2fd0cf9a9771e8a40f53a9a19ad08e38f5c83c5331c8"
+    },
+    {
+      "source": "packages/core/test/parallel.test.ts",
+      "sha256": "1a3dc51e530f23b5403808b7d9b6fd95db6a51dd5bf9e5e402b57d2a41ae1708"
+    }
+  ],
+  "tables": [
+    {
+      "source": "packages/core/test/examples/6.16.test.ts",
+      "line": 52,
+      "key": "packages/core/test/examples/6.16.test.ts:52",
+      "suites": [
+        "Example 6.16"
+      ],
+      "mode": "helper",
+      "config": {
+        "type": "parallel",
+        "states": {
+          "A": {
+            "initial": "D",
+            "states": {
+              "C": {
+                "on": {
+                  "2": {
+                    "target": "D",
+                    "guard": {
+                      "__stateIn": "#E"
+                    }
+                  }
+                }
+              },
+              "D": {
+                "on": {
+                  "1": "C"
+                }
+              }
+            }
+          },
+          "B": {
+            "initial": "F",
+            "states": {
+              "E": {
+                "id": "E",
+                "on": {
+                  "5": "G"
+                }
+              },
+              "F": {
+                "on": {
+                  "1": "E"
+                }
+              },
+              "G": {
+                "on": {
+                  "3": "F"
+                }
+              }
+            }
+          }
+        }
+      },
+      "tests": [
+        {
+          "id": "packages/core/test/examples/6.16.test.ts::Example 6.16 > should go from {\"A\":\"D\",\"B\":\"F\"} to {\"A\":\"C\",\"B\":\"E\"} on 1",
+          "from": "{\"A\":\"D\",\"B\":\"F\"}",
+          "eventTypes": "1",
+          "events": [
+            "1"
+          ],
+          "kind": "equals",
+          "expected": {
+            "A": "C",
+            "B": "E"
+          }
+        },
+        {
+          "id": "packages/core/test/examples/6.16.test.ts::Example 6.16 > should go from {\"A\":\"D\",\"B\":\"F\"} to undefined on 2",
+          "from": "{\"A\":\"D\",\"B\":\"F\"}",
+          "eventTypes": "2",
+          "events": [
+            "2"
+          ],
+          "kind": "unchanged"
+        },
+        {
+          "id": "packages/core/test/examples/6.16.test.ts::Example 6.16 > should go from {\"A\":\"D\",\"B\":\"F\"} to {\"A\":\"C\",\"B\":\"F\"} on 1, 5, 3",
+          "from": "{\"A\":\"D\",\"B\":\"F\"}",
+          "eventTypes": "1, 5, 3",
+          "events": [
+            "1",
+            "5",
+            "3"
+          ],
+          "kind": "equals",
+          "expected": {
+            "A": "C",
+            "B": "F"
+          }
+        },
+        {
+          "id": "packages/core/test/examples/6.16.test.ts::Example 6.16 > should go from {\"A\":\"C\",\"B\":\"E\"} to undefined on 1",
+          "from": "{\"A\":\"C\",\"B\":\"E\"}",
+          "eventTypes": "1",
+          "events": [
+            "1"
+          ],
+          "kind": "unchanged"
+        },
+        {
+          "id": "packages/core/test/examples/6.16.test.ts::Example 6.16 > should go from {\"A\":\"C\",\"B\":\"E\"} to {\"A\":\"D\",\"B\":\"E\"} on 2",
+          "from": "{\"A\":\"C\",\"B\":\"E\"}",
+          "eventTypes": "2",
+          "events": [
+            "2"
+          ],
+          "kind": "equals",
+          "expected": {
+            "A": "D",
+            "B": "E"
+          }
+        },
+        {
+          "id": "packages/core/test/examples/6.16.test.ts::Example 6.16 > should go from {\"A\":\"C\",\"B\":\"E\"} to {\"A\":\"C\",\"B\":\"G\"} on 5",
+          "from": "{\"A\":\"C\",\"B\":\"E\"}",
+          "eventTypes": "5",
+          "events": [
+            "5"
+          ],
+          "kind": "equals",
+          "expected": {
+            "A": "C",
+            "B": "G"
+          }
+        },
+        {
+          "id": "packages/core/test/examples/6.16.test.ts::Example 6.16 > should go from {\"A\":\"C\",\"B\":\"G\"} to undefined on 1",
+          "from": "{\"A\":\"C\",\"B\":\"G\"}",
+          "eventTypes": "1",
+          "events": [
+            "1"
+          ],
+          "kind": "unchanged"
+        },
+        {
+          "id": "packages/core/test/examples/6.16.test.ts::Example 6.16 > should go from {\"A\":\"C\",\"B\":\"G\"} to undefined on 2",
+          "from": "{\"A\":\"C\",\"B\":\"G\"}",
+          "eventTypes": "2",
+          "events": [
+            "2"
+          ],
+          "kind": "unchanged"
+        },
+        {
+          "id": "packages/core/test/examples/6.16.test.ts::Example 6.16 > should go from {\"A\":\"C\",\"B\":\"G\"} to {\"A\":\"C\",\"B\":\"F\"} on 3",
+          "from": "{\"A\":\"C\",\"B\":\"G\"}",
+          "eventTypes": "3",
+          "events": [
+            "3"
+          ],
+          "kind": "equals",
+          "expected": {
+            "A": "C",
+            "B": "F"
+          }
+        }
+      ]
+    },
+    {
+      "source": "packages/core/test/examples/6.17.test.ts",
+      "line": 53,
+      "key": "packages/core/test/examples/6.17.test.ts:53",
+      "suites": [
+        "Example 6.17"
+      ],
+      "mode": "equals",
+      "config": {
+        "initial": "X",
+        "states": {
+          "X": {
+            "on": {
+              "1": "Y",
+              "2": "Y.A.C",
+              "4": "Y.A.hist"
+            }
+          },
+          "Y": {
+            "type": "parallel",
+            "states": {
+              "A": {
+                "initial": "D",
+                "states": {
+                  "C": {},
+                  "D": {},
+                  "E": {},
+                  "hist": {
+                    "history": true
+                  }
+                }
+              },
+              "B": {
+                "initial": "G",
+                "states": {
+                  "F": {},
+                  "G": {},
+                  "H": {}
+                }
+              }
+            },
+            "on": {
+              "back": "X"
+            }
+          }
+        }
+      },
+      "tests": [
+        {
+          "id": "packages/core/test/examples/6.17.test.ts::Example 6.17 > should go from X to {\"Y\":{\"A\":\"D\",\"B\":\"G\"}} on 1",
+          "from": "X",
+          "eventTypes": "1",
+          "events": [
+            "1"
+          ],
+          "kind": "equals",
+          "expected": {
+            "Y": {
+              "A": "D",
+              "B": "G"
+            }
+          }
+        },
+        {
+          "id": "packages/core/test/examples/6.17.test.ts::Example 6.17 > should go from X to {\"Y\":{\"A\":\"C\",\"B\":\"G\"}} on 2",
+          "from": "X",
+          "eventTypes": "2",
+          "events": [
+            "2"
+          ],
+          "kind": "equals",
+          "expected": {
+            "Y": {
+              "A": "C",
+              "B": "G"
+            }
+          }
+        },
+        {
+          "id": "packages/core/test/examples/6.17.test.ts::Example 6.17 > should go from X to {\"Y\":{\"A\":\"C\",\"B\":\"G\"}} on 2, back, 4",
+          "from": "X",
+          "eventTypes": "2, back, 4",
+          "events": [
+            "2",
+            "back",
+            "4"
+          ],
+          "kind": "equals",
+          "expected": {
+            "Y": {
+              "A": "C",
+              "B": "G"
+            }
+          }
+        },
+        {
+          "id": "packages/core/test/examples/6.17.test.ts::Example 6.17 > should go from {\"Y\":{\"A\":\"C\",\"B\":\"G\"}} to \"X\" on back",
+          "from": "{\"Y\":{\"A\":\"C\",\"B\":\"G\"}}",
+          "eventTypes": "back",
+          "events": [
+            "back"
+          ],
+          "kind": "equals",
+          "expected": "X"
+        },
+        {
+          "id": "packages/core/test/examples/6.17.test.ts::Example 6.17 > should go from {\"Y\":{\"A\":\"C\"}} to \"X\" on back",
+          "from": "{\"Y\":{\"A\":\"C\"}}",
+          "eventTypes": "back",
+          "events": [
+            "back"
+          ],
+          "kind": "equals",
+          "expected": "X"
+        },
+        {
+          "id": "packages/core/test/examples/6.17.test.ts::Example 6.17 > should go from {\"Y\":{\"B\":\"G\"}} to \"X\" on back",
+          "from": "{\"Y\":{\"B\":\"G\"}}",
+          "eventTypes": "back",
+          "events": [
+            "back"
+          ],
+          "kind": "equals",
+          "expected": "X"
+        }
+      ]
+    },
+    {
+      "source": "packages/core/test/examples/6.17.test.ts",
+      "line": 118,
+      "key": "packages/core/test/examples/6.17.test.ts:118",
+      "suites": [
+        "Jump to ID"
+      ],
+      "mode": "equals",
+      "config": {
+        "initial": "X",
+        "states": {
+          "X": {
+            "id": "X",
+            "on": {
+              "1": "Y",
+              "2": "Y.A.C",
+              "4": "Y.A.hist"
+            }
+          },
+          "Y": {
+            "type": "parallel",
+            "states": {
+              "A": {
+                "initial": "D",
+                "states": {
+                  "C": {
+                    "on": {
+                      "finish": "#X"
+                    }
+                  },
+                  "D": {},
+                  "E": {},
+                  "hist": {
+                    "history": true
+                  }
+                }
+              },
+              "B": {
+                "initial": "G",
+                "states": {
+                  "F": {},
+                  "G": {},
+                  "H": {}
+                }
+              }
+            },
+            "on": {
+              "kill": "#X"
+            }
+          }
+        }
+      },
+      "tests": [
+        {
+          "id": "packages/core/test/examples/6.17.test.ts::Jump to ID > should go from {\"Y\":{\"B\":\"G\"}} to \"X\" on kill",
+          "from": "{\"Y\":{\"B\":\"G\"}}",
+          "eventTypes": "kill",
+          "events": [
+            "kill"
+          ],
+          "kind": "equals",
+          "expected": "X"
+        },
+        {
+          "id": "packages/core/test/examples/6.17.test.ts::Jump to ID > should go from {\"Y\":{\"A\":\"C\",\"B\":\"H\"}} to \"X\" on finish",
+          "from": "{\"Y\":{\"A\":\"C\",\"B\":\"H\"}}",
+          "eventTypes": "finish",
+          "events": [
+            "finish"
+          ],
+          "kind": "equals",
+          "expected": "X"
+        }
+      ]
+    },
+    {
+      "source": "packages/core/test/examples/6.6.test.ts",
+      "line": 62,
+      "key": "packages/core/test/examples/6.6.test.ts:62",
+      "suites": [
+        "Example 6.6"
+      ],
+      "mode": "helper",
+      "config": {
+        "initial": "A",
+        "states": {
+          "A": {
+            "on": {
+              "3": "B"
+            },
+            "initial": "D",
+            "states": {
+              "C": {
+                "on": {
+                  "2": "#B"
+                }
+              },
+              "D": {
+                "on": {
+                  "1": "C"
+                }
+              }
+            }
+          },
+          "B": {
+            "id": "B",
+            "on": {
+              "4": "A.D"
+            }
+          }
+        }
+      },
+      "tests": [
+        {
+          "id": "packages/core/test/examples/6.6.test.ts::Example 6.6 > should go from A to {\"A\":\"C\"} on 1",
+          "from": "A",
+          "eventTypes": "1",
+          "events": [
+            "1"
+          ],
+          "kind": "equals",
+          "expected": {
+            "A": "C"
+          }
+        },
+        {
+          "id": "packages/core/test/examples/6.6.test.ts::Example 6.6 > should go from A to {\"A\":\"D\"} on 2",
+          "from": "A",
+          "eventTypes": "2",
+          "events": [
+            "2"
+          ],
+          "kind": "equals",
+          "expected": {
+            "A": "D"
+          }
+        },
+        {
+          "id": "packages/core/test/examples/6.6.test.ts::Example 6.6 > should go from A to \"B\" on 3",
+          "from": "A",
+          "eventTypes": "3",
+          "events": [
+            "3"
+          ],
+          "kind": "matches",
+          "expected": "B"
+        },
+        {
+          "id": "packages/core/test/examples/6.6.test.ts::Example 6.6 > should go from A to {\"A\":\"D\"} on 4",
+          "from": "A",
+          "eventTypes": "4",
+          "events": [
+            "4"
+          ],
+          "kind": "equals",
+          "expected": {
+            "A": "D"
+          }
+        },
+        {
+          "id": "packages/core/test/examples/6.6.test.ts::Example 6.6 > should go from B to \"B\" on 1",
+          "from": "B",
+          "eventTypes": "1",
+          "events": [
+            "1"
+          ],
+          "kind": "matches",
+          "expected": "B"
+        },
+        {
+          "id": "packages/core/test/examples/6.6.test.ts::Example 6.6 > should go from B to \"B\" on 2",
+          "from": "B",
+          "eventTypes": "2",
+          "events": [
+            "2"
+          ],
+          "kind": "matches",
+          "expected": "B"
+        },
+        {
+          "id": "packages/core/test/examples/6.6.test.ts::Example 6.6 > should go from B to \"B\" on 3",
+          "from": "B",
+          "eventTypes": "3",
+          "events": [
+            "3"
+          ],
+          "kind": "matches",
+          "expected": "B"
+        },
+        {
+          "id": "packages/core/test/examples/6.6.test.ts::Example 6.6 > should go from B to {\"A\":\"D\"} on 4",
+          "from": "B",
+          "eventTypes": "4",
+          "events": [
+            "4"
+          ],
+          "kind": "equals",
+          "expected": {
+            "A": "D"
+          }
+        },
+        {
+          "id": "packages/core/test/examples/6.6.test.ts::Example 6.6 > should go from {\"A\":\"C\"} to {\"A\":\"C\"} on 1",
+          "from": "{\"A\":\"C\"}",
+          "eventTypes": "1",
+          "events": [
+            "1"
+          ],
+          "kind": "equals",
+          "expected": {
+            "A": "C"
+          }
+        },
+        {
+          "id": "packages/core/test/examples/6.6.test.ts::Example 6.6 > should go from {\"A\":\"C\"} to \"B\" on 2",
+          "from": "{\"A\":\"C\"}",
+          "eventTypes": "2",
+          "events": [
+            "2"
+          ],
+          "kind": "matches",
+          "expected": "B"
+        },
+        {
+          "id": "packages/core/test/examples/6.6.test.ts::Example 6.6 > should go from {\"A\":\"C\"} to \"B\" on 3",
+          "from": "{\"A\":\"C\"}",
+          "eventTypes": "3",
+          "events": [
+            "3"
+          ],
+          "kind": "matches",
+          "expected": "B"
+        },
+        {
+          "id": "packages/core/test/examples/6.6.test.ts::Example 6.6 > should go from {\"A\":\"C\"} to {\"A\":\"C\"} on 4",
+          "from": "{\"A\":\"C\"}",
+          "eventTypes": "4",
+          "events": [
+            "4"
+          ],
+          "kind": "equals",
+          "expected": {
+            "A": "C"
+          }
+        },
+        {
+          "id": "packages/core/test/examples/6.6.test.ts::Example 6.6 > should go from {\"A\":\"D\"} to {\"A\":\"C\"} on 1",
+          "from": "{\"A\":\"D\"}",
+          "eventTypes": "1",
+          "events": [
+            "1"
+          ],
+          "kind": "equals",
+          "expected": {
+            "A": "C"
+          }
+        },
+        {
+          "id": "packages/core/test/examples/6.6.test.ts::Example 6.6 > should go from {\"A\":\"D\"} to {\"A\":\"D\"} on 2",
+          "from": "{\"A\":\"D\"}",
+          "eventTypes": "2",
+          "events": [
+            "2"
+          ],
+          "kind": "equals",
+          "expected": {
+            "A": "D"
+          }
+        },
+        {
+          "id": "packages/core/test/examples/6.6.test.ts::Example 6.6 > should go from {\"A\":\"D\"} to \"B\" on 3",
+          "from": "{\"A\":\"D\"}",
+          "eventTypes": "3",
+          "events": [
+            "3"
+          ],
+          "kind": "matches",
+          "expected": "B"
+        },
+        {
+          "id": "packages/core/test/examples/6.6.test.ts::Example 6.6 > should go from {\"A\":\"D\"} to {\"A\":\"D\"} on 4",
+          "from": "{\"A\":\"D\"}",
+          "eventTypes": "4",
+          "events": [
+            "4"
+          ],
+          "kind": "equals",
+          "expected": {
+            "A": "D"
+          }
+        }
+      ]
+    },
+    {
+      "source": "packages/core/test/examples/6.8.test.ts",
+      "line": 68,
+      "key": "packages/core/test/examples/6.8.test.ts:68",
+      "suites": [
+        "Example 6.8"
+      ],
+      "mode": "helper",
+      "config": {
+        "initial": "A",
+        "states": {
+          "A": {
+            "on": {
+              "6": "F"
+            },
+            "initial": "B",
+            "states": {
+              "B": {
+                "on": {
+                  "1": "C"
+                }
+              },
+              "C": {
+                "on": {
+                  "2": "E"
+                }
+              },
+              "D": {
+                "on": {
+                  "3": "B"
+                }
+              },
+              "E": {
+                "on": {
+                  "4": "B",
+                  "5": "D"
+                }
+              },
+              "hist": {
+                "history": true
+              }
+            }
+          },
+          "F": {
+            "on": {
+              "5": "A.hist"
+            }
+          }
+        }
+      },
+      "tests": [
+        {
+          "id": "packages/core/test/examples/6.8.test.ts::Example 6.8 > should go from A to \"A.C\" on 1",
+          "from": "A",
+          "eventTypes": "1",
+          "events": [
+            "1"
+          ],
+          "kind": "matches",
+          "expected": "A.C"
+        },
+        {
+          "id": "packages/core/test/examples/6.8.test.ts::Example 6.8 > should go from A to \"F\" on 6",
+          "from": "A",
+          "eventTypes": "6",
+          "events": [
+            "6"
+          ],
+          "kind": "matches",
+          "expected": "F"
+        },
+        {
+          "id": "packages/core/test/examples/6.8.test.ts::Example 6.8 > should go from {\"A\":\"B\"} to \"A.C\" on 1",
+          "from": "{\"A\":\"B\"}",
+          "eventTypes": "1",
+          "events": [
+            "1"
+          ],
+          "kind": "matches",
+          "expected": "A.C"
+        },
+        {
+          "id": "packages/core/test/examples/6.8.test.ts::Example 6.8 > should go from {\"A\":\"B\"} to \"F\" on 6",
+          "from": "{\"A\":\"B\"}",
+          "eventTypes": "6",
+          "events": [
+            "6"
+          ],
+          "kind": "matches",
+          "expected": "F"
+        },
+        {
+          "id": "packages/core/test/examples/6.8.test.ts::Example 6.8 > should go from {\"A\":\"B\"} to undefined on FAKE",
+          "from": "{\"A\":\"B\"}",
+          "eventTypes": "FAKE",
+          "events": [
+            "FAKE"
+          ],
+          "kind": "unchanged"
+        },
+        {
+          "id": "packages/core/test/examples/6.8.test.ts::Example 6.8 > should go from {\"A\":\"C\"} to \"A.E\" on 2",
+          "from": "{\"A\":\"C\"}",
+          "eventTypes": "2",
+          "events": [
+            "2"
+          ],
+          "kind": "matches",
+          "expected": "A.E"
+        },
+        {
+          "id": "packages/core/test/examples/6.8.test.ts::Example 6.8 > should go from {\"A\":\"C\"} to \"F\" on 6",
+          "from": "{\"A\":\"C\"}",
+          "eventTypes": "6",
+          "events": [
+            "6"
+          ],
+          "kind": "matches",
+          "expected": "F"
+        },
+        {
+          "id": "packages/core/test/examples/6.8.test.ts::Example 6.8 > should go from {\"A\":\"C\"} to undefined on FAKE",
+          "from": "{\"A\":\"C\"}",
+          "eventTypes": "FAKE",
+          "events": [
+            "FAKE"
+          ],
+          "kind": "unchanged"
+        },
+        {
+          "id": "packages/core/test/examples/6.8.test.ts::Example 6.8 > should go from {\"A\":\"D\"} to \"A.B\" on 3",
+          "from": "{\"A\":\"D\"}",
+          "eventTypes": "3",
+          "events": [
+            "3"
+          ],
+          "kind": "matches",
+          "expected": "A.B"
+        },
+        {
+          "id": "packages/core/test/examples/6.8.test.ts::Example 6.8 > should go from {\"A\":\"D\"} to \"F\" on 6",
+          "from": "{\"A\":\"D\"}",
+          "eventTypes": "6",
+          "events": [
+            "6"
+          ],
+          "kind": "matches",
+          "expected": "F"
+        },
+        {
+          "id": "packages/core/test/examples/6.8.test.ts::Example 6.8 > should go from {\"A\":\"D\"} to undefined on FAKE",
+          "from": "{\"A\":\"D\"}",
+          "eventTypes": "FAKE",
+          "events": [
+            "FAKE"
+          ],
+          "kind": "unchanged"
+        },
+        {
+          "id": "packages/core/test/examples/6.8.test.ts::Example 6.8 > should go from {\"A\":\"E\"} to \"A.B\" on 4",
+          "from": "{\"A\":\"E\"}",
+          "eventTypes": "4",
+          "events": [
+            "4"
+          ],
+          "kind": "matches",
+          "expected": "A.B"
+        },
+        {
+          "id": "packages/core/test/examples/6.8.test.ts::Example 6.8 > should go from {\"A\":\"E\"} to \"A.D\" on 5",
+          "from": "{\"A\":\"E\"}",
+          "eventTypes": "5",
+          "events": [
+            "5"
+          ],
+          "kind": "matches",
+          "expected": "A.D"
+        },
+        {
+          "id": "packages/core/test/examples/6.8.test.ts::Example 6.8 > should go from {\"A\":\"E\"} to \"F\" on 6",
+          "from": "{\"A\":\"E\"}",
+          "eventTypes": "6",
+          "events": [
+            "6"
+          ],
+          "kind": "matches",
+          "expected": "F"
+        },
+        {
+          "id": "packages/core/test/examples/6.8.test.ts::Example 6.8 > should go from {\"A\":\"E\"} to undefined on FAKE",
+          "from": "{\"A\":\"E\"}",
+          "eventTypes": "FAKE",
+          "events": [
+            "FAKE"
+          ],
+          "kind": "unchanged"
+        },
+        {
+          "id": "packages/core/test/examples/6.8.test.ts::Example 6.8 > should go from F to \"A.B\" on 5",
+          "from": "F",
+          "eventTypes": "5",
+          "events": [
+            "5"
+          ],
+          "kind": "matches",
+          "expected": "A.B"
+        }
+      ]
+    },
+    {
+      "source": "packages/core/test/examples/6.9.test.ts",
+      "line": 107,
+      "key": "packages/core/test/examples/6.9.test.ts:107",
+      "suites": [
+        "Example 6.9"
+      ],
+      "mode": "helper",
+      "config": {
+        "initial": "A",
+        "states": {
+          "A": {
+            "on": {
+              "6": "H"
+            },
+            "initial": "B",
+            "states": {
+              "B": {
+                "initial": "E",
+                "on": {
+                  "5": "C"
+                },
+                "states": {
+                  "D": {},
+                  "E": {
+                    "on": {
+                      "3": "D"
+                    }
+                  }
+                }
+              },
+              "C": {
+                "initial": "G",
+                "on": {
+                  "4": "B.E"
+                },
+                "states": {
+                  "F": {},
+                  "G": {
+                    "on": {
+                      "2": "F"
+                    }
+                  }
+                }
+              },
+              "hist": {
+                "history": true
+              },
+              "deepHist": {
+                "history": "deep"
+              }
+            }
+          },
+          "H": {
+            "on": {
+              "1": "A.hist",
+              "7": "A.deepHist"
+            }
+          }
+        }
+      },
+      "tests": [
+        {
+          "id": "packages/core/test/examples/6.9.test.ts::Example 6.9 > should go from A to {\"A\":{\"B\":\"D\"}} on 3",
+          "from": "A",
+          "eventTypes": "3",
+          "events": [
+            "3"
+          ],
+          "kind": "equals",
+          "expected": {
+            "A": {
+              "B": "D"
+            }
+          }
+        },
+        {
+          "id": "packages/core/test/examples/6.9.test.ts::Example 6.9 > should go from A to {\"A\":{\"C\":\"G\"}} on 5",
+          "from": "A",
+          "eventTypes": "5",
+          "events": [
+            "5"
+          ],
+          "kind": "equals",
+          "expected": {
+            "A": {
+              "C": "G"
+            }
+          }
+        },
+        {
+          "id": "packages/core/test/examples/6.9.test.ts::Example 6.9 > should go from A to \"H\" on 6",
+          "from": "A",
+          "eventTypes": "6",
+          "events": [
+            "6"
+          ],
+          "kind": "matches",
+          "expected": "H"
+        },
+        {
+          "id": "packages/core/test/examples/6.9.test.ts::Example 6.9 > should go from A to undefined on FAKE",
+          "from": "A",
+          "eventTypes": "FAKE",
+          "events": [
+            "FAKE"
+          ],
+          "kind": "unchanged"
+        },
+        {
+          "id": "packages/core/test/examples/6.9.test.ts::Example 6.9 > should go from {\"A\":\"B\"} to {\"A\":{\"B\":\"D\"}} on 3",
+          "from": "{\"A\":\"B\"}",
+          "eventTypes": "3",
+          "events": [
+            "3"
+          ],
+          "kind": "equals",
+          "expected": {
+            "A": {
+              "B": "D"
+            }
+          }
+        },
+        {
+          "id": "packages/core/test/examples/6.9.test.ts::Example 6.9 > should go from {\"A\":\"B\"} to {\"A\":{\"C\":\"G\"}} on 5",
+          "from": "{\"A\":\"B\"}",
+          "eventTypes": "5",
+          "events": [
+            "5"
+          ],
+          "kind": "equals",
+          "expected": {
+            "A": {
+              "C": "G"
+            }
+          }
+        },
+        {
+          "id": "packages/core/test/examples/6.9.test.ts::Example 6.9 > should go from {\"A\":\"B\"} to \"H\" on 6",
+          "from": "{\"A\":\"B\"}",
+          "eventTypes": "6",
+          "events": [
+            "6"
+          ],
+          "kind": "matches",
+          "expected": "H"
+        },
+        {
+          "id": "packages/core/test/examples/6.9.test.ts::Example 6.9 > should go from {\"A\":\"B\"} to undefined on FAKE",
+          "from": "{\"A\":\"B\"}",
+          "eventTypes": "FAKE",
+          "events": [
+            "FAKE"
+          ],
+          "kind": "unchanged"
+        },
+        {
+          "id": "packages/core/test/examples/6.9.test.ts::Example 6.9 > should go from {\"A\":\"B\"} to {\"A\":{\"C\":\"G\"}} on 5, 6, 1",
+          "from": "{\"A\":\"B\"}",
+          "eventTypes": "5, 6, 1",
+          "events": [
+            "5",
+            "6",
+            "1"
+          ],
+          "kind": "equals",
+          "expected": {
+            "A": {
+              "C": "G"
+            }
+          }
+        },
+        {
+          "id": "packages/core/test/examples/6.9.test.ts::Example 6.9 > should go from {\"A\":\"B\"} to {\"A\":{\"B\":\"E\"}} on 3, 6, 1",
+          "from": "{\"A\":\"B\"}",
+          "eventTypes": "3, 6, 1",
+          "events": [
+            "3",
+            "6",
+            "1"
+          ],
+          "kind": "equals",
+          "expected": {
+            "A": {
+              "B": "E"
+            }
+          }
+        },
+        {
+          "id": "packages/core/test/examples/6.9.test.ts::Example 6.9 > should go from {\"A\":\"C\"} to {\"A\":{\"C\":\"F\"}} on 2",
+          "from": "{\"A\":\"C\"}",
+          "eventTypes": "2",
+          "events": [
+            "2"
+          ],
+          "kind": "equals",
+          "expected": {
+            "A": {
+              "C": "F"
+            }
+          }
+        },
+        {
+          "id": "packages/core/test/examples/6.9.test.ts::Example 6.9 > should go from {\"A\":\"C\"} to {\"A\":{\"B\":\"E\"}} on 4",
+          "from": "{\"A\":\"C\"}",
+          "eventTypes": "4",
+          "events": [
+            "4"
+          ],
+          "kind": "equals",
+          "expected": {
+            "A": {
+              "B": "E"
+            }
+          }
+        },
+        {
+          "id": "packages/core/test/examples/6.9.test.ts::Example 6.9 > should go from {\"A\":\"C\"} to \"H\" on 6",
+          "from": "{\"A\":\"C\"}",
+          "eventTypes": "6",
+          "events": [
+            "6"
+          ],
+          "kind": "matches",
+          "expected": "H"
+        },
+        {
+          "id": "packages/core/test/examples/6.9.test.ts::Example 6.9 > should go from {\"A\":\"C\"} to undefined on FAKE",
+          "from": "{\"A\":\"C\"}",
+          "eventTypes": "FAKE",
+          "events": [
+            "FAKE"
+          ],
+          "kind": "unchanged"
+        },
+        {
+          "id": "packages/core/test/examples/6.9.test.ts::Example 6.9 > should go from {\"A\":\"C\"} to {\"A\":{\"C\":\"G\"}} on 6, 1",
+          "from": "{\"A\":\"C\"}",
+          "eventTypes": "6, 1",
+          "events": [
+            "6",
+            "1"
+          ],
+          "kind": "equals",
+          "expected": {
+            "A": {
+              "C": "G"
+            }
+          }
+        },
+        {
+          "id": "packages/core/test/examples/6.9.test.ts::Example 6.9 > should go from {\"A\":\"C\"} to {\"A\":{\"B\":\"E\"}} on 4, 6, 1",
+          "from": "{\"A\":\"C\"}",
+          "eventTypes": "4, 6, 1",
+          "events": [
+            "4",
+            "6",
+            "1"
+          ],
+          "kind": "equals",
+          "expected": {
+            "A": {
+              "B": "E"
+            }
+          }
+        },
+        {
+          "id": "packages/core/test/examples/6.9.test.ts::Example 6.9 > should go from {\"A\":{\"B\":\"D\"}} to {\"A\":{\"C\":\"G\"}} on 5",
+          "from": "{\"A\":{\"B\":\"D\"}}",
+          "eventTypes": "5",
+          "events": [
+            "5"
+          ],
+          "kind": "equals",
+          "expected": {
+            "A": {
+              "C": "G"
+            }
+          }
+        },
+        {
+          "id": "packages/core/test/examples/6.9.test.ts::Example 6.9 > should go from {\"A\":{\"B\":\"D\"}} to \"H\" on 6",
+          "from": "{\"A\":{\"B\":\"D\"}}",
+          "eventTypes": "6",
+          "events": [
+            "6"
+          ],
+          "kind": "matches",
+          "expected": "H"
+        },
+        {
+          "id": "packages/core/test/examples/6.9.test.ts::Example 6.9 > should go from {\"A\":{\"B\":\"D\"}} to undefined on FAKE",
+          "from": "{\"A\":{\"B\":\"D\"}}",
+          "eventTypes": "FAKE",
+          "events": [
+            "FAKE"
+          ],
+          "kind": "unchanged"
+        },
+        {
+          "id": "packages/core/test/examples/6.9.test.ts::Example 6.9 > should go from {\"A\":{\"B\":\"E\"}} to {\"A\":{\"B\":\"D\"}} on 3",
+          "from": "{\"A\":{\"B\":\"E\"}}",
+          "eventTypes": "3",
+          "events": [
+            "3"
+          ],
+          "kind": "equals",
+          "expected": {
+            "A": {
+              "B": "D"
+            }
+          }
+        },
+        {
+          "id": "packages/core/test/examples/6.9.test.ts::Example 6.9 > should go from {\"A\":{\"B\":\"E\"}} to {\"A\":{\"C\":\"G\"}} on 5",
+          "from": "{\"A\":{\"B\":\"E\"}}",
+          "eventTypes": "5",
+          "events": [
+            "5"
+          ],
+          "kind": "equals",
+          "expected": {
+            "A": {
+              "C": "G"
+            }
+          }
+        },
+        {
+          "id": "packages/core/test/examples/6.9.test.ts::Example 6.9 > should go from {\"A\":{\"B\":\"E\"}} to \"H\" on 6",
+          "from": "{\"A\":{\"B\":\"E\"}}",
+          "eventTypes": "6",
+          "events": [
+            "6"
+          ],
+          "kind": "matches",
+          "expected": "H"
+        },
+        {
+          "id": "packages/core/test/examples/6.9.test.ts::Example 6.9 > should go from {\"A\":{\"B\":\"E\"}} to undefined on FAKE",
+          "from": "{\"A\":{\"B\":\"E\"}}",
+          "eventTypes": "FAKE",
+          "events": [
+            "FAKE"
+          ],
+          "kind": "unchanged"
+        },
+        {
+          "id": "packages/core/test/examples/6.9.test.ts::Example 6.9 > should go from {\"A\":{\"C\":\"F\"}} to {\"A\":{\"B\":\"E\"}} on 4",
+          "from": "{\"A\":{\"C\":\"F\"}}",
+          "eventTypes": "4",
+          "events": [
+            "4"
+          ],
+          "kind": "equals",
+          "expected": {
+            "A": {
+              "B": "E"
+            }
+          }
+        },
+        {
+          "id": "packages/core/test/examples/6.9.test.ts::Example 6.9 > should go from {\"A\":{\"C\":\"F\"}} to \"H\" on 6",
+          "from": "{\"A\":{\"C\":\"F\"}}",
+          "eventTypes": "6",
+          "events": [
+            "6"
+          ],
+          "kind": "matches",
+          "expected": "H"
+        },
+        {
+          "id": "packages/core/test/examples/6.9.test.ts::Example 6.9 > should go from {\"A\":{\"C\":\"F\"}} to undefined on FAKE",
+          "from": "{\"A\":{\"C\":\"F\"}}",
+          "eventTypes": "FAKE",
+          "events": [
+            "FAKE"
+          ],
+          "kind": "unchanged"
+        },
+        {
+          "id": "packages/core/test/examples/6.9.test.ts::Example 6.9 > should go from {\"A\":{\"C\":\"G\"}} to {\"A\":{\"C\":\"F\"}} on 2",
+          "from": "{\"A\":{\"C\":\"G\"}}",
+          "eventTypes": "2",
+          "events": [
+            "2"
+          ],
+          "kind": "equals",
+          "expected": {
+            "A": {
+              "C": "F"
+            }
+          }
+        },
+        {
+          "id": "packages/core/test/examples/6.9.test.ts::Example 6.9 > should go from {\"A\":{\"C\":\"G\"}} to {\"A\":{\"B\":\"E\"}} on 4",
+          "from": "{\"A\":{\"C\":\"G\"}}",
+          "eventTypes": "4",
+          "events": [
+            "4"
+          ],
+          "kind": "equals",
+          "expected": {
+            "A": {
+              "B": "E"
+            }
+          }
+        },
+        {
+          "id": "packages/core/test/examples/6.9.test.ts::Example 6.9 > should go from {\"A\":{\"C\":\"G\"}} to \"H\" on 6",
+          "from": "{\"A\":{\"C\":\"G\"}}",
+          "eventTypes": "6",
+          "events": [
+            "6"
+          ],
+          "kind": "matches",
+          "expected": "H"
+        },
+        {
+          "id": "packages/core/test/examples/6.9.test.ts::Example 6.9 > should go from {\"A\":{\"C\":\"G\"}} to undefined on FAKE",
+          "from": "{\"A\":{\"C\":\"G\"}}",
+          "eventTypes": "FAKE",
+          "events": [
+            "FAKE"
+          ],
+          "kind": "unchanged"
+        },
+        {
+          "id": "packages/core/test/examples/6.9.test.ts::Example 6.9 > should go from H to {\"A\":{\"B\":\"E\"}} on 1",
+          "from": "H",
+          "eventTypes": "1",
+          "events": [
+            "1"
+          ],
+          "kind": "equals",
+          "expected": {
+            "A": {
+              "B": "E"
+            }
+          }
+        },
+        {
+          "id": "packages/core/test/examples/6.9.test.ts::Example 6.9 > should go from H to undefined on FAKE",
+          "from": "H",
+          "eventTypes": "FAKE",
+          "events": [
+            "FAKE"
+          ],
+          "kind": "unchanged"
+        }
+      ]
+    },
+    {
+      "source": "packages/core/test/examples/cd.test.ts",
+      "line": 88,
+      "key": "packages/core/test/examples/cd.test.ts:88",
+      "suites": [
+        "Example: CD Player"
+      ],
+      "mode": "helper",
+      "config": {
+        "initial": "not_loaded",
+        "states": {
+          "not_loaded": {
+            "on": {
+              "INSERT_CD": "loaded"
+            }
+          },
+          "loaded": {
+            "initial": "stopped",
+            "on": {
+              "EJECT": "not_loaded"
+            },
+            "states": {
+              "stopped": {
+                "on": {
+                  "PLAY": "playing"
+                }
+              },
+              "playing": {
+                "on": {
+                  "STOP": "stopped",
+                  "EXPIRED_END": "stopped",
+                  "EXPIRED_MID": "playing",
+                  "PAUSE": "paused"
+                }
+              },
+              "paused": {
+                "initial": "not_blank",
+                "states": {
+                  "blank": {
+                    "on": {
+                      "TIMER": "not_blank"
+                    }
+                  },
+                  "not_blank": {
+                    "on": {
+                      "TIMER": "blank"
+                    }
+                  }
+                },
+                "on": {
+                  "PAUSE": "playing",
+                  "PLAY": "playing",
+                  "STOP": "stopped"
+                }
+              }
+            }
+          }
+        }
+      },
+      "tests": [
+        {
+          "id": "packages/core/test/examples/cd.test.ts::Example: CD Player > should go from not_loaded to \"loaded.stopped\" on INSERT_CD",
+          "from": "not_loaded",
+          "eventTypes": "INSERT_CD",
+          "events": [
+            "INSERT_CD"
+          ],
+          "kind": "matches",
+          "expected": "loaded.stopped"
+        },
+        {
+          "id": "packages/core/test/examples/cd.test.ts::Example: CD Player > should go from not_loaded to undefined on FAKE",
+          "from": "not_loaded",
+          "eventTypes": "FAKE",
+          "events": [
+            "FAKE"
+          ],
+          "kind": "unchanged"
+        },
+        {
+          "id": "packages/core/test/examples/cd.test.ts::Example: CD Player > should go from loaded to \"not_loaded\" on EJECT",
+          "from": "loaded",
+          "eventTypes": "EJECT",
+          "events": [
+            "EJECT"
+          ],
+          "kind": "matches",
+          "expected": "not_loaded"
+        },
+        {
+          "id": "packages/core/test/examples/cd.test.ts::Example: CD Player > should go from loaded to undefined on FAKE",
+          "from": "loaded",
+          "eventTypes": "FAKE",
+          "events": [
+            "FAKE"
+          ],
+          "kind": "unchanged"
+        },
+        {
+          "id": "packages/core/test/examples/cd.test.ts::Example: CD Player > should go from {\"loaded\":\"stopped\"} to \"loaded.playing\" on PLAY",
+          "from": "{\"loaded\":\"stopped\"}",
+          "eventTypes": "PLAY",
+          "events": [
+            "PLAY"
+          ],
+          "kind": "matches",
+          "expected": "loaded.playing"
+        },
+        {
+          "id": "packages/core/test/examples/cd.test.ts::Example: CD Player > should go from {\"loaded\":\"stopped\"} to \"not_loaded\" on EJECT",
+          "from": "{\"loaded\":\"stopped\"}",
+          "eventTypes": "EJECT",
+          "events": [
+            "EJECT"
+          ],
+          "kind": "matches",
+          "expected": "not_loaded"
+        },
+        {
+          "id": "packages/core/test/examples/cd.test.ts::Example: CD Player > should go from {\"loaded\":\"stopped\"} to undefined on FAKE",
+          "from": "{\"loaded\":\"stopped\"}",
+          "eventTypes": "FAKE",
+          "events": [
+            "FAKE"
+          ],
+          "kind": "unchanged"
+        },
+        {
+          "id": "packages/core/test/examples/cd.test.ts::Example: CD Player > should go from {\"loaded\":\"playing\"} to \"loaded.playing\" on EXPIRED_MID",
+          "from": "{\"loaded\":\"playing\"}",
+          "eventTypes": "EXPIRED_MID",
+          "events": [
+            "EXPIRED_MID"
+          ],
+          "kind": "matches",
+          "expected": "loaded.playing"
+        },
+        {
+          "id": "packages/core/test/examples/cd.test.ts::Example: CD Player > should go from {\"loaded\":\"playing\"} to \"loaded.stopped\" on EXPIRED_END",
+          "from": "{\"loaded\":\"playing\"}",
+          "eventTypes": "EXPIRED_END",
+          "events": [
+            "EXPIRED_END"
+          ],
+          "kind": "matches",
+          "expected": "loaded.stopped"
+        },
+        {
+          "id": "packages/core/test/examples/cd.test.ts::Example: CD Player > should go from {\"loaded\":\"playing\"} to \"loaded.stopped\" on STOP",
+          "from": "{\"loaded\":\"playing\"}",
+          "eventTypes": "STOP",
+          "events": [
+            "STOP"
+          ],
+          "kind": "matches",
+          "expected": "loaded.stopped"
+        },
+        {
+          "id": "packages/core/test/examples/cd.test.ts::Example: CD Player > should go from {\"loaded\":\"playing\"} to \"not_loaded\" on EJECT",
+          "from": "{\"loaded\":\"playing\"}",
+          "eventTypes": "EJECT",
+          "events": [
+            "EJECT"
+          ],
+          "kind": "matches",
+          "expected": "not_loaded"
+        },
+        {
+          "id": "packages/core/test/examples/cd.test.ts::Example: CD Player > should go from {\"loaded\":\"playing\"} to \"loaded.paused.not_blank\" on PAUSE",
+          "from": "{\"loaded\":\"playing\"}",
+          "eventTypes": "PAUSE",
+          "events": [
+            "PAUSE"
+          ],
+          "kind": "matches",
+          "expected": "loaded.paused.not_blank"
+        },
+        {
+          "id": "packages/core/test/examples/cd.test.ts::Example: CD Player > should go from {\"loaded\":\"playing\"} to undefined on FAKE",
+          "from": "{\"loaded\":\"playing\"}",
+          "eventTypes": "FAKE",
+          "events": [
+            "FAKE"
+          ],
+          "kind": "unchanged"
+        },
+        {
+          "id": "packages/core/test/examples/cd.test.ts::Example: CD Player > should go from {\"loaded\":\"paused\"} to \"loaded.playing\" on PAUSE",
+          "from": "{\"loaded\":\"paused\"}",
+          "eventTypes": "PAUSE",
+          "events": [
+            "PAUSE"
+          ],
+          "kind": "matches",
+          "expected": "loaded.playing"
+        },
+        {
+          "id": "packages/core/test/examples/cd.test.ts::Example: CD Player > should go from {\"loaded\":\"paused\"} to \"loaded.playing\" on PLAY",
+          "from": "{\"loaded\":\"paused\"}",
+          "eventTypes": "PLAY",
+          "events": [
+            "PLAY"
+          ],
+          "kind": "matches",
+          "expected": "loaded.playing"
+        },
+        {
+          "id": "packages/core/test/examples/cd.test.ts::Example: CD Player > should go from {\"loaded\":\"paused\"} to \"loaded.paused.blank\" on TIMER",
+          "from": "{\"loaded\":\"paused\"}",
+          "eventTypes": "TIMER",
+          "events": [
+            "TIMER"
+          ],
+          "kind": "matches",
+          "expected": "loaded.paused.blank"
+        },
+        {
+          "id": "packages/core/test/examples/cd.test.ts::Example: CD Player > should go from {\"loaded\":\"paused\"} to \"not_loaded\" on EJECT",
+          "from": "{\"loaded\":\"paused\"}",
+          "eventTypes": "EJECT",
+          "events": [
+            "EJECT"
+          ],
+          "kind": "matches",
+          "expected": "not_loaded"
+        },
+        {
+          "id": "packages/core/test/examples/cd.test.ts::Example: CD Player > should go from {\"loaded\":\"paused\"} to \"loaded.stopped\" on STOP",
+          "from": "{\"loaded\":\"paused\"}",
+          "eventTypes": "STOP",
+          "events": [
+            "STOP"
+          ],
+          "kind": "matches",
+          "expected": "loaded.stopped"
+        },
+        {
+          "id": "packages/core/test/examples/cd.test.ts::Example: CD Player > should go from {\"loaded\":{\"paused\": \"blank\"}} to \"loaded.playing\" on PAUSE",
+          "from": "{\"loaded\":{\"paused\": \"blank\"}}",
+          "eventTypes": "PAUSE",
+          "events": [
+            "PAUSE"
+          ],
+          "kind": "matches",
+          "expected": "loaded.playing"
+        },
+        {
+          "id": "packages/core/test/examples/cd.test.ts::Example: CD Player > should go from {\"loaded\":{\"paused\": \"blank\"}} to \"loaded.playing\" on PLAY",
+          "from": "{\"loaded\":{\"paused\": \"blank\"}}",
+          "eventTypes": "PLAY",
+          "events": [
+            "PLAY"
+          ],
+          "kind": "matches",
+          "expected": "loaded.playing"
+        },
+        {
+          "id": "packages/core/test/examples/cd.test.ts::Example: CD Player > should go from {\"loaded\":{\"paused\": \"blank\"}} to \"loaded.paused.not_blank\" on TIMER",
+          "from": "{\"loaded\":{\"paused\": \"blank\"}}",
+          "eventTypes": "TIMER",
+          "events": [
+            "TIMER"
+          ],
+          "kind": "matches",
+          "expected": "loaded.paused.not_blank"
+        },
+        {
+          "id": "packages/core/test/examples/cd.test.ts::Example: CD Player > should go from {\"loaded\":{\"paused\": \"blank\"}} to \"not_loaded\" on EJECT",
+          "from": "{\"loaded\":{\"paused\": \"blank\"}}",
+          "eventTypes": "EJECT",
+          "events": [
+            "EJECT"
+          ],
+          "kind": "matches",
+          "expected": "not_loaded"
+        },
+        {
+          "id": "packages/core/test/examples/cd.test.ts::Example: CD Player > should go from {\"loaded\":{\"paused\": \"blank\"}} to \"loaded.stopped\" on STOP",
+          "from": "{\"loaded\":{\"paused\": \"blank\"}}",
+          "eventTypes": "STOP",
+          "events": [
+            "STOP"
+          ],
+          "kind": "matches",
+          "expected": "loaded.stopped"
+        }
+      ]
+    },
+    {
+      "source": "packages/core/test/id.test.ts",
+      "line": 74,
+      "key": "packages/core/test/id.test.ts:74",
+      "suites": [
+        "State node IDs"
+      ],
+      "mode": "helper",
+      "config": {
+        "initial": "A",
+        "states": {
+          "A": {
+            "id": "A",
+            "initial": "foo",
+            "states": {
+              "foo": {
+                "id": "A_foo",
+                "on": {
+                  "NEXT": "#A_bar"
+                }
+              },
+              "bar": {
+                "id": "A_bar",
+                "on": {
+                  "NEXT": "#B_foo"
+                }
+              }
+            },
+            "on": {
+              "NEXT_DOT_RESOLVE": "#B.bar"
+            }
+          },
+          "B": {
+            "id": "B",
+            "initial": "foo",
+            "states": {
+              "foo": {
+                "id": "B_foo",
+                "on": {
+                  "NEXT": "#B_bar",
+                  "NEXT_DOT": "#B.dot"
+                }
+              },
+              "bar": {
+                "id": "B_bar",
+                "on": {
+                  "NEXT": "#A_foo"
+                }
+              },
+              "dot": {}
+            }
+          }
+        }
+      },
+      "tests": [
+        {
+          "id": "packages/core/test/id.test.ts::State node IDs > should go from A to {\"A\":\"bar\"} on NEXT",
+          "from": "A",
+          "eventTypes": "NEXT",
+          "events": [
+            "NEXT"
+          ],
+          "kind": "equals",
+          "expected": {
+            "A": "bar"
+          }
+        },
+        {
+          "id": "packages/core/test/id.test.ts::State node IDs > should go from A to {\"B\":\"bar\"} on NEXT_DOT_RESOLVE",
+          "from": "A",
+          "eventTypes": "NEXT_DOT_RESOLVE",
+          "events": [
+            "NEXT_DOT_RESOLVE"
+          ],
+          "kind": "equals",
+          "expected": {
+            "B": "bar"
+          }
+        },
+        {
+          "id": "packages/core/test/id.test.ts::State node IDs > should go from {\"A\":\"foo\"} to {\"A\":\"bar\"} on NEXT",
+          "from": "{\"A\":\"foo\"}",
+          "eventTypes": "NEXT",
+          "events": [
+            "NEXT"
+          ],
+          "kind": "equals",
+          "expected": {
+            "A": "bar"
+          }
+        },
+        {
+          "id": "packages/core/test/id.test.ts::State node IDs > should go from {\"A\":\"bar\"} to {\"B\":\"foo\"} on NEXT",
+          "from": "{\"A\":\"bar\"}",
+          "eventTypes": "NEXT",
+          "events": [
+            "NEXT"
+          ],
+          "kind": "equals",
+          "expected": {
+            "B": "foo"
+          }
+        },
+        {
+          "id": "packages/core/test/id.test.ts::State node IDs > should go from {\"B\":\"foo\"} to {\"A\":\"foo\"} on NEXT,NEXT",
+          "from": "{\"B\":\"foo\"}",
+          "eventTypes": "NEXT,NEXT",
+          "events": [
+            "NEXT",
+            "NEXT"
+          ],
+          "kind": "equals",
+          "expected": {
+            "A": "foo"
+          }
+        },
+        {
+          "id": "packages/core/test/id.test.ts::State node IDs > should go from {\"B\":\"foo\"} to {\"B\":\"dot\"} on NEXT_DOT",
+          "from": "{\"B\":\"foo\"}",
+          "eventTypes": "NEXT_DOT",
+          "events": [
+            "NEXT_DOT"
+          ],
+          "kind": "equals",
+          "expected": {
+            "B": "dot"
+          }
+        }
+      ]
+    }
+  ],
+  "rejected": [
+    {
+      "source": "packages/core/test/parallel.test.ts",
+      "line": 544,
+      "reason": "Nonliteral table property"
+    }
+  ]
+}
