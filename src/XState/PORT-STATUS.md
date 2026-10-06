@@ -2,32 +2,40 @@
 
 Chưa đạt 100%, chưa tích hợp OhMyBot. Đọc [CONTINUING.md](CONTINUING.md) để tiếp tục và [DECISIONS.md](DECISIONS.md) để giữ đúng các quyết định đã có. Phần đầu này là mốc hiện hành; nhật ký phía sau giữ kết quả ở từng revision cũ, không được lấy số của một mục cũ làm trạng thái hiện tại.
 
-## Repository độc lập và CI (2026-10-06)
+## Bàn giao repository sau R002 (2026-10-06)
+
+Repo độc lập đã nhập đủ 7 file của batch R002 từ manifest SHA256 5fa1a01e-3b24-4165-888a-25d980926091. Kiểm tra đối chiếu toàn bộ 288 file gốc xác nhận không mất delta và không còn source thay đổi trong lúc bàn giao; phần khác biệt ngoài tài liệu chỉ là migration đường dẫn dpb-plugins/ sang src/.
+
+Run độc lập cuối: **7702d2b6-fad8-4100-bd2a-cb7fe85c8326**, **2026-10-06T16:25:10.330Z–2026-10-06T16:28:11.267Z**, execution=verified, exit 0. **1.097 native, 376 supplemental .NET, 662 differential, 8/31 examples, 17 native + 17 upstream example checks, 8 CLI**, compiler 7/453 pass. Lint cả bốn project 0 warning/error. Còn 658 runtime, 446 compiler và 23 example pending; complete=false. R002 closed, R001 open. Logs: tmp/extraction-r002-lint.log và tmp/extraction-r002-parity.log, evidence dưới tmp/xstate-parity/.
+
+Build/test chạy từ repo root mới. GitHub Actions kiểm từng commit; link workflow ở README root. Runtime/kernel ngoài fix R002 được giữ nguyên; lần tách repo không bổ sung tích hợp hoặc deploy host.
+
+## Repository độc lập và CI: snapshot trước R002 (2026-10-06)
 
 Bản public nằm tại https://github.com/nguyenvanduocit/xstate-dotnet; project paths hiện ở src/, công cụ lint ở tools/. Các đường dẫn lệnh trong doc đã cập nhật sang layout này; nhật ký cũ giữ nguyên kết quả/rationale của lượt gốc. Quyết định và giới hạn: XSTATE-D15 trong DECISIONS.md.
 
 Pipeline tại checkout độc lập đã pass, runId **59768300-beb6-414f-9c28-c7cd3d29f87a**, startedAt **2026-10-06T16:10:25.032Z**, finishedAt **2026-10-06T16:13:43.677Z**: native **1097**, supplemental **363**, differential **650**, examples **8/31**, compiler **7/453**. Bốn project lint pass, 0 warning/error. Native examples có 17 behavior checks và 8 CLI executions; upstream examples được so trong cùng pipeline. Đây là lượt xác nhận migration đường dẫn/harness, không phải sửa runtime semantics. Hai finding R001/R002 vẫn mở trong snapshot được xuất.
 
-Lệnh bun run test exit 0, complete=false; strict coverage tiếp tục chưa đạt (runtime 658, compiler 446, examples 23 pending). CI chạy test/example cho push main và pull request, upload evidence và package artifact; chưa publish NuGet.org. Lượt local này chưa phải bằng chứng hosted GitHub Actions đã pass: xem tab Actions cho kết quả từng commit.
+Lệnh bun run test exit 0, complete=false; strict coverage tiếp tục chưa đạt (runtime 658, compiler 446, examples 23 pending). CI chạy test/example cho push main và pull request, upload evidence và package artifact; chưa publish NuGet.org. Hosted GitHub Actions đã pass trên commit d6a1b5c: https://github.com/nguyenvanduocit/xstate-dotnet/actions/runs/37495098679, gồm tests/examples và package artifact. Lượt đầu đã phát hiện Git normalise newline làm sai hash raw bytes của fixture graph; .gitattributes hiện giữ fixture đó nguyên bytes, không thay hash kỳ vọng hoặc bỏ assertion.
 
 ## Mốc đã kiểm chứng ngày 2026-10-06
 
-Run đầy đủ gần nhất tại lúc cập nhật tài liệu: **b8d78fde-7a6b-4712-ae80-4bbae4a24cd7**, bắt đầu 23:06:15 và kết thúc 23:09:08 giờ Asia/Saigon (16:06:15–16:09:08 UTC). `run-evidence.json` có status=verified; `parity-report.json` có complete=false. Đây là kết quả của lượt runner đã hoàn tất trong workspace, không phải một lượt chạy mới do việc viết tài liệu tạo ra.
+Run đầy đủ gần nhất tại lúc cập nhật tài liệu: **5fa1a01e-3b24-4165-888a-25d980926091**, bắt đầu 23:16:37 và kết thúc 23:19:38 giờ Asia/Saigon (16:16:37–16:19:38 UTC). `run-evidence.json` có status=verified; `parity-report.json` có complete=false. Đây là kết quả của lượt runner đã hoàn tất trong workspace, không phải một lượt chạy mới do việc viết tài liệu tạo ra.
 
 - Source XState **5.33.2**, commit `fbee62e7c1586315ed478c2fedf530d7e0ff5a3e`; **625 file core/examples** khớp archive pin. Node **24.16.0**, Vitest **3.2.7**.
 - Upstream runtime: **75 file**, **1.755 pass**, **13 skip**, **1 todo**. AST: **1.455 declarations**, **9 declarations động**; không đánh đồng declaration với runtime case đã expand.
 - Native core: **1.097 pass**, **0 failed**, **658 pending** so với upstream pass. Compiler: **7/453 nhóm pass**, **446 pending**.
-- Supplemental .NET: **363/363 pass**. Differential JS/C#: **57 file, 650/650 pass**, không skip. Hai tập này không cộng vào số upstream case đã port.
+- Supplemental .NET: **376/376 pass**. Differential JS/C#: **58 file, 662/662 pass**, không skip. Hai tập này không cộng vào số upstream case đã port.
 - Examples: **8/31 required pass**, **23 pending**, **18 excluded-ui** trên tổng 49. Lượt này chạy **17 native + 17 upstream behavior checks**, **8 native CLI** và upstream onboarding CLI thật; không tuyên bố 23 example chưa port đã được chạy.
-- Lint project test/dependencies của lượt đó: **0 warning, 0 error**. Strict gate exit **1** vì coverage chưa complete; xem water-fractional-gate.log, run-evidence.json và parity-report.json dưới tmp/xstate-parity.
+- Lint project test/dependencies của lượt đó: **0 warning, 0 error**. Strict gate exit **1** vì coverage chưa complete; xem initial-errors-gate.log, run-evidence.json và parity-report.json dưới tmp/xstate-parity.
 
 Artifacts dưới tmp có thể được ghi lại hoặc dọn; runId và mốc này giữ provenance lịch sử. Lần cập nhật tiếp theo phải dùng report/manifest đã verify của lượt mới, không cộng chéo số từ report khác.
 
-Mốc này đã dùng native example runner riêng XState.Examples.Tests; core runner không còn reference examples hoặc mode --examples. So với run 930c7d4e-b49e-4a45-9fee-c21cf05c67b4, native tăng 9 case, supplementary tăng 1, differential tăng 9 và examples tăng 1 với 4 behavior checks mới. Hai finding review bên dưới vẫn mở trên source đã đối chiếu.
+Mốc này đã dùng native example runner riêng XState.Examples.Tests; core runner không còn reference examples hoặc mode --examples. So với snapshot migration b8d78fde-7a6b-4712-ae80-4bbae4a24cd7, native coverage/examples không đổi; supplemental tăng 13 và differential tăng 12. R002 đã sửa và có regression; R001 còn mở. Batch này đã bàn giao đủ bảy file qua manifest SHA256 và nhập vào src/ của repo độc lập. Không ghi tiếp các source paths cũ trong workspace ban đầu.
 
 ## Lỗi review còn mở
 
-**XSTATE-R001, P2:** WaitForAsync timeout chạy ngoài actor execution gate, có thể reject trước khi một turn đồng bộ gửi event thỏa predicate. **XSTATE-R002, P2:** initial Assign/output resolution lỗi sau khi có preInitial không unwrap ActorErrors carrier; raw payload biến thành Exception và JSON `{}`. Cả hai đã được tái hiện trong review; chưa sửa source và chưa đăng ký regression trong suite chính ở mốc doc này. Cách tái hiện, expected/actual và điều kiện đóng nằm trong [CONTINUING.md](CONTINUING.md).
+**XSTATE-R001, P2:** WaitForAsync timeout chạy ngoài actor execution gate, có thể reject trước khi một turn đồng bộ gửi event thỏa predicate. R001 chưa sửa; ActorTasks.cs giữ nguyên SHA256 so với snapshot migration. **XSTATE-R002 đã đóng** bằng unwrap raw failure ở InitialTransitionCore và 12 regression native/JS (assign/output × 6 loại failure); xem batch cuối tài liệu. Cách tái hiện, expected/actual và điều kiện đóng nằm trong [CONTINUING.md](CONTINUING.md).
 
 Review cũng so 1.000 statechart × 20 event với seed 76543, không lệch state/status/entry-exit trace trong tập đó. Đây là supplemental probe, không chứng minh toàn bộ statechart hoặc async parity. Gate thiếu differential được ghi nhận trong quá trình review đã được runner cập nhật; không còn là finding mở.
 
@@ -39,9 +47,9 @@ Scope được user chọn là core gồm graph, toàn bộ test và non-UI exam
 
 ## Công việc tiếp theo
 
-1. Sửa và đưa R001/R002 vào native/differential regressions, kiểm lifecycle và đo flow liên quan.
+1. Chờ session migration xác nhận đường dẫn mới trước khi tiếp tục. Sau đó sửa R001 với native/differential regressions, kiểm lifecycle và đo flow liên quan. R002 đã đóng ở batch cuối.
 2. Port các ID còn pending trong report, bao gồm SCXML và các ca meta/route/history/state. Những file types/setup.types/typeHelpers cũng xuất hiện trong runtime baseline: không cộng các con số đó với compiler groups thành một tổng thiếu duy nhất.
-3. Hoàn tất compiler contracts còn thiếu và 24 example có execution/behavior checks thật; dịch vụ ngoài chưa có vẫn pending.
+3. Hoàn tất compiler contracts còn thiếu và 23 example có execution/behavior checks thật; dịch vụ ngoài chưa có vẫn pending.
 4. Mở rộng scheduler restore, async/microtask, missing/null/undefined/JSON/container semantics và public API theo assertions còn thiếu. Không port lại các API đã có chỉ vì nhật ký đầu kỳ nói chúng pending.
 5. Đo performance/resource ở workload còn thiếu và chạy dài. Các số allocation/latency dưới nhật ký chỉ áp dụng đúng đợt/workload đó, chưa có chứng nhận performance parity JS hoặc flow game.
 
@@ -981,3 +989,13 @@ Release .NET 8.0.5:
 - Mandatory pipeline runId **b8d78fde-7a6b-4712-ae80-4bbae4a24cd7** (16:06:15–16:09:08 UTC): **1.755 upstream JS**, **1.097 native core**, **363 supplemental .NET**, **650 differential core** đều pass. Examples **8/31**, **17/17 native**, **17/17 JS**, **8/8 native CLI** cùng real upstream onboarding CLI pass. Lint core/examples lần cuối **0 warning/error**. Strict exit 1 do **658 runtime + 446 compiler groups + 23 examples pending**; complete=false, goal active.
 - Kernel không đổi; chưa có phép đo allocation/GC hoặc stress lâu dài cho example observer/trace layer. Hai finding runtime R001/R002 vẫn mở; không suy ra production readiness từ batch này. Không deploy.
 - Artifacts: tmp/xstate-parity/water-fractional-gate.log, water-example-lint.log, csharp-examples.json, upstream-examples.json, example-runner-results.json, run-evidence.json và parity-report.json. RepoWise targets chưa indexed; update bị WinError 1920 ở data/release-notes/latest.md (water-example-repowise.log), impact đã trace trực tiếp qua Create/RunAsync/CLI/runner/contracts.
+
+
+## Chốt R002 và bàn giao migration (2026-10-06)
+
+- Phạm vi batch: chỉ R002; không bắt đầu R001, không sửa libraries/xstate-dotnet, không deploy/push. Runtime delta một dòng: InitialTransitionCore chuyển preInitial.WithStatus(Error, error) thành preInitial.WithStatus(Error, ActorErrors.GetValue(error)). Context/value/children vẫn lấy nguyên preInitial; không giữ assignment đã chạy dở.
+- InitialErrorTests.cs kiểm assign thất bại sau một assignment thành công và root output thất bại sau entry assignment. Mỗi nhánh có string, number, false, null, object và Exception; kiểm error identity trước start, observer, parent invoke onError, context rollback về count=0, persistence JSON và restore. 12 native cases + một export observation, 12 differential JS probes chạy kernel pin. Trước sửa 10 ca non-Exception fail, hai Exception pass; sau sửa cả 12 pass. Observations nằm trong csharp-initial-errors.json.
+- Full gate runId **5fa1a01e-3b24-4165-888a-25d980926091**, 16:16:37–16:19:38 UTC, execution=verified. 1.755 upstream JS, 1.097 native, 376 supplemental .NET, 58 file / 662 differential pass. Examples 8/31, 17/17 native + 17/17 upstream checks, 8/8 native CLI và JS onboarding CLI pass; compiler mapped 7/7 pass. Lint core/examples cuối 0 warning/error. Strict exit 1 chỉ do scope còn thiếu (658 runtime, 446 compiler groups, 23 examples); whole goal chưa complete.
+- Benchmark cùng Release runner, 1.000 warmup + 10.000 cycles mỗi nhánh (create actor, subscribe error, start, assert error status, stop). Assign allocation trước/sau 5.792/5.792 byte; output 5.768/5.768 byte. Assign p95/p99 62.3/78.2 → 50.1/70.7 µs; output 48.8/67.6 → 45.5/58.0 µs. Một cặp đo trên shared host, không coi latency giảm là bằng chứng tối ưu hoặc chứng nhận performance parity; không tăng allocation trong workload đo.
+- Artifacts: initial-errors-before.log, initial-errors-before-results.json(.resources.json), initial-errors-lint.log, initial-errors-gate.log, initial-error-before.json, initial-error-after.json, csharp-initial-errors.json và run-evidence/parity-report dưới tmp/xstate-parity. RepoWise targets không indexed; refresh vẫn lỗi WinError 1920 tại data/release-notes/latest.md, log initial-errors-repowise.log. Impact được trace trực tiếp qua initialization catch, snapshot failure, observers, persistence và parent invocation.
+- Bàn giao source delta qua tmp/xstate-parity/r002-handoff.json (file paths + SHA256). Session này dừng ghi source sau bàn giao, chờ migration thông báo đường dẫn; session migration sở hữu extraction/CI/GitHub/submodule. Goal tạm dừng theo yêu cầu phối hợp, chưa đạt 100%.

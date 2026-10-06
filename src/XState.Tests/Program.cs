@@ -1,6 +1,8 @@
 using System.Text.Json;
 using XState;
 
+if (args.Length == 2 && args[0] == "--benchmark-initial-error") return XStatePort.Tests.InitialErrorTests.Benchmark(args[1]);
+
 if (args.Length == 2 && args[0] == "--benchmark-machine-creation") return XStatePort.Tests.MachineCreationBenchmarks.Run(args[1]);
 
 if (args.Length == 2 && args[0] == "--benchmark") return XStatePort.Tests.RuntimeBenchmarks.Run(args[1]);
@@ -203,6 +205,7 @@ XStatePort.Tests.FinalStateTests.RegisterResources(resourceCases);
 XStatePort.Tests.SystemInteropTests.RegisterResources(resourceCases);
 XStatePort.Tests.ThenableTests.RegisterResources(resourceCases);
 XStatePort.Tests.ErrorHandlingTests.RegisterResources(resourceCases);
+XStatePort.Tests.InitialErrorTests.RegisterResources(resourceCases);
 XStatePort.Tests.ErrorValueTests.RegisterResources(resourceCases);
 XStatePort.Tests.PromiseInvocationTests.RegisterResources(resourceCases);
 XStatePort.Tests.CallbackInvocationTests.RegisterResources(resourceCases);

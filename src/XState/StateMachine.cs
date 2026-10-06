@@ -250,7 +250,7 @@ public sealed partial class StateMachine<TContext> : IActorLogic<MachineSnapshot
             // Upstream returns the pre-initial snapshot, not a partially resolved microstep.
             // Preserve the initialized context and its spawned children when available.
             var failed = preInitial is null ? MachineSnapshot<TContext>.InitializationError(this, error) :
-                preInitial.WithStatus(SnapshotStatus.Error, error);
+                preInitial.WithStatus(SnapshotStatus.Error, ActorErrors.GetValue(error));
             return new(failed, execution is null ? [] : execution.Actions.AsReadOnly());
         }
     }

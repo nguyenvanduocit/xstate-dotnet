@@ -4,6 +4,10 @@ Repo độc lập: đọc [README tại root](../../README.md) và quyết đị
 
 Cập nhật ngày 2026-10-06. Mục tiêu và phạm vi nằm trong [upstream.json](upstream.json); đọc [quyết định kiến trúc](DECISIONS.md) trước khi đổi runtime. [PORT-STATUS.md](PORT-STATUS.md) là nơi ghi kết quả từng đợt; [README của harness](../XState.Tests/README.md) giải thích lệnh và artifacts.
 
+## Repository hiện tại
+
+Làm việc từ root repo xstate-dotnet, với bốn project dưới src/. Khi repo được dùng dưới dạng submodule, commit/push thư viện trước rồi cập nhật commit được pin trong repo chứa nó. Không ghi tiếp vào các thư mục XState cũ của workspace ban đầu. Batch R002 của phiên port đã được nhập đầy đủ theo manifest SHA256; XSTATE-D15 ghi quyết định tách repo và CI.
+
 ## Bắt đầu một phiên làm việc
 
 1. Đọc phần trạng thái đầu PORT-STATUS và các lỗi còn mở bên dưới. Kiểm tra source hiện tại vì repo đang có nhiều thay đổi chưa commit; không lấy HEAD hoặc index RepoWise cũ làm bản port hiện hành.
@@ -24,7 +28,7 @@ Probe đã chạy: tạo machine context=0, GO assign context=1. Trong cùng Act
 
 ## XSTATE-R002 Initial assign làm mất raw failure
 
-**Trạng thái tại review 2026-10-06: OPEN, P2.** Source sở hữu lỗi: [StateMachine.cs](StateMachine.cs), catch trong InitialTransitionCore khi preInitial khác null.
+**CLOSED 2026-10-06**, verified run 5fa1a01e-3b24-4165-888a-25d980926091. Regression: InitialErrorTests.cs và tools/reference/initial-errors.test.mjs, 12/12 native + JS pass. Lịch sử finding bên dưới giữ nguyên để truy nguyên. **Tại review ban đầu: OPEN, P2.** Source sở hữu lỗi: [StateMachine.cs](StateMachine.cs), catch trong InitialTransitionCore khi preInitial khác null.
 
 Probe độc lập không cần game:
 
@@ -60,15 +64,15 @@ Harness review nằm ngoài dpb-plugins nên lệnh lint:csharp từ chối đư
 
 ## Thứ tự công việc tiếp theo
 
-Ưu tiên sửa R001/R002 và đưa vào gate trước khi tăng coverage. Sau đó chọn nhóm theo report đã verify; ở mốc review ban đầu SCXML có 169 case pending, meta 16, route 13, history 10 và state 9; các batch history/transitions sau đó đã tăng coverage, nên lấy ID còn pending từ report mới thay vì giữ nguyên danh sách cũ. Các file types/setup.types/typeHelpers có runtime cases riêng và compiler groups riêng, không cộng gộp hai loại coverage. Khi chọn batch, không coi danh sách khả năng trong README là danh sách phần chưa có implementation.
+Ưu tiên sửa R001 và đưa vào gate trước khi tăng coverage; R002 đã đóng. Sau đó chọn nhóm theo report đã verify; ở mốc review ban đầu SCXML có 169 case pending, meta 16, route 13, history 10 và state 9; các batch history/transitions sau đó đã tăng coverage, nên lấy ID còn pending từ report mới thay vì giữ nguyên danh sách cũ. Các file types/setup.types/typeHelpers có runtime cases riêng và compiler groups riêng, không cộng gộp hai loại coverage. Khi chọn batch, không coi danh sách khả năng trong README là danh sách phần chưa có implementation.
 
-- **Runtime:** còn 658 ca chưa port ở run verified b8d78fde-7a6b-4712-ae80-4bbae4a24cd7, native 1.097/1.755. Mở từng ID pending để xác định đúng contract chưa chứng minh; nhiều API đã có implementation nhưng chưa đủ assertions.
+- **Runtime:** còn 658 ca chưa port ở run verified 5fa1a01e-3b24-4165-888a-25d980926091, native 1.097/1.755. Mở từng ID pending để xác định đúng contract chưa chứng minh; nhiều API đã có implementation nhưng chưa đủ assertions.
 - **Compiler:** 446/453 nhóm còn pending ở cùng mốc. Viết mapping C# rõ ràng cho event unions, registry keys, parameters và snapshot typing; cập nhật positive/negative fixtures cùng manifest. Không thay compiler proof bằng runtime test.
-- **Examples:** scope cố định 31 non-UI; run verified b8d78fde-7a6b-4712-ae80-4bbae4a24cd7 đã pass 8, còn 23 pending. Names/contract có implementation chưa tự được tính pass; cần native behavior, CLI và upstream bằng chứng cùng run. Chọn ví dụ có dependency thật có thể cung cấp và kiểm chứng; thiếu service tiếp tục pending.
+- **Examples:** scope cố định 31 non-UI; run verified 5fa1a01e-3b24-4165-888a-25d980926091 đã pass 8, còn 23 pending. Names/contract có implementation chưa tự được tính pass; cần native behavior, CLI và upstream bằng chứng cùng run. Chọn ví dụ có dependency thật có thể cung cấp và kiểm chứng; thiếu service tiếp tục pending.
 - **Semantic gaps đã ghi:** scheduler restore; full Promise.resolve/microtask ordering; arbitrary JSON missing/null/undefined, custom error properties, cycles/containers và malformed input; compile-time API. ResolveState, StateNode definitions, graph và TestModel đã có code, cần đọc test pending thay vì port lại từ đầu.
 - **Hiệu năng/lifecycle:** mở rộng stress/reconnect/long-running retention, cold error/serialization, graph nhiều after/metadata/literal input và example layer. Chưa có chứng nhận hiệu năng flow game.
 
-Khi R001/R002 đã được sửa bởi phiên khác, tái hiện trên source mới, cập nhật trạng thái bằng test/result cụ thể và giữ lịch sử finding. Không đóng chỉ vì source đã trông khác hoặc suite cũ vẫn pass.
+Khi R001 đã được sửa bởi phiên khác, tái hiện trên source mới, cập nhật trạng thái bằng test/result cụ thể và giữ lịch sử finding. Không đóng chỉ vì source đã trông khác hoặc suite cũ vẫn pass.
 
 ## Hoàn tất một batch
 
@@ -78,4 +82,4 @@ Sau mỗi lượt C# edit, chạy lint project bị ảnh hưởng; shared sourc
 
 Cập nhật README nếu API/hạn chế đổi, DECISIONS nếu đổi ownership/semantics, phần đầu PORT-STATUS và một mục nhật ký với ngày, scope, counts, runId/artifacts, lint, số đo và giới hạn. Không sao chép số pass của lần chạy khác thành kết quả lần này. Mốc benchmark phải nêu revision/binary hoặc artifacts trước/sau và cùng workload.
 
-Repo này build/test độc lập với RepoWise và workspace ban đầu. Nếu dùng index tùy chọn, refresh sau thay đổi và đối chiếu source khi index cũ; lỗi symlink được ghi trong nhật ký cũ thuộc workspace trước khi tách. Cấu trúc, CI và quy trình contributor hiện tại ở README/AGENTS.md tại root repo.
+Repo này build/test độc lập với RepoWise và workspace ban đầu. Nếu dùng index tùy chọn, refresh sau thay đổi và đối chiếu source khi index cũ. Cấu trúc, CI và quy trình contributor hiện tại ở README/AGENTS.md tại root repo.

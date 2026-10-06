@@ -6,13 +6,13 @@ Repo độc lập: đọc [README tại root](../../README.md) và quyết đị
 
 ## Đọc gì để làm tiếp
 
-- [CONTINUING.md](CONTINUING.md): bắt đầu phiên mới, hai lỗi review còn mở, backlog và điều kiện đóng một batch.
-- [DECISIONS.md](DECISIONS.md): 14 quyết định về scope, execution domain, ownership, error/persistence, test gate và tối ưu.
+- [CONTINUING.md](CONTINUING.md): bắt đầu phiên mới, lỗi review còn mở và migration handoff, backlog và điều kiện đóng một batch.
+- [DECISIONS.md](DECISIONS.md): 15 quyết định về scope, execution domain, ownership, error/persistence, test gate và tối ưu.
 - [PORT-STATUS.md](PORT-STATUS.md): mốc đã kiểm chứng hiện hành và toàn bộ nhật ký/số đo lịch sử.
 - [Harness kiểm thử](../XState.Tests/README.md): setup, lint, native/differential/compiler/examples, artifacts và cách đọc exit code.
 - [Examples native](../XState.Examples/README.md): CLI, dialogue và cách mở rộng integration tests.
 
-Mốc verified 2026-10-06: 1.097/1.755 runtime cases upstream đã port, 7/453 compiler groups, 8/31 examples; 363 supplemental .NET và 650 differential JS pass. Chưa full parity. Hai sai lệch runtime đã tái hiện nhưng chưa thành regression của gate: WaitFor timeout ngoài actor turn và mất raw failure từ initial assign. Xem CONTINUING trước khi dùng các kết quả pass này để quyết định tích hợp.
+Mốc verified 2026-10-06: 1.097/1.755 runtime cases upstream đã port, 7/453 compiler groups, 8/31 examples; 376 supplemental .NET và 662 differential JS pass. Chưa full parity. R002 (mất raw failure từ initial assign/output) đã sửa và có 12 regression native/JS. R001 (WaitFor timeout ngoài actor turn) còn mở. Source và pipeline nằm trong repo độc lập; các lệnh bên dưới chạy từ root repo xstate-dotnet. Xem CONTINUING trước khi dùng các kết quả pass này để quyết định tích hợp.
 
 ## Phạm vi và tiêu chí hoàn thành
 
@@ -229,7 +229,7 @@ Constructor `new PromiseLogic<TOutput>(creator)` tiếp tục nhận Task. Thena
 
 Snapshot.Failure, ActorErrorData.Failure, action Subscribe(onError:) và IUnhandledErrorReporter.Report nhận object?, giữ null như giá trị lỗi hợp lệ khi Status là Error. Actor con mặc định dùng reporter của root system; ActorOptions.ErrorReporter override riêng cho actor đó.
 
-Task và IObserver yêu cầu Exception. Dùng ActorErrors.ToException(value) tại ranh giới đó, ActorErrors.GetValue(exception) để đọc lại. Exception thật giữ identity; contract của native actor callbacks là nhận raw value trực tiếp. Nhánh initial assign đã phát hiện còn giữ carrier exception, được theo dõi bằng XSTATE-R002 trong [CONTINUING.md](CONTINUING.md). Ví dụ producer: Task.FromException<int>(ActorErrors.ToException("failed")). Thenable resolver dùng Reject("failed") trực tiếp.
+Task và IObserver yêu cầu Exception. Dùng ActorErrors.ToException(value) tại ranh giới đó, ActorErrors.GetValue(exception) để đọc lại. Exception thật giữ identity; contract của native actor callbacks là nhận raw value trực tiếp. Nhánh initial assign/output đã sửa để unwrap carrier exception; regression và lịch sử XSTATE-R002 nằm trong [CONTINUING.md](CONTINUING.md). Ví dụ producer: Task.FromException<int>(ActorErrors.ToException("failed")). Thenable resolver dùng Reject("failed") trực tiếp.
 
 WaitForOptions.CancellationReason phân biệt không cấu hình với explicit null: có reason thì Task fault với reason, không cấu hình thì token làm Task canceled. JSON snapshot ghi primitive/object/null và plain Exception thành {}; custom Error properties và đầy đủ undefined semantics vẫn đang port.
 

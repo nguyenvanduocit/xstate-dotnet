@@ -54,7 +54,7 @@ Các trường hợp cần tra lại source trước khi sửa: timer cùng ID k
 
 **Quyết định:** Failure/error event/subscriber/reporter nhận `object?`; null cũng là lỗi hợp lệ khi Status=Error. Dùng `ActorErrors.ToException/GetValue` khi đi qua Task/IObserver/default reporter. Exception thật giữ identity. Reporter mặc định của child thuộc root system; override của actor chỉ áp dụng cục bộ.
 
-**Lý do và hệ quả:** JS có thể throw/reject string, number, false, null hoặc object. Không được biến chúng thành message string hoặc exception mới trong contract nội bộ. JSON của plain Exception là `{}`; raw object phải giữ payload. Initial assign đang vi phạm contract này: XSTATE-R002 trong [CONTINUING.md](CONTINUING.md). Căn cứ: [ActorErrors.cs](ActorErrors.cs), [Actor.cs](Actor.cs), [ErrorValueTests.cs](../XState.Tests/ErrorValueTests.cs).
+**Lý do và hệ quả:** JS có thể throw/reject string, number, false, null hoặc object. Không được biến chúng thành message string hoặc exception mới trong contract nội bộ. JSON của plain Exception là `{}`; raw object phải giữ payload. Vi phạm ở initial assign/output đã sửa trong batch XSTATE-R002, có regression giữ raw identity/persistence; xem [CONTINUING.md](CONTINUING.md). Căn cứ: [ActorErrors.cs](ActorErrors.cs), [Actor.cs](Actor.cs), [ErrorValueTests.cs](../XState.Tests/ErrorValueTests.cs).
 
 ## XSTATE-D08 Missing, null, identity và context mutation
 
